@@ -9,7 +9,7 @@ class User(models.Model):
     password = models.CharField(max_length=32)
     email = models.EmailField()
     rule = models.IntegerField(default=0)
-
+#asdfasdf
 
 class series(models.Model):
     seriesname = models.CharField(max_length=32)
