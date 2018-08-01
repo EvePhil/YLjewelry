@@ -421,7 +421,7 @@ $(".addJob").click(function(){
 $(".confirmDelSeries").click(function(){
 	delSeriesAjax(delSeries);
 	now.remove();
-	//location.reload();
+	location.reload();
 });
 $(".confirmDelJob").click(function(){
 	delWorkAjax(delWork);
@@ -441,8 +441,9 @@ $(".confirmFixSeries").click(function(){
     Data.append("seriesintro", intro);
     Data.append("seriesname_eng", name_eng);
     Data.append("seriesintro_eng", intro_eng);
+    Data.append("file", $('.fixSeriesPhoto')[0].files[0]);
 	fixSeriesAjax(Data);
-	//location.reload();
+	location.reload();
 });
 
 $(".confirmFixIndex").click(function(){

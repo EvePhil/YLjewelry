@@ -41,4 +41,5 @@ $(".confirmIntro").click(function(){
 	// 	return false;
 	// }
 	introAjax();
+	location.reload();
 });
