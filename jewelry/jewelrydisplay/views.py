@@ -161,22 +161,15 @@ def uploadSeries(request):
     name = data.get('seriesName')
     intro_eng = data.get('seriesIntro_eng')
     name_eng = data.get('seriesName_eng')
-
-#	
     files = request.FILES
     p = files['file']
-
     fobj = open(django_settings.IMAGES_ROOT+'series_images/' + p.name, 'wb')
     for chunk in p.chunks():
         fobj.write(chunk)
     fobj.close()
 
-    # print(intro)
-    # print(name)
-    # print(intro_eng)
-    # print(name_eng)
-
-    series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic=p.name)
+    numSeries = models.series.objects.all().count()
+    series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic=p.name, series_sequence = numSeries+1)
     series.save()
     return HttpResponse(1)
 
@@ -222,6 +215,50 @@ def fixSeries(request):
     series.save()
 
     return HttpResponse(1)
+# 删除系列
+def delSeries(request):
+    data = request.POST
+    print(data)
+    id = data.get('seriesId')
+    try:
+        # 删除该系列下的作品及每个作品的图片
+        works = models.works.objects.filter(series_id=id)
+        if works is not None:
+            for w in works:
+                models.picture_path.objects.filter(work_id=w.id).delete()
+                dirPath = django_settings.IMAGES_ROOT + str(w.id)
+                shutil.rmtree(dirPath)
+                w.delete()
+
+        # 删除该系列及其图片
+        series = models.series.objects.get(id=id)
+
+        os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
+        seq = series.series_sequence
+        ss = models.series.objects.filter(series_sequence__gt=seq)
+        for s in ss:
+            s.series_sequence = s.series_sequence - 1
+            s.save()
+        series.delete()
+    except Exception as e:
+        print e
+        return HttpResponse(u'删除系列错误')
+    return HttpResponse(1)
+# 修改系列顺序
+def changeSeriesSequence(request):
+    body = request.body
+    js = json.loads(body)
+    print(js)
+    ss = models.series.objects.all()
+    for k in js:
+        # print(k, js[k])
+        s = ss.get(id=k)
+        s.series_sequence = js[k]
+        s.save()
+
+    return HttpResponse(1)
+
+
 # works
 # 浏览作品
 def jewel(request):
@@ -291,7 +328,7 @@ def getOptionWorks(request):
     return HttpResponse(json.dumps(ja), content_type="application/json")
 
 
-def workSequence(request):
+def changeWorkSequence(request):
     body = request.body
     js = json.loads(body)
     print(js)
@@ -363,7 +400,6 @@ def delWork(request):
         w.delete()
 
         dirPath = django_settings.IMAGES_ROOT + str(id)
-        print id
         shutil.rmtree(dirPath)
     except Exception as e:
         # 删除失败
@@ -561,27 +597,7 @@ def fixIndex(request):
         indexpic.save()
     return HttpResponse(1)
 
-def delSeries(request):
-    data = request.POST
-    print(data)
-    id = data.get('seriesId')
-    print('123ccccccccccc')
-    try:
-        works = models.works.objects.filter(series_id=id)
-        if works is not None:
-            for w in works:
-                models.picture_path.objects.filter(work_id=w.id).delete()
-                w.delete()
 
-        series = models.series.objects.filter(id=id)
-
-        os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
-
-        series.delete()
-    except Exception as e:
-        print e
-        return HttpResponse(u'删除系列错误')
-    return HttpResponse(1)
 
 
 

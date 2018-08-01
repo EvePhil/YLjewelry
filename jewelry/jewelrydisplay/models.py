@@ -16,7 +16,7 @@ class series(models.Model):
     intro = models.TextField(default="")
     seriesname_eng = models.TextField(default="")
     intro_eng = models.TextField(default="")
-    series_pic = models.CharField(max_length=32, default='')
+    series_pic = models.CharField(max_length=64, default='')
     series_sequence = models.IntegerField(default=0)
 
 

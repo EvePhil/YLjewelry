@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^getWork/', views.getWork),
     url(r'^getWorks/', views.getOptionWorks),
     url(r'^getOptionWorks/', views.getOptionWorks),
-    url(r'^workSequence/', views.workSequence),
+    url(r'^workSequence/', views.changeWorkSequence),
     url(r'^addWork/', views.uploadWork),
     url(r'^addSeries/', views.uploadSeries),
     url(r'^getIndexPic/', views.getIndexPic),
@@ -51,6 +51,8 @@ urlpatterns = [
     url(r'^getJewels/', views.getJewels),
     url(r'^getOneSeries/', views.getOneSeries),
     url(r'^fixSeries/', views.fixSeries),
+    url(r'^seriesSequence/', views.changeSeriesSequence),
+
     url(r'^getAllPics/', views.getAllPics),
     url(r'^fixIndex/', views.fixIndex),
 
