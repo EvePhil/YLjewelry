@@ -380,7 +380,7 @@ def uploadWork(request):
         timestamp = int(round(time.time() * 1000))
 
         # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
-        splitfilename = str(filename).split('.')
+        splitfilename = filename.encode('utf-8').split('.')
         newfilename = str(timestamp)+filekey+'.'+splitfilename[-1]
 
         # print(newfilename)
