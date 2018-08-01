@@ -251,7 +251,8 @@ function fixSeriesAjax(series) {
         contentType: false,
         async: false
     }).done(function(res) {
-    	alert("修改系列成功");
+        if(res == 1)
+    	    alert("修改系列成功");
     }).fail(function(res) {
 
     });
