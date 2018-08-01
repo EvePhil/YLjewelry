@@ -33,6 +33,12 @@ $(function () {
         '            </div>\n' +
         '            <p>TEL：13020031705 Copyright © all reserved</p>\n' +
         '        </div>');
+		$(".wechat").click(function(){
+            $('#wechatModal').modal('show');
+        });
+        $(".email").click(function(){
+            $('#emailModal').modal('show');
+        });
 
 		var i = 1;
         console.log(len)

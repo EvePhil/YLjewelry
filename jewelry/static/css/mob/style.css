@@ -13,7 +13,7 @@ body {
 }
 @font-face {
     font-family: HWxihei;
-    src: url("/static/css/fonts/hwxh.ttf");
+    src: url("/static/css/fonts/newHwxh.ttf");
 }
 #upMenu {
 	position: absolute;
@@ -45,29 +45,33 @@ body {
 	/*margin-left: 4%;*/
     height: 1rem;
     /*vertical-align: bottom;*/
-	width: 22rem;
+	width: 12rem;
 }
 .menu a {
 	text-decoration: none;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 1.75;
 	margin-left: 0.5rem;
 	color: #333333;
     vertical-align: bottom;
 }
 .engMenu {
     /*font-size: 18px !important;*/
-    line-height: 22px !important;
+    line-height: 1.7 !important;
 }
 .search {
-	position: absolute;
-    top: 5.8rem;
-    right: 1.5rem;
+	display: inline-block;
+	height: 24px;
+    width: 24px;
+	margin-top: 1.8%;
+	float: right;
+    margin-right: 5%;
+	text-align: right;
 }
 .sea {
-    margin-left: 0.3rem;
-	margin-top: 0.3rem;
+    vertical-align: middle;
 	color: #666666 !important;
+    line-height: 24px;
 }
 .sea:visited {
     color: #666666;

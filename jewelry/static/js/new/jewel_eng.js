@@ -38,6 +38,12 @@ $(function () {
         '            </div>\n' +
         '            <p>TEL：13020031705 Copyright © all reserved</p>\n' +
         '        </div>');
+		$(".wechat").click(function(){
+			$('#wechatModal').modal('show');
+		});
+		$(".email").click(function(){
+			$('#emailModal').modal('show');
+		});
 		CloudZoom.quickStart();
 		var classes = $(".cloudzoom-gallery-active").attr("class");
 		var cls = classes.split(' ');
