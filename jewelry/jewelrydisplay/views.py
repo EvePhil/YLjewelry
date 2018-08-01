@@ -230,20 +230,24 @@ def delSeries(request):
     data = request.POST
     print(data)
     id = data.get('seriesId')
+
+    # 删除该系列下的作品及每个作品的图片
+    works = models.works.objects.filter(series_id=id)
+    if works is not None:
+        for w in works:
+            models.picture_path.objects.filter(work_id=w.id).delete()
+            shutil.rmtree(django_settings.IMAGES_ROOT + str(w.id))
+            w.delete()
+
+    # 删除该系列及其图片
+    series = models.series.objects.get(id=id)
+
     try:
-        # 删除该系列下的作品及每个作品的图片
-        works = models.works.objects.filter(series_id=id)
-        if works is not None:
-            for w in works:
-                models.picture_path.objects.filter(work_id=w.id).delete()
-                dirPath = django_settings.IMAGES_ROOT + str(w.id)
-                shutil.rmtree(dirPath)
-                w.delete()
-
-        # 删除该系列及其图片
-        series = models.series.objects.get(id=id)
-
         os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
+    except:
+        print u'没有系列图片'
+
+    try:
         seq = series.series_sequence
         ss = models.series.objects.filter(series_sequence__gt=seq)
         for s in ss:
