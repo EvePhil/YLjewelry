@@ -201,17 +201,11 @@ def getOneSeries(request):
 
 def fixSeries(request):
     data = request.POST
-    id = data.get('id')
-    name = data.get('seriesname')
-    intro = data.get('seriesintro')
-    name_eng = data.get('seriesname_eng')
-    intro_eng = data.get('seriesintro_eng')
-    #print(name)
-    series = models.series.objects.get(id=id)
-    series.seriesname = name
-    series.intro = intro
-    series.seriesname_eng = name_eng
-    series.intro_eng = intro_eng
+    series = models.series.objects.get(id=data.get('id'))
+    series.seriesname = data.get('seriesname')
+    series.intro = data.get('seriesintro')
+    series.seriesname_eng = data.get('seriesname_eng')
+    series.intro_eng = data.get('seriesintro_eng')
     series.save()
 
     return HttpResponse(1)
