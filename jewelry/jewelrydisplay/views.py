@@ -202,11 +202,27 @@ def getOneSeries(request):
 def fixSeries(request):
     data = request.POST
     series = models.series.objects.get(id=data.get('id'))
-    series.seriesname = data.get('seriesname')
-    series.intro = data.get('seriesintro')
-    series.seriesname_eng = data.get('seriesname_eng')
-    series.intro_eng = data.get('seriesintro_eng')
-    series.save()
+    files = request.FILES
+    p = files.get('file', None)
+    if p is not None:
+        os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
+        fobj = open(django_settings.IMAGES_ROOT + 'series_images/' + p.name, 'wb')
+        for chunk in p.chunks():
+            fobj.write(chunk)
+        fobj.close()
+
+        series.seriesname = data.get('seriesname')
+        series.intro = data.get('seriesintro')
+        series.seriesname_eng = data.get('seriesname_eng')
+        series.intro_eng = data.get('seriesintro_eng')
+        series.series_pic = p.name
+        series.save()
+    else:
+        series.seriesname = data.get('seriesname')
+        series.intro = data.get('seriesintro')
+        series.seriesname_eng = data.get('seriesname_eng')
+        series.intro_eng = data.get('seriesintro_eng')
+        series.save()
 
     return HttpResponse(1)
 # 删除系列
@@ -470,27 +486,33 @@ def setIntro(request):
     # print(intro)
     # print(exper)
     files = request.FILES
-    p = files['file']
-    filename = p.name
-    # print(p.name)
+    p = files.get('file', None)
 
     try:
-
-        fobj = open(django_settings.IMAGES_ROOT+p.name, 'wb')
-        for chunk in p.chunks():
-            fobj.write(chunk)
-        fobj.close()
         introduction = models.introduction.objects.filter(id = 1)
-        # print(introduction)
-        if introduction.count() == 0:
-            introduction = models.introduction(exper_cn=exper, intro_cn=intro, picture_name=filename, exper_eng=exper_eng, intro_eng=intro_eng)
-            introduction.save()
+        if p is not None:
+            fobj = open(django_settings.IMAGES_ROOT+p.name, 'wb')
+            for chunk in p.chunks():
+                fobj.write(chunk)
+            fobj.close()
+            if introduction.count() == 0:
+                introduction = models.introduction(exper_cn=exper, intro_cn=intro, picture_name=p.name, exper_eng=exper_eng, intro_eng=intro_eng)
+                introduction.save()
+            else:
+                introduction.update(exper_cn= exper)
+                introduction.update(intro_cn = intro)
+                introduction.update(exper_eng=exper_eng)
+                introduction.update(intro_eng=intro_eng)
+                introduction.update(picture_name = p.name)
         else:
-            introduction.update(exper_cn= exper)
-            introduction.update(intro_cn = intro)
-            introduction.update(exper_eng=exper_eng)
-            introduction.update(intro_eng=intro_eng)
-            introduction.update(picture_name = filename)
+            if introduction.count() == 0:
+                introduction = models.introduction(exper_cn=exper, intro_cn=intro, exper_eng=exper_eng, intro_eng=intro_eng)
+                introduction.save()
+            else:
+                introduction.update(exper_cn= exper)
+                introduction.update(intro_cn = intro)
+                introduction.update(exper_eng=exper_eng)
+                introduction.update(intro_eng=intro_eng)
     except:
         return HttpResponse(0)
 

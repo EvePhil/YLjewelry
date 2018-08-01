@@ -35,10 +35,10 @@ function introAjax()
     });
 } 
 $(".confirmIntro").click(function(){
-    if (!$('#photo').val()) {
-		alert("请选择上传照片");
-		$('#photo').focus();
-		return false;
-	}
+    // if (!$('#photo').val()) {
+	// 	alert("请选择上传照片");
+	// 	$('#photo').focus();
+	// 	return false;
+	// }
 	introAjax();
 });

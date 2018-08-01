@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^signup/', views.signup),
     url(r'^getOptionSeries/', views.getAllSeries),
     url(r'^getSeries/', views.getSeries),
+    url(r'^fixSeries/', views.fixSeries),
+
     url(r'^item/', views.itemPage),
     url(r'^series/', views.series),
     url(r'^jewel/', views.jewel),
