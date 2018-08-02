@@ -79,14 +79,14 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'new_jewelry_works',
-        # 'HOST' : '127.0.0.1',
-        # 'USER' : 'root',
-        # 'PASSWORD' : '',
-        'NAME': 'jewelry_works',
-        'HOST' : '39.106.143.27',
-        'USER' : 'jewel',
-        'PASSWORD' : 'nbjewel',
+        'NAME': 'new_jewelry_works',
+        'HOST' : '127.0.0.1',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        # 'NAME': 'jewelry_works',
+        # 'HOST' : '39.106.143.27',
+        # 'USER' : 'jewel',
+        # 'PASSWORD' : 'nbjewel',
         'PORT' : '3306',
 
     }

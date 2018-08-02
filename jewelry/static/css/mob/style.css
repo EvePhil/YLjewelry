@@ -45,7 +45,7 @@ body {
 	/*margin-left: 4%;*/
     height: 1rem;
     /*vertical-align: bottom;*/
-	width: 25rem;
+	width: 20.5rem;
 }
 .menu a {
 	text-decoration: none;
@@ -59,26 +59,59 @@ body {
     /*font-size: 18px !important;*/
     line-height: 1.5 !important;
 }
-.search {
+.rightIcon {
 	display: inline-block;
 	height: 24px;
-    width: 24px;
-	margin-top: 1.8%;
+    width: 5.5rem;
+    vertical-align: top;
+	margin-top: 1.5%;
 	float: right;
-    margin-right: 5%;
+    margin-right: 1.5rem;
 	text-align: right;
 }
-.sea {
-    vertical-align: middle;
-	color: #666666 !important;
-    line-height: 24px;
+.rightIcon div {
+    display: inline-block;
+    height: 100%;
 }
-.sea:visited {
-    color: #666666;
+.search {
+    width: 2rem;
+    background: url("/static/images/icons/search.png") center center no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
 }
-.sea:hover, .sea:active{
-	color: #333333 !important;
+.shop {
+    width: 1.6rem;
+    background: url("/static/images/icons/shop.png") center center no-repeat;
+    background-size: contain;
 }
+.search:hover, .search:active {
+    background: url("/static/images/icons/search_black.png") center center no-repeat;
+    background-size: contain;
+}
+.shop:hover, .shop:active {
+    background: url("/static/images/icons/shop_black.png") center center no-repeat;
+    background-size: contain;
+}
+/*.search {*/
+	/*display: inline-block;*/
+	/*height: 24px;*/
+    /*width: 24px;*/
+	/*margin-top: 1.8%;*/
+	/*float: right;*/
+    /*margin-right: 5%;*/
+	/*text-align: right;*/
+/*}*/
+/*.sea {*/
+    /*vertical-align: middle;*/
+	/*color: #666666 !important;*/
+    /*line-height: 24px;*/
+/*}*/
+/*.sea:visited {*/
+    /*color: #666666;*/
+/*}*/
+/*.sea:hover, .sea:active{*/
+	/*color: #333333 !important;*/
+/*}*/
 
 pre {
 	padding: 0;

@@ -52,39 +52,58 @@ body {
 .menu a {
 	text-decoration: none;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 27px;
 	margin-left: 2%;
 	color: #333333;
     vertical-align: bottom;
 }
 .engMenu {
     font-size: 16px !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
 }
-.search {
+/*.search {*/
+	/*display: inline-block;*/
+	/*height: 24px;*/
+    /*width: 200px;*/
+    /*vertical-align: top;*/
+	/*margin-top: 0.5%;*/
+	/*float: right;*/
+    /*margin-right: 2%;*/
+	/*text-align: right;*/
+/*}*/
+.rightIcon {
 	display: inline-block;
 	height: 24px;
-    width: 100px;
+    width: 200px;
     vertical-align: top;
 	margin-top: 0.5%;
 	float: right;
-    margin-right: 5%;
+    margin-right: 4%;
 	text-align: right;
 }
-.sea {
-	display: inline-block;
-    vertical-align: middle;
-	color: #666666 !important;
-    line-height: 24px;
-    padding-left: 20px;
+.rightIcon div {
+    display: inline-block;
+    height: 100%;
 }
-.sea:visited {
-    color: #666666;
+.search {
+    width: 19px;
+    background: url("/static/images/icons/search.png") center center no-repeat;
+    background-size: contain;
+    margin-right: 10px;
 }
-.sea:hover, .sea:active{
-	color: #333333 !important;
+.shop {
+    width: 14.5px;
+    background: url("/static/images/icons/shop.png") center center no-repeat;
+    background-size: contain;
 }
-
+.search:hover, .search:active {
+    background: url("/static/images/icons/search_black.png") center center no-repeat;
+    background-size: contain;
+}
+.shop:hover, .shop:active {
+    background: url("/static/images/icons/shop_black.png") center center no-repeat;
+    background-size: contain;
+}
 pre {
 	padding: 0;
 	margin: 0;
