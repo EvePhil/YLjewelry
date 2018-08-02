@@ -7,7 +7,6 @@ $(function () {
 	$('.changeLanguage').attr('href', '/index_mob_eng/jewel_mob_eng/?' + seriesId);
 
 	var seriesPost = {id:seriesId};
-	var name;
 
 	$.get('/getJewels/', seriesPost, function (jeweljson) {//获取作品
 				//series =  JSON.parse(json)
@@ -15,28 +14,16 @@ $(function () {
 		for(var i=0; i<jewel.image.length; i++) {
 			//alert(job.image)
 			if(i == 0) {
-				$('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
-				jewel.image[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', animationTime:0, zoomPosition: \'inside\', startMagnification:2, zoomImage: \'/static/images/'+
-				jewel.image[i] + '\', autoInside: 30"/>');
-				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + ' cloudzoom-gallery-active" src="/static/images/' +
-				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-				jewel.image[i] + '\',zoomImage:\'/static/images/' +
-				jewel.image[i] + '\'"/></li>');
+				$('#main').append('<img src="/static/images/' + jewel.image[i] + '" />');
+				$('#main').append('<div id="text"></div>');
+				$('#text').html('<h3>' + jewel.seriesname + '</h3>' +
+                    // '<h4>' +  jewel.seriesname + '-' + cls[1] + '</h4>' +
+                    '<pre>' + jewel.seriesintro + '</pre>');
 			}
 			else {
-				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="/static/images/' +
-				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-				jewel.image[i] + '\',zoomImage:\'/static/images/' +
-				jewel.image[i] + '\'"/></li>');
+			    $('#main').append('<img src="/static/images/' + jewel.image[i] + '" />');
 			}
 		}
-		CloudZoom.quickStart();
-		var classes = $(".cloudzoom-gallery-active").attr("class");
-		var cls = classes.split(' ');
-		$('#text').html('<h3>' + jewel.seriesname + '</h3>' +
-			// '<h4>' +  jewel.seriesname + '-' + cls[1] + '</h4>' +
-			'<pre>' + jewel.seriesintro + '</pre>');
-		name = jewel.seriesname;
 
 		$('#main').append('<div id="footer">\n' +
         '             <div class="contact">\n' +
@@ -57,9 +44,9 @@ $(function () {
 
    })
 
-	$("#imgList").click(function(){
-		var classes = $(".cloudzoom-gallery-active").attr("class");
-		var cls = classes.split(' ');
-		$('#text h4').html(name + '-' + cls[1]);
-	});
+	// $("#imgList").click(function(){
+	// 	var classes = $(".cloudzoom-gallery-active").attr("class");
+	// 	var cls = classes.split(' ');
+	// 	$('#text h4').html(name + '-' + cls[1]);
+	// });
 })

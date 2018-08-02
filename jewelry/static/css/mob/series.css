@@ -1,6 +1,6 @@
 #main {
 	position: absolute;
-	top: 15%;
+	top: 13%;
 	width: 100%;
 	height: auto;
 }
@@ -33,11 +33,12 @@
     background-color: rgba(0,0,0,0.6);
 }
 .seriesName h3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 22rem;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.6rem;
     color: #cccccc;
     margin: 0;
+    font-weight: lighter;
 }
 
 #footer {

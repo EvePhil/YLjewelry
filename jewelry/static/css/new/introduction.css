@@ -48,10 +48,10 @@
 }
 .text1 {
     padding-bottom: 5px;
-    border-bottom: 1px solid #666666;
+    border-bottom: thin solid #666666;
 }
 .text2 {
-    padding-top: 8px;
+    padding-top: 5px;
 }
 
 #footer {

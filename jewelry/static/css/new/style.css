@@ -24,7 +24,7 @@ body {
 	height: 13%;
 }
 .title {
-	margin-top: 1.5%;
+	margin-top: 1%;
 }
 .title a{
 	margin-left: 4%;
@@ -38,7 +38,7 @@ body {
 	height: 24px;
 	margin-left: 4.15%;
 	margin-top: 0.5%;
-	background: url(/static/images/111.png) no-repeat center center;
+	background: url(/static/images/menu.png) no-repeat center center;
 	background-size: cover;
 }
 .menu {
@@ -64,7 +64,7 @@ body {
 .search {
 	display: inline-block;
 	height: 24px;
-    width: 24px;
+    width: 100px;
     vertical-align: top;
 	margin-top: 0.5%;
 	float: right;
@@ -72,9 +72,11 @@ body {
 	text-align: right;
 }
 .sea {
+	display: inline-block;
     vertical-align: middle;
 	color: #666666 !important;
     line-height: 24px;
+    padding-left: 20px;
 }
 .sea:visited {
     color: #666666;
@@ -91,6 +93,7 @@ pre {
 	font-size: 12px;
 	line-height: 20px;
     font-family: HWxihei, sans-serif;
+    word-break:normal;
     overflow: hidden;
     white-space: pre-wrap;
     word-wrap: break-word;
