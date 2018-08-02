@@ -15,9 +15,9 @@ img {
 	/*display: inline-block;*/
     padding-top: 1rem;
     padding-bottom: 0.8rem;
-	margin-left: 4%;
+	margin-left: 1.5rem;
+    margin-right: 1.5rem;
 	height: 100%;
-	width: 92%;
     /*text-align: left !important;*/
     color: #333333;
 }
