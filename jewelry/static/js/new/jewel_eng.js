@@ -17,13 +17,13 @@ $(function () {
 				$('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
 				jewel.image[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', animationTime:0, zoomPosition: \'inside\', startMagnification:1.5, zoomImage: \'/static/images/'+
 				jewel.image[i] + '\', autoInside: 30"/>');
-				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + ' cloudzoom-gallery-active" src="/static/images/' +
+				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + ' cloudzoom-gallery-active" src="/static/images/thumbnail/' +
 				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
 				jewel.image[i] + '\',zoomImage:\'/static/images/' +
 				jewel.image[i] + '\'"/></li>');
 			}
 			else {
-				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="/static/images/' +
+				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="/static/images/thumbnail/' +
 				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
 				jewel.image[i] + '\',zoomImage:\'/static/images/' +
 				jewel.image[i] + '\'"/></li>');

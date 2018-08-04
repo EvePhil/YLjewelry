@@ -14,9 +14,11 @@ import models
 import time
 import os
 import shutil
+from django.conf import settings
 # Create your views here.
 
 import sys
+from PIL import Image
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -354,6 +356,25 @@ def changeWorkSequence(request):
         w.save()
     return HttpResponse(1)
 
+def resize(path, thumbnailPath):
+    img = Image.open(path)
+    w, h = img.size
+    rate = 1.0
+    trate = 1.0
+    if h > 1080:
+        rate = 1080.0 / h
+    print w, h, w * h
+    trate = 150.0/h
+    tw = int(w*trate)
+    th = int(h*trate)
+    w = int(w * rate)
+    h = int(h * rate)
+    print w, h, w * h
+    img.resize((w, h)).save(path, format='JPEG')
+    img.resize((tw, th)).save(thumbnailPath, format = 'JPEG')
+
+
+
 def uploadWork(request):
     # 上传
     # 修改信息
@@ -374,26 +395,35 @@ def uploadWork(request):
     # print(request.POST)
     files = request.FILES
     # print(files)
-    for filekey in files:
-        print(filekey)
-        filename = files[filekey].name
-        timestamp = int(round(time.time() * 1000))
+    try:
+        for filekey in files:
+            print(filekey)
+            filename = files[filekey].name
+            timestamp = int(round(time.time() * 1000))
 
-        # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
-        splitfilename = filename.encode('utf-8').split('.')
-        newfilename = str(timestamp)+filekey+'.'+splitfilename[-1]
+            # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
+            splitfilename = filename.encode('utf-8').split('.')
+            newfilename = str(timestamp)+filekey+'.'+splitfilename[-1]
 
-        # print(newfilename)
-        dirPath = django_settings.IMAGES_ROOT+str(workid)
-        if not os.path.exists(dirPath):
-            os.makedirs(dirPath)
+            # print(newfilename)
+            dirPath = django_settings.IMAGES_ROOT+str(workid)
+            if not os.path.exists(dirPath):
+                os.makedirs(dirPath)
+                os.makedirs(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid))
 
-        fobj = open(os.path.join(dirPath,newfilename), 'wb')
-        for chunk in files[filekey].chunks():
-            fobj.write(chunk)
-        fobj.close()
-        picture = models.picture_path(work_id=workid, isFirst=(filekey == 'photo1'),picturepath=newfilename)
-        picture.save()
+            fobj = open(os.path.join(dirPath,newfilename), 'wb')
+            for chunk in files[filekey].chunks():
+                fobj.write(chunk)
+            fobj.close()
+            # 压缩图片
+            resize(os.path.join(dirPath,newfilename), os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
+            picture = models.picture_path(work_id=workid, isFirst=(filekey == 'photo1'),picturepath=newfilename)
+            picture.save()
+    except:
+        models.picture_path.objects.filter(work_id=workid).delete()
+        work.delete()
+        return HttpResponse(u"上传失败")
+
     return HttpResponse(1)
 
 def delWork(request):
@@ -731,3 +761,13 @@ def introduction_mob_eng(request):
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
     return render(request,"mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+
+def sendEmail2Admin(request):
+    send_title = request.POST['title']
+    send_message = 'message: '+request.POST['content']+\
+                    '\nemail: '+request.POST['email']
+    send_obj_list = ['yilanjewelry@163.com']  # 收件人列表
+    send_html_message = '<h1>包含 html 标签且不希望被转义的内容</h1>'
+    send_status = send_mail(send_title, send_message, settings.EMAIL_FROM, send_obj_list)
+    print(send_status)  # 发送状态,可用可不用
+    return HttpResponse('1')
