@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/new/email_eng.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mob/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mob/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/new/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/new/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/menu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/upmenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/email.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eng/index_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/index_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eng/introduction_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/introduction_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eng/jewel_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/jewel_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eng/series_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/series_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/introduction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jewel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jewel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob/index_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/index_mob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob/introduction_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/introduction_mob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob/jewel_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/jewel_mob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob/series_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/series_mob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/series.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/series.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -154,15 +131,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="series_eng.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/eng/series_eng.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index_mob_eng.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -190,7 +158,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/new/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="806">
@@ -199,6 +167,18 @@
                 <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="81" selection-start-line="81" selection-end-line="84" selection-end-column="26" />
+              <folding>
+                <marker date="1533366642168" expanded="true" signature="2493:2526" ph="..." />
               </folding>
             </state>
           </provider>
@@ -273,7 +253,6 @@
         <option value="$PROJECT_DIR$/templates/mob/introduction_mob.html" />
         <option value="$PROJECT_DIR$/templates/mob/jewel_mob.html" />
         <option value="$PROJECT_DIR$/templates/mob/series_mob.html" />
-        <option value="$PROJECT_DIR$/jewelry/settings.py" />
         <option value="$PROJECT_DIR$/static/css/mob/index.css" />
         <option value="$PROJECT_DIR$/static/js/new/jewel.js" />
         <option value="$PROJECT_DIR$/static/js/new/email.js" />
@@ -288,6 +267,7 @@
         <option value="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" />
         <option value="$PROJECT_DIR$/static/css/mob/style.css" />
         <option value="$PROJECT_DIR$/static/js/new/index.js" />
+        <option value="$PROJECT_DIR$/jewelry/settings.py" />
       </list>
     </option>
   </component>
@@ -637,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533200707488</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="接着改样式+邮件">
+      <created>1533366636578</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1533366636578</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -686,7 +673,8 @@
     <MESSAGE value="修改手机端样式1" />
     <MESSAGE value="修改手机端样式2" />
     <MESSAGE value="加搜索购物" />
-    <option name="LAST_COMMIT_MESSAGE" value="加搜索购物" />
+    <MESSAGE value="接着改样式+邮件" />
+    <option name="LAST_COMMIT_MESSAGE" value="接着改样式+邮件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html">
@@ -948,16 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="85" selection-start-line="85" selection-end-line="88" selection-end-column="33" />
-          <folding>
-            <marker date="1533365873966" expanded="true" signature="2487:2522" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/mob/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1071,6 +1049,16 @@
             <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="81" selection-start-line="81" selection-end-line="84" selection-end-column="26" />
+          <folding>
+            <marker date="1533366642168" expanded="true" signature="2493:2526" ph="..." />
           </folding>
         </state>
       </provider>
