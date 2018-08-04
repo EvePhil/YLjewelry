@@ -80,4 +80,7 @@ urlpatterns = [
     url(r'^index_mob_eng/introduction_mob_eng', views.introduction_mob_eng),
     url(r'^index_mob_eng/series_mob_eng', views.series_mob_eng),
     url(r'^index_mob_eng/jewel_mob_eng', views.jewel_mob_eng),
+
+    url(r'^sendEmail/', views.sendEmail2Admin),
+
 ]
