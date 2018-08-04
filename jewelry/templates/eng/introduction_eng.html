@@ -13,7 +13,7 @@
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/jquery.rotate.min.js" ></script>
     <script type="text/javascript" src="/static/js/new/menu.js" ></script>
-    <script type="text/javascript" src="/static/js/new/email.js" ></script>
+    <script type="text/javascript" src="/static/js/new/email_eng.js" ></script>
     <script type="text/javascript" src="/static/js/uaredirect.js"></script>
     <script type="text/javascript">uaredirect("/index_mob_eng/introduction_mob_eng");</script>
 
@@ -82,11 +82,29 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                         </button>
-                        <h4 class="modal-title" id="myModalLabel">邮 件</h4>
+                        <h4 class="modal-title" id="myModalLabel">Email</h4>
                         <div class="selector">
-{#                            <div class="append">#}
-{#                                <img style="margin-left: 12.5%" src="/static/images/wechat.png">#}
-{#                            </div>#}
+                            <div class="append email">
+								<ul style="margin-left: 10%;">
+									<li>
+										<p style="margin-top: 2%; font-weight: bold;">Email</p>
+										<input class="yourEmail" type="email" placeholder="Your Email" style="width: 80%; margin: 0; height: 25px;"/>
+									</li>
+                                    <li>
+										<p style="margin-top: 2%; font-weight: bold;">Title</p>
+										<input class="title" type="text" placeholder="Email Title" style="width: 80%; margin: 0; height: 25px;"/>
+									</li>
+									<li>
+										<p style="margin-top: 2%; font-weight: bold;">Content</p>
+										<textarea name="content" class="content" type="text"
+										clos=",50" rows="5" warp="hard" placeholder="Email Content" style="width: 90%;"></textarea>
+									</li>
+								</ul>
+							</div>
+                            <div class="modal-footer" style="margin-right: 7%;">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary send" data-dismiss="modal">Send</button>
+                            </div>
                         </div>
                     </div>
                 </div><!-- /.modal-content -->

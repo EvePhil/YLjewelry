@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/static/js/new/email_eng.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/mob/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mob/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/new/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/new/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/upmenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/new/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/email.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/new/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/index_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/index_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/introduction_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/introduction_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/jewel_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/jewel_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/series_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/series_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/jewel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jewel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/index_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/index_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/introduction_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/introduction_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/jewel_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/jewel_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/series_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/series_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/series.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/series.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,50 +118,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_mob.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mob/index_mob.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1300">
+              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="98" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/mob/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+            <state relative-caret-position="589">
+              <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="introduction_mob.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mob/introduction_mob.html">
+      <file leaf-file-name="email_eng.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/new/email_eng.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="369">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+      <file leaf-file-name="email.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/new/email.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="81" selection-start-line="81" selection-end-line="84" selection-end-column="26" />
-              <folding>
-                <marker date="1533200695706" expanded="true" signature="2493:2526" ph="..." />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jewel_mob.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mob/jewel_mob.html">
+      <file leaf-file-name="series_eng.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/eng/series_eng.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="series_mob.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mob/series_mob.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="304">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -146,8 +166,8 @@
       <file leaf-file-name="index_mob_eng.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="304">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -155,17 +175,8 @@
       <file leaf-file-name="introduction_mob_eng.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/new/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="285">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -173,8 +184,22 @@
       <file leaf-file-name="jewel_mob_eng.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="217">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/new/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="806">
+              <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,8 +207,8 @@
       <file leaf-file-name="series_mob_eng.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="285">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -212,7 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/css/jewelFront.css" />
         <option value="$PROJECT_DIR$/static/js/mob/series_old.js" />
         <option value="$PROJECT_DIR$/jewelrydisplay/tests.py" />
         <option value="$PROJECT_DIR$/static/js/mob/series.js" />
@@ -229,10 +253,8 @@
         <option value="$PROJECT_DIR$/static/js/new/index_eng.js" />
         <option value="$PROJECT_DIR$/static/js/mob/index.js" />
         <option value="$PROJECT_DIR$/static/js/mob/index_eng.js" />
-        <option value="$PROJECT_DIR$/static/js/new/jewel.js" />
         <option value="$PROJECT_DIR$/static/js/new/jewel_eng.js" />
         <option value="$PROJECT_DIR$/static/js/new/menu.js" />
-        <option value="$PROJECT_DIR$/static/js/new/email.js" />
         <option value="$PROJECT_DIR$/static/css/new/index.css" />
         <option value="$PROJECT_DIR$/static/css/new/jewel.css" />
         <option value="$PROJECT_DIR$/static/css/new/series.css" />
@@ -240,29 +262,32 @@
         <option value="$PROJECT_DIR$/static/js/mob/jewel.js" />
         <option value="$PROJECT_DIR$/static/js/mob/jewel_eng.js" />
         <option value="$PROJECT_DIR$/static/css/new/introduction.css" />
-        <option value="$PROJECT_DIR$/static/css/mob/index.css" />
-        <option value="$PROJECT_DIR$/static/js/new/index.js" />
         <option value="$PROJECT_DIR$/static/css/mob/jewel.css" />
         <option value="$PROJECT_DIR$/static/css/mob/introduction.css" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/introduction.html" />
         <option value="$PROJECT_DIR$/templates/jewel.html" />
         <option value="$PROJECT_DIR$/templates/series.html" />
+        <option value="$PROJECT_DIR$/templates/mob/index_mob.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/new/style.css" />
+        <option value="$PROJECT_DIR$/templates/mob/introduction_mob.html" />
+        <option value="$PROJECT_DIR$/templates/mob/jewel_mob.html" />
+        <option value="$PROJECT_DIR$/templates/mob/series_mob.html" />
+        <option value="$PROJECT_DIR$/jewelry/settings.py" />
+        <option value="$PROJECT_DIR$/static/css/mob/index.css" />
+        <option value="$PROJECT_DIR$/static/js/new/jewel.js" />
+        <option value="$PROJECT_DIR$/static/js/new/email.js" />
+        <option value="$PROJECT_DIR$/static/js/new/email_eng.js" />
         <option value="$PROJECT_DIR$/templates/eng/index_eng.html" />
         <option value="$PROJECT_DIR$/templates/eng/introduction_eng.html" />
         <option value="$PROJECT_DIR$/templates/eng/jewel_eng.html" />
         <option value="$PROJECT_DIR$/templates/eng/series_eng.html" />
-        <option value="$PROJECT_DIR$/templates/mob/index_mob.html" />
-        <option value="$PROJECT_DIR$/templates/mob/introduction_mob.html" />
-        <option value="$PROJECT_DIR$/templates/mob/jewel_mob.html" />
-        <option value="$PROJECT_DIR$/templates/mob/series_mob.html" />
         <option value="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" />
         <option value="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" />
         <option value="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" />
         <option value="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" />
-        <option value="$PROJECT_DIR$/static/css/new/style.css" />
-        <option value="$PROJECT_DIR$/jewelry/settings.py" />
         <option value="$PROJECT_DIR$/static/css/mob/style.css" />
+        <option value="$PROJECT_DIR$/static/js/new/index.js" />
       </list>
     </option>
   </component>
@@ -273,9 +298,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="426" />
-    <option name="width" value="983" />
-    <option name="height" value="963" />
+    <option name="x" value="425" />
+    <option name="width" value="984" />
+    <option name="height" value="964" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -405,16 +430,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Limbo\Desktop\jewelry\templates\eng" />
-      <recent name="C:\Users\Limbo\Desktop\jewelry\static\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitTest\YLjewelry\jewelry\static\js\new" />
       <recent name="E:\gitTest\YLjewelry\jewelry\static\images" />
       <recent name="E:\gitTest\YLjewelry\jewelry\static\images\icons" />
       <recent name="E:\newJewelry\jewelry\static\images" />
       <recent name="$PROJECT_DIR$/static/js" />
-      <recent name="E:\jewelry\static\css\mob" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Limbo\Desktop\jewelry\templates\eng" />
+      <recent name="C:\Users\Limbo\Desktop\jewelry\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -616,7 +641,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -624,12 +649,11 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4987437" weight="0.32959184" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4930192" weight="0.32831737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.74623114" visible="true" weight="0.17260274" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74623114" visible="true" weight="0.17230444" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6529948" weight="0.10821918" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16992188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16979167" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49396783" weight="0.21780822" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -640,6 +664,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49396783" weight="0.21780822" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,6 +689,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="加搜索购物" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7049">
@@ -696,12 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="243" selection-start-line="243" selection-end-line="258" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/email.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/new/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -768,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/jewel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="41" selection-start-line="41" selection-end-line="45" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/mob/series.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -786,11 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,33 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/30ad959074c3b9e013da987e34bfcd11.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/1528197400007photo2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/IMG_0854.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/menu.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/1528197400018photo1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mob/jewel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-76">
@@ -842,176 +829,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mob/jewel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mob/introduction.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/index.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mob/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/new/series.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/introduction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/jewel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state relative-caret-position="2223">
+          <caret line="117" column="71" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/series.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="1938">
+          <caret line="102" column="115" selection-start-line="102" selection-start-column="115" selection-end-line="102" selection-end-column="115" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eng/index_eng.html">
+    <entry file="file://$PROJECT_DIR$/templates/Oldindex(dont del!!!!).html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="665">
+          <caret line="101" column="81" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eng/introduction_eng.html">
+    <entry file="file://$PROJECT_DIR$/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/indexFront.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="475">
+          <caret line="169" selection-start-line="169" selection-end-line="180" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eng/jewel_eng.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        <state relative-caret-position="236">
+          <caret line="84" column="63" selection-start-line="84" selection-start-column="54" selection-end-line="84" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eng/series_eng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/static/images/menu.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob/index_mob.html">
+    <entry file="file://$PROJECT_DIR$/static/css/new/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="304">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <marker date="1533365283167" expanded="true" signature="2494:2519" ph="..." />
+            <marker date="1533365283167" expanded="true" signature="2628:2664" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/mob/introduction_mob.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="79" selection-start-line="79" selection-end-line="99" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/mob/jewel_mob.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        <state relative-caret-position="692">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/mob/series_mob.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="692">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html">
+    <entry file="file://$PROJECT_DIR$/static/css/mob/introduction.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="198">
+          <caret line="40" selection-start-line="40" selection-end-line="42" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html">
+    <entry file="file://$PROJECT_DIR$/static/css/mob/jewel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/upmenu.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/new/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="-87">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="81" selection-start-line="81" selection-end-line="84" selection-end-column="26" />
+        <state relative-caret-position="393">
+          <caret line="85" selection-start-line="85" selection-end-line="88" selection-end-column="33" />
           <folding>
-            <marker date="1533200695706" expanded="true" signature="2493:2526" ph="..." />
+            <marker date="1533365873966" expanded="true" signature="2487:2522" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/mob/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/jewel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="60" column="7" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/introduction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="93" column="71" selection-start-line="93" selection-start-column="71" selection-end-line="93" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eng/index_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eng/introduction_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eng/jewel_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eng/series_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mob/index_mob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="98" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/mob/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        <state relative-caret-position="589">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/email_eng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/email.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

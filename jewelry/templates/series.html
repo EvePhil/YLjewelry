@@ -81,9 +81,27 @@
                         </button>
                         <h4 class="modal-title" id="myModalLabel">邮 件</h4>
                         <div class="selector">
-{#                            <div class="append">#}
-{#                                <img style="margin-left: 12.5%" src="/static/images/wechat.png">#}
-{#                            </div>#}
+                            <div class="append email">
+								<ul style="margin-left: 10%;">
+									<li>
+										<p style="margin-top: 2%; font-weight: bold;">邮 箱</p>
+										<input class="yourEmail" type="email" placeholder="您的邮箱" style="width: 80%; margin: 0; height: 25px;"/>
+									</li>
+                                    <li>
+										<p style="margin-top: 2%; font-weight: bold;">标 题</p>
+										<input class="title" type="text" placeholder="邮件标题" style="width: 80%; margin: 0; height: 25px;"/>
+									</li>
+									<li>
+										<p style="margin-top: 2%; font-weight: bold;">内 容</p>
+										<textarea name="content" class="content" type="text"
+										clos=",50" rows="5" warp="hard" placeholder="想要输入的内容" style="width: 90%;"></textarea>
+									</li>
+								</ul>
+							</div>
+                            <div class="modal-footer" style="margin-right: 7%;">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary send" data-dismiss="modal">发送</button>
+                            </div>
                         </div>
                     </div>
                 </div><!-- /.modal-content -->

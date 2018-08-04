@@ -25,15 +25,15 @@ $(function () {
         var title = $('.yourTitle').val();
         var content = $('.content').val();
         if(!isEmail(email)) {
-            alert("邮箱格式错误！");
+            alert("Wrong Email！");
             return false;
         }
         else if(title == "") {
-            alert("邮件标题为空！")
+            alert("Title is null！")
             return false;
         }
         else if(content == "") {
-            alert("邮件内容为空！")
+            alert("Content is null！")
             return false;
         }
         else {
