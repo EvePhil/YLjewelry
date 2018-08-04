@@ -763,10 +763,9 @@ def introduction_mob_eng(request):
     return render(request,"mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
 
 def sendEmail2Admin(request):
-    print request.POST
     send_title = request.POST['title']
     send_message = 'message: '+request.POST['content']+\
-                    '\nemail: '+'qwer'
+                    '\nemail: '+request.POST['email']
     send_obj_list = ['yilanjewelry@163.com']  # 收件人列表
     send_html_message = '<h1>包含 html 标签且不希望被转义的内容</h1>'
     send_status = send_mail(send_title, send_message, settings.EMAIL_FROM, send_obj_list)
