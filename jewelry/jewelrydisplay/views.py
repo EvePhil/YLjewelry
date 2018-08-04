@@ -550,7 +550,7 @@ def setIntro(request):
     except:
         return HttpResponse(0)
 
-    print intro
+    # print intro
     return HttpResponse(1)
 
 def getIndexPic(request):
@@ -672,16 +672,17 @@ def introduction_eng(request):
     return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
-    ss = models.series.objects.all()
+    ss = models.series.objects.all().order_by('series_sequence')
     ja = []
     for s in ss:
         js1 = {}
         js1['id'] = s.id
         js1['seriesname'] = s.seriesname_eng
-        js1['pic'] = s.series_pic
+        js1['seriespic'] = s.series_pic
         ja.append(js1)
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
+
 
 def getJewels_eng(request):
     print(request.GET)

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jewelrydisplay/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelrydisplay/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,24 +95,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_mob.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mob/index_mob.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="98" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/mob/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="email_eng.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/new/email_eng.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -154,13 +136,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="408">
+              <caret line="680" column="19" selection-start-line="680" selection-start-column="19" selection-end-line="680" selection-end-column="19" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="series_eng.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/new/series_eng.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="112" selection-start-line="12" selection-start-column="112" selection-end-line="12" selection-end-column="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="series.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/new/series.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,7 +187,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -221,12 +224,10 @@
         <option value="$PROJECT_DIR$/jewelrydisplay/tests.py" />
         <option value="$PROJECT_DIR$/static/js/mob/series.js" />
         <option value="$PROJECT_DIR$/static/js/mob/series_eng.js" />
-        <option value="$PROJECT_DIR$/static/js/new/series_eng.js" />
         <option value="$PROJECT_DIR$/static/js/new/series.js" />
         <option value="$PROJECT_DIR$/static/css/item.css" />
         <option value="$PROJECT_DIR$/jewelrydisplay/models.py" />
         <option value="$PROJECT_DIR$/jewelry/urls.py" />
-        <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
         <option value="$PROJECT_DIR$/templates/manage/item.html" />
         <option value="$PROJECT_DIR$/static/js/intro.js" />
         <option value="$PROJECT_DIR$/static/js/option.js" />
@@ -268,6 +269,8 @@
         <option value="$PROJECT_DIR$/static/js/new/jewel.js" />
         <option value="$PROJECT_DIR$/static/js/new/jewel_eng.js" />
         <option value="$PROJECT_DIR$/jewelry/settings.py" />
+        <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
+        <option value="$PROJECT_DIR$/static/js/new/series_eng.js" />
       </list>
     </option>
   </component>
@@ -653,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533368119097</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="对接缩放33">
+      <created>1533368144944</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1533368144944</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -705,16 +715,10 @@
     <MESSAGE value="接着改样式+邮件" />
     <MESSAGE value="接着改样式+邮件222" />
     <MESSAGE value="对接缩放" />
-    <option name="LAST_COMMIT_MESSAGE" value="对接缩放" />
+    <MESSAGE value="对接缩放33" />
+    <option name="LAST_COMMIT_MESSAGE" value="对接缩放33" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/intro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -817,13 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-76">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/series.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1059,16 +1056,6 @@
     <entry file="file://$PROJECT_DIR$/static/images/thumbnail/7/1533367679735photo2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/new/jewel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1087,6 +1074,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/series.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/series_eng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="112" selection-start-line="12" selection-start-column="112" selection-end-line="12" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="680" column="19" selection-start-line="680" selection-start-column="19" selection-end-line="680" selection-end-column="19" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
