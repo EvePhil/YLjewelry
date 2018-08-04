@@ -4,17 +4,6 @@
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jewelry/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jewelrydisplay/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelrydisplay/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/1/1532857345688photo2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/1/1532857345693photo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/1/1532942976928photo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/2/1532930321487photo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/2/1532942985988photo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/4/1533018501012photo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/5/1533018515105photo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/jewel.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/jewel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/jewel_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/jewel_eng.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -186,7 +175,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jewel_eng.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jewel_eng.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/new/jewel_eng.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
@@ -195,11 +184,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="270">
+              <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -276,9 +265,9 @@
         <option value="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" />
         <option value="$PROJECT_DIR$/static/css/mob/style.css" />
         <option value="$PROJECT_DIR$/static/js/new/index.js" />
-        <option value="$PROJECT_DIR$/jewelry/settings.py" />
         <option value="$PROJECT_DIR$/static/js/new/jewel.js" />
         <option value="$PROJECT_DIR$/static/js/new/jewel_eng.js" />
+        <option value="$PROJECT_DIR$/jewelry/settings.py" />
       </list>
     </option>
   </component>
@@ -657,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533366646864</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="接着改样式+邮件222">
+      <created>1533368119097</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1533368119097</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -708,7 +704,8 @@
     <MESSAGE value="加搜索购物" />
     <MESSAGE value="接着改样式+邮件" />
     <MESSAGE value="接着改样式+邮件222" />
-    <option name="LAST_COMMIT_MESSAGE" value="接着改样式+邮件222" />
+    <MESSAGE value="对接缩放" />
+    <option name="LAST_COMMIT_MESSAGE" value="对接缩放" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/js/intro.js">
@@ -1072,13 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/new/jewel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1090,6 +1080,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="124" selection-start-line="25" selection-start-column="124" selection-end-line="25" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
         </state>
       </provider>
     </entry>
