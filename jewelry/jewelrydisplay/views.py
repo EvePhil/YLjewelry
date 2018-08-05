@@ -155,24 +155,49 @@ def getSeries(request):
     #     ja.append(j)
 
     return HttpResponse(json.dumps(j), content_type="application/json")
+def resizeSeries(path):
+    img = Image.open(path)
+    w, h = img.size
+    rate = 1.0
+    if h > 1800:
+        rate = 1800.0 / h
+
+    w = int(w * rate)
+    h = int(h * rate)
+    img.resize((w, h)).save(path, format='JPEG')
+
 
 #添加系列
 def uploadSeries(request):
-    data = request.POST
-    intro = data.get('seriesIntro')
-    name = data.get('seriesName')
-    intro_eng = data.get('seriesIntro_eng')
-    name_eng = data.get('seriesName_eng')
-    files = request.FILES
-    p = files['file']
-    fobj = open(django_settings.IMAGES_ROOT+'series_images/' + p.name, 'wb')
-    for chunk in p.chunks():
-        fobj.write(chunk)
-    fobj.close()
+    try:
 
-    numSeries = models.series.objects.all().count()
-    series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic=p.name, series_sequence = numSeries+1)
-    series.save()
+        data = request.POST
+        intro = data.get('seriesIntro')
+        name = data.get('seriesName')
+        intro_eng = data.get('seriesIntro_eng')
+        name_eng = data.get('seriesName_eng')
+        files = request.FILES
+        p = files['file']
+
+        filename = p.name
+        timestamp = int(round(time.time() * 1000))
+
+        # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
+        splitfilename = filename.encode('utf-8').split('.')
+        newfilename = str(timestamp) + 'series.' + splitfilename[-1]
+
+
+        fobj = open(django_settings.IMAGES_ROOT+'series_images/' + newfilename, 'wb')
+        for chunk in p.chunks():
+            fobj.write(chunk)
+        fobj.close()
+        resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename)
+
+        numSeries = models.series.objects.all().count()
+        series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic= newfilename, series_sequence = numSeries+1)
+        series.save()
+    except:
+        return HttpResponse(0)
     return HttpResponse(1)
 
 def getAllSeries(request):
@@ -360,10 +385,8 @@ def resize(path, thumbnailPath):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
-    trate = 1.0
-    if h > 1080:
-        rate = 1080.0 / h
-    print w, h, w * h
+    if h > 1800:
+        rate = 1800.0 / h
     trate = 150.0/h
     tw = int(w*trate)
     th = int(h*trate)
@@ -380,7 +403,6 @@ def uploadWork(request):
     # 修改信息
     # 保存的文件名改成 时间戳+photo+本作品中该图片的序号
     seriesid = request.POST.get('seriesSelect')
-    #workIntro = request.POST.get('jobIntro')
     # 该系列多少个作品
     worksInSeriesid = models.works.objects.filter(series_id=seriesid).count()
     # seriesname = models.series.objects.get(id = seriesid).seriesname
@@ -422,7 +444,7 @@ def uploadWork(request):
     except:
         models.picture_path.objects.filter(work_id=workid).delete()
         work.delete()
-        return HttpResponse(u"上传失败")
+        return HttpResponse(0)
 
     return HttpResponse(1)
 
