@@ -168,7 +168,8 @@ function addSeriesAjax()
          contentType: false,
          async: false
     }).done(function(res) {
-    	alert("添加系列成功");
+        if(res == 1)
+    	    alert("添加系列成功");
         
     }).fail(function(res) {
         
@@ -198,8 +199,8 @@ function addWorkAjax()
          contentType: false,
          async: false
     }).done(function(res) {
+        if(res == 1 )
     	alert("添加作品成功");
-
     }).fail(function(res) {
 
     });

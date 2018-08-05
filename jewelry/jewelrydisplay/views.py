@@ -385,8 +385,15 @@ def resize(path, thumbnailPath):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
+<<<<<<< HEAD
     if h > 1800:
         rate = 1800.0 / h
+=======
+    trate = 1.0
+    if h > 1080:
+        rate = 1080.0 / h
+    print w, h, w * h
+>>>>>>> 74c5c67e6193ac62afb9d34da9afba45283190b6
     trate = 150.0/h
     tw = int(w*trate)
     th = int(h*trate)
@@ -444,7 +451,11 @@ def uploadWork(request):
     except:
         models.picture_path.objects.filter(work_id=workid).delete()
         work.delete()
+<<<<<<< HEAD
         return HttpResponse(0)
+=======
+        return HttpResponse(u"上传失败")
+>>>>>>> 74c5c67e6193ac62afb9d34da9afba45283190b6
 
     return HttpResponse(1)
 
@@ -572,7 +583,7 @@ def setIntro(request):
     except:
         return HttpResponse(0)
 
-    print intro
+    # print intro
     return HttpResponse(1)
 
 def getIndexPic(request):
@@ -694,16 +705,17 @@ def introduction_eng(request):
     return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
-    ss = models.series.objects.all()
+    ss = models.series.objects.all().order_by('series_sequence')
     ja = []
     for s in ss:
         js1 = {}
         js1['id'] = s.id
         js1['seriesname'] = s.seriesname_eng
-        js1['pic'] = s.series_pic
+        js1['seriespic'] = s.series_pic
         ja.append(js1)
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
+
 
 def getJewels_eng(request):
     print(request.GET)
