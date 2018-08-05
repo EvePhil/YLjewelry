@@ -4,12 +4,6 @@
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/fonts/hwxh.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/fonts/oldHwxh.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mob/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mob/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/new/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/new/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/menu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/option.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/option.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -161,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="option.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="option.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/option.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
+            <state relative-caret-position="761">
               <caret line="202" column="24" selection-start-line="202" selection-start-column="24" selection-end-line="202" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
@@ -194,11 +188,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1030">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="232">
+              <caret line="83" selection-start-line="83" selection-end-line="86" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -277,10 +271,10 @@
         <option value="$PROJECT_DIR$/static/js/new/jewel_eng.js" />
         <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
         <option value="$PROJECT_DIR$/static/js/new/series_eng.js" />
-        <option value="$PROJECT_DIR$/jewelry/settings.py" />
         <option value="$PROJECT_DIR$/static/css/new/style.css" />
         <option value="$PROJECT_DIR$/static/css/mob/style.css" />
         <option value="$PROJECT_DIR$/static/js/option.js" />
+        <option value="$PROJECT_DIR$/jewelry/settings.py" />
       </list>
     </option>
   </component>
@@ -652,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533369933711</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="对接缩放33444">
+      <created>1533443684119</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1533443684119</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1029,13 +1030,6 @@
     <entry file="file://$PROJECT_DIR$/static/css/mob/font.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1030">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1087,7 +1081,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/option.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
+        <state relative-caret-position="761">
           <caret line="202" column="24" selection-start-line="202" selection-start-column="24" selection-end-line="202" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
@@ -1095,6 +1089,13 @@
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="83" selection-start-line="83" selection-end-line="86" selection-end-column="26" />
         </state>
       </provider>
     </entry>
