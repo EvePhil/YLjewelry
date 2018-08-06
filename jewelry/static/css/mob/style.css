@@ -24,14 +24,17 @@ body {
 	margin-left: 1.5rem;
 	font-size: 25px;
 	color: #333333;
+	line-height: 25px;
+    height: auto;
 	text-decoration: none;
+    vertical-align: bottom;
 }
 .openMenu {
-	display: inline-block;
+	display: none;
 	width: 2.025rem;
 	height: 1.545rem;
 	margin-left: 1.5rem;
-	margin-top: 0.5rem;
+	/*margin-top: 0.5rem;*/
 	background: url(/static/images/menu.png) no-repeat center center;
 	background-size: cover;
 }

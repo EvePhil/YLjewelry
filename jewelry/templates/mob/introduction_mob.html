@@ -122,6 +122,12 @@
     $(".email").click(function(){
         $('#emailModal').modal('show');
     });
+    var bigHeight = $("#upMenu").height();
+    var titleHeight = $(".title").outerHeight(true);
+    var space = bigHeight - titleHeight;
+    space = (space - 20.6) / 2;
+    $(".openMenu").css("display", "inline-block");
+    $(".openMenu").css("margin-top", space);
 </script>
 
 </html>
