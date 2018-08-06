@@ -11,10 +11,6 @@ body {
     /*max-width: 100%;*/
 	overflow: auto !important;
 }
-@font-face {
-    font-family: HWxihei;
-    src: url("/static/css/fonts/newHwxh.ttf");
-}
 #upMenu {
 	position: absolute;
 	top: 0;

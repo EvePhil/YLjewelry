@@ -12,10 +12,6 @@ body {
     min-width: 1000px !important;
 	overflow: auto !important;
 }
-@font-face {
-    font-family: HWxihei;
-    src: url("/static/css/fonts/newHwxh.ttf");
-}
 #upMenu {
     min-width: 1000px;
 	position: absolute;
@@ -111,7 +107,7 @@ pre {
 	background: #ffffff;
 	font-size: 12px;
 	line-height: 20px;
-    font-family: HWxihei;
+    font-family: STXihei;
     word-break:normal;
     overflow: hidden;
     white-space: pre-wrap;
