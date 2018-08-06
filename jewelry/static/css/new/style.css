@@ -30,8 +30,8 @@ body {
 }
 .openMenu {
 	display: inline-block;
-	width: 24px;
-	height: 24px;
+	width: 27px;
+	height: 20.6px;
 	margin-left: 4.15%;
 	margin-top: 0.5%;
 	background: url(/static/images/menu.png) no-repeat center center;
@@ -54,7 +54,7 @@ body {
     vertical-align: bottom;
 }
 .engMenu {
-    font-size: 16px !important;
+    font-size: 17px !important;
     line-height: 1.5 !important;
 }
 /*.search {*/
@@ -79,25 +79,20 @@ body {
 }
 .rightIcon div {
     display: inline-block;
-    height: 100%;
 }
 .search {
-    width: 19px;
+    width: 21px;
+    height: 21px;
+    vertical-align: top;
     background: url("/static/images/icons/search.png") center center no-repeat;
     background-size: contain;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .shop {
-    width: 14.5px;
+    width: 15.4px;
+    height: 20.5px;
+    vertical-align: top;
     background: url("/static/images/icons/shop.png") center center no-repeat;
-    background-size: contain;
-}
-.search:hover, .search:active {
-    background: url("/static/images/icons/search_black.png") center center no-repeat;
-    background-size: contain;
-}
-.shop:hover, .shop:active {
-    background: url("/static/images/icons/shop_black.png") center center no-repeat;
     background-size: contain;
 }
 pre {

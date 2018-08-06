@@ -18,7 +18,7 @@ body {
 	height: 13%;
 }
 .title {
-	margin-top: 0.5rem;
+	margin-top: 1.5rem;
 }
 .title a{
 	margin-left: 1.5rem;
@@ -28,8 +28,8 @@ body {
 }
 .openMenu {
 	display: inline-block;
-	width: 1.8rem;
-	height: 1.8rem;
+	width: 2.025rem;
+	height: 1.545rem;
 	margin-left: 1.5rem;
 	margin-top: 0.5rem;
 	background: url(/static/images/menu.png) no-repeat center center;
@@ -41,11 +41,11 @@ body {
 	/*margin-left: 4%;*/
     height: 1rem;
     /*vertical-align: bottom;*/
-	width: 17.5rem;
+	width: 21rem;
 }
 .menu a {
 	text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.7;
 	margin-left: 0.5rem;
 	color: #333333;
@@ -57,58 +57,32 @@ body {
 }
 .rightIcon {
 	display: inline-block;
-	height: 24px;
-    width: 3.5rem;
+	height: 16px;
+    width: 5rem;
     vertical-align: top;
-	margin-top: 0.4rem;
+	margin-top: 0.5rem;
 	float: right;
     margin-right: 1.5rem;
 	text-align: right;
 }
 .rightIcon div {
     display: inline-block;
-    height: 100%;
 }
 .search {
-    width: 1.5rem;
+    width: 1.575rem;
+    height: 1.575rem;
+    vertical-align: top;
     background: url("/static/images/icons/search.png") center center no-repeat;
     background-size: contain;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
 }
 .shop {
-    width: 1.15rem;
+    width: 1.8rem;
+    height: 1.54rem;
+    vertical-align: top;
     background: url("/static/images/icons/shop.png") center center no-repeat;
     background-size: contain;
 }
-.search:hover, .search:active {
-    background: url("/static/images/icons/search_black.png") center center no-repeat;
-    background-size: contain;
-}
-.shop:hover, .shop:active {
-    background: url("/static/images/icons/shop_black.png") center center no-repeat;
-    background-size: contain;
-}
-/*.search {*/
-	/*display: inline-block;*/
-	/*height: 24px;*/
-    /*width: 24px;*/
-	/*margin-top: 1.8%;*/
-	/*float: right;*/
-    /*margin-right: 5%;*/
-	/*text-align: right;*/
-/*}*/
-/*.sea {*/
-    /*vertical-align: middle;*/
-	/*color: #666666 !important;*/
-    /*line-height: 24px;*/
-/*}*/
-/*.sea:visited {*/
-    /*color: #666666;*/
-/*}*/
-/*.sea:hover, .sea:active{*/
-	/*color: #333333 !important;*/
-/*}*/
-
 pre {
 	padding: 0;
 	margin: 0;
