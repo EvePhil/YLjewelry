@@ -9,10 +9,11 @@ $(function () {
          //    '<div class="seriesPic" style="background-image:url(\'/static/images/' + allSeries[i].pic +  '\')"' + '></div></a>');
 		// }
 		for(var i in allSeries) {
-		    $('#list').append('<div class="series"><a href="/index_eng/jewel_eng/?' + allSeries[i].id + '">' +
-            '<div class="seriesPic" style="background-image:url(\'/static/images/series_images/' + allSeries[i].seriespic +  '\')"' + '></div>' +
-			'<div class="seriesName"><h3>' + allSeries[i].seriesname + 	'</h3></div></a>');
-		}
+            $('#list').append('<div class="series"><a href="/index_eng/jewel_eng/?' + allSeries[i].id + '">' +
+                '<div class="seriesPic" style="background:url(/static/images/series_images/' + allSeries[i].seriespic +
+                ') center center no-repeat; background-size: cover;"' +
+                '></div><div class="seriesName"><h3>' + allSeries[i].seriesname + '</h3></div></a>');
+        }
         $('#main').append('<div id="footer">\n' +
         '             <div class="contact">\n' +
         '                <a class="ins con" href="https://www.instagram.com/yilanliu_lyl/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>\n' +

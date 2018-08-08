@@ -1,39 +1,12 @@
-﻿//var series = {"1":"系列1","2":"系列2","3":"系列3"};
-//var jobs = {"intro": "系列简介系列简介系列简介系列简介系列简介系列简介系列简介系列简介", jobs:["作品1","作品2","作品3","作品4"]};
-//var job={"image": "jewel1.jpg"};
-
-//function jobsAjax(seriesId) {
-//	var seriesId={id:seriesId};
-//	//alert(seriesId.id);
-//	$.ajax({
-//		type:'POST',
-//		data:JSON.stringify(seriesId),
-//		contentType: "application/json; charset=utf-8", 
-//		dataType:'json',
-//		url :'/sendOptionSeries/',
-//	});
-//}
-//function jobAjax(jobId) {
-//	var jobId={id:jobId};
-//	//alert(seriesId.id);
-//	$.ajax({
-//		type:'POST',
-//		data:JSON.stringify(jobId),
-//		contentType: "application/json; charset=utf-8", 
-//		dataType:'json',
-//		url :'/sendOptionJob/',
-//	});
-//}
-var delSeries;
+﻿var delSeries;
 var delWork;
 var optSeries;
 var optWork;
 var now;
+var flag;
 
 $(function () {
-	//getSeries();
-	//get
-	
+
     $.get('/getOptionSeries/', function (seriesjson) {//获取系列
 		//series =  JSON.parse(json)
 		var series = seriesjson;
@@ -75,6 +48,7 @@ $(function () {
 			var seriesName = $(this).attr("id");
 			var seriesId = seriesName.substring(6);
 			//jobsAjax(seriesId);
+            flag = seriesId;
 			var seriesPost = {id:seriesId};
 			$('#jobs').html('');
 			//$('#intro').html('');
@@ -480,7 +454,79 @@ $(".confirmSeries").click(function(){
 
 $(".confirmJob").click(function(){
 	addWorkAjax();
-	location.reload();
+	//location.reload();
+    if(flag) {
+        var seriesPost = {id:flag};
+        $('#jobs').html('');
+        //$('#intro').html('');
+        $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
+            var intro = seriesjson;
+            $('#intro').html('');
+            $('#intro').append(intro.seriesintro);
+        })
+        $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
+            //series =  JSON.parse(json)
+            var jobs = jobsjson;
+            //$('#intro').append(jobs.intro);
+            for (var i in jobs) {
+                //alert(jobs[i].paths[0]);
+                $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
+                    jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
+                    jobs[i].paths[0]+ '"/><div class=\"mask\">' +
+                    jobs[i].workname + '</div></a></div>');
+            }
+            $(".job").mouseover(function(){
+                $(this).children('div').show();
+            })
+            $(".job").mouseout(function(){
+                $(this).children('div').hide();
+            })
+
+            $(function () {
+            //导航切换
+                $("#series a").click(function () {
+                    $("#series a.active").removeClass("active")
+                    $(this).addClass("active");
+                })
+            })
+
+            $(function () {
+                //导航切换
+                $("#jobs a").click(function () {
+                    $("#jobs a.active").removeClass("active")
+                    $(this).addClass("active");
+                })
+            })
+            $("#jobs a").smartMenu(jobMenu, {
+                name: "jobMenu"
+            });
+            $(".job").click(function(){
+                var imgId = $(this).attr("name");
+                var img = imgId.substring(4);
+                $('#imgList').html("");
+                $('.jqueryzoom').html("");
+                for(var i=0; i<jobs[img].paths.length; i++) {
+                    if(i == 0) {
+                        $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
+                        jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
+                        jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
+                        $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
+                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                        jobs[img].paths[i] + '\'"/></li>');
+                    }
+                    else {
+                        $('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
+                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                        jobs[img].paths[i] + '\'"/></li>');
+                    }
+                }
+                CloudZoom.quickStart();
+                //$('#image').append('<img src="'+ src + '" width="100%" />');
+            });
+        });
+    }
 });
 $(".addSeries").click(function(){
 	$('#seriesModal').modal('show');
@@ -496,8 +542,80 @@ $(".confirmDelSeries").click(function(){
 });
 $(".confirmDelJob").click(function(){
 	delWorkAjax(delWork);
-	now.remove();
-	location.reload();
+	// now.remove();
+	// location.reload();
+    if(flag) {
+        var seriesPost = {id:flag};
+        $('#jobs').html('');
+        //$('#intro').html('');
+        $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
+            var intro = seriesjson;
+            $('#intro').html('');
+            $('#intro').append(intro.seriesintro);
+        })
+        $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
+            //series =  JSON.parse(json)
+            var jobs = jobsjson;
+            //$('#intro').append(jobs.intro);
+            for (var i in jobs) {
+                //alert(jobs[i].paths[0]);
+                $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
+                    jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
+                    jobs[i].paths[0]+ '"/><div class=\"mask\">' +
+                    jobs[i].workname + '</div></a></div>');
+            }
+            $(".job").mouseover(function(){
+                $(this).children('div').show();
+            })
+            $(".job").mouseout(function(){
+                $(this).children('div').hide();
+            })
+
+            $(function () {
+            //导航切换
+                $("#series a").click(function () {
+                    $("#series a.active").removeClass("active")
+                    $(this).addClass("active");
+                })
+            })
+
+            $(function () {
+                //导航切换
+                $("#jobs a").click(function () {
+                    $("#jobs a.active").removeClass("active")
+                    $(this).addClass("active");
+                })
+            })
+            $("#jobs a").smartMenu(jobMenu, {
+                name: "jobMenu"
+            });
+            $(".job").click(function(){
+                var imgId = $(this).attr("name");
+                var img = imgId.substring(4);
+                $('#imgList').html("");
+                $('.jqueryzoom').html("");
+                for(var i=0; i<jobs[img].paths.length; i++) {
+                    if(i == 0) {
+                        $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
+                        jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
+                        jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
+                        $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
+                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                        jobs[img].paths[i] + '\'"/></li>');
+                    }
+                    else {
+                        $('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
+                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                        jobs[img].paths[i] + '\'"/></li>');
+                    }
+                }
+                CloudZoom.quickStart();
+                //$('#image').append('<img src="'+ src + '" width="100%" />');
+            });
+        });
+    }
 });
 $(".confirmFixSeries").click(function(){
 	var seriesid = optSeries.substring(6);
