@@ -135,4 +135,12 @@
         </div><!-- /.modal -->
     </div>
 </body>
+<script>
+    var bigHeight = $("#upMenu").height();
+    var titleHeight = $(".title").outerHeight(true);
+    var space = bigHeight - titleHeight;
+    space = (space - 20.6) / 2 - 3;
+    $(".openMenu").css("display", "inline-block");
+    $(".openMenu").css("margin-top", space);
+</script>
 </html>
