@@ -159,8 +159,8 @@ def resizeSeries(path):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
-    if h > 1800:
-        rate = 1800.0 / h
+    if h > 1200:
+        rate = 1200.0 / h
 
     w = int(w * rate)
     h = int(h * rate)
@@ -233,10 +233,11 @@ def fixSeries(request):
     p = files.get('file', None)
     if p is not None:
         os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
-        fobj = open(django_settings.IMAGES_ROOT + 'series_images/' + p.name, 'wb')
+        fobj = open(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic, 'wb')
         for chunk in p.chunks():
             fobj.write(chunk)
         fobj.close()
+        resizeSeries(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
 
         series.seriesname = data.get('seriesname')
         series.intro = data.get('seriesintro')
@@ -385,21 +386,14 @@ def resize(path, thumbnailPath):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
-<<<<<<< HEAD
     if h > 1800:
         rate = 1800.0 / h
-=======
-    trate = 1.0
-    if h > 1080:
-        rate = 1080.0 / h
-    print w, h, w * h
->>>>>>> 74c5c67e6193ac62afb9d34da9afba45283190b6
     trate = 150.0/h
     tw = int(w*trate)
     th = int(h*trate)
     w = int(w * rate)
     h = int(h * rate)
-    print w, h, w * h
+
     img.resize((w, h)).save(path, format='JPEG')
     img.resize((tw, th)).save(thumbnailPath, format = 'JPEG')
 
@@ -451,11 +445,8 @@ def uploadWork(request):
     except:
         models.picture_path.objects.filter(work_id=workid).delete()
         work.delete()
-<<<<<<< HEAD
         return HttpResponse(0)
-=======
         return HttpResponse(u"上传失败")
->>>>>>> 74c5c67e6193ac62afb9d34da9afba45283190b6
 
     return HttpResponse(1)
 
@@ -543,6 +534,10 @@ def test(request):
     return render(request,"introduction.html", {'intro':1, 'exper': 2, 'image': 'self.jpg'})
 
 
+def resizeIntro(path):
+    img = Image.open(path)
+    w, h = img.size
+    img.resize((w, h)).save(path, format='JPEG')
 
 def setIntro(request):
     data = request.POST
@@ -562,6 +557,7 @@ def setIntro(request):
             for chunk in p.chunks():
                 fobj.write(chunk)
             fobj.close()
+            resizeIntro(django_settings.IMAGES_ROOT+p.name)
             if introduction.count() == 0:
                 introduction = models.introduction(exper_cn=exper, intro_cn=intro, picture_name=p.name, exper_eng=exper_eng, intro_eng=intro_eng)
                 introduction.save()

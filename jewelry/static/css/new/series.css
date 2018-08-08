@@ -37,7 +37,8 @@
     font-size: 50px;
     line-height: 430px;
     letter-spacing: 6px;
-    color: #cccccc;
+    /*color: #cccccc;*/
+    color: rgba(204, 204, 204, 0.8);
     margin: 0;
 }
 /*.seriesPic:active, .seriesPic:hover {*/

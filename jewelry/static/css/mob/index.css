@@ -1,9 +1,9 @@
 /*轮播图片*/
 #main {
 	position: absolute;
-	top: 13%;
+	top: 15%;
 	width: 100%;
-	height: 87%;
+	height: 85%;
 }
 .pic {
 	width: 100%;
