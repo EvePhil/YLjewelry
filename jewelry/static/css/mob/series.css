@@ -1,6 +1,6 @@
 #main {
 	position: absolute;
-	top: 13%;
+	top: 15%;
 	width: 100%;
 	height: auto;
 }
@@ -30,15 +30,17 @@
     top:0;
     text-align: center;
     /*display: none;*/
-    background-color: rgba(0,0,0,0.6);
+    /*background-color: rgba(0,0,0,0.6);*/
+    background-color: transparent;
 }
 .seriesName h3 {
     font-size: 3rem;
     line-height: 22rem;
     letter-spacing: 0.6rem;
-    color: #cccccc;
+    /*color: #cccccc;*/
+    color: rgba(204, 204, 204, 0.8);
     margin: 0;
-    font-weight: lighter;
+    /*font-weight: lighter;*/
 }
 
 #footer {

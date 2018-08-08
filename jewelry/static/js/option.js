@@ -305,9 +305,25 @@ var seriesMenu = [
 		func: function() {
 			var parent = $(this).parent();
 			var prev = parent.prev();
-			//alert(prev.html());
 			prev.before(parent);
-			//parent.remove();
+			var seq = {};
+			var i = 1;
+			// id key seq value;
+			var seqId;
+			$(".series").each(function(){
+				//alert($(this).attr("id"))
+				seqId = $(this).attr("id").substring(6);
+
+				seq[seqId] = i;
+				i++;
+			});
+			$.ajax({
+				type:'POST',
+				data:JSON.stringify(seq),
+				contentType: "application/json; charset=utf-8",
+				dataType:'json',
+				url :'/seriesSequence/',
+			});
 		}
 	},
 	{
@@ -315,8 +331,25 @@ var seriesMenu = [
 		func: function() {
 			var parent = $(this).parent();
 			var next = parent.next();
-			//alert(next.html());
 			next.after(parent);
+			var seq = {};
+			var i = 1;
+			// id key seq value;
+			var seqId;
+			$(".series").each(function(){
+				//alert($(this).attr("id"))
+				seqId = $(this).attr("id").substring(6);
+
+				seq[seqId] = i;
+				i++;
+			});
+			$.ajax({
+				type:'POST',
+				data:JSON.stringify(seq),
+				contentType: "application/json; charset=utf-8",
+				dataType:'json',
+				url :'/seriesSequence/',
+			});
 		}
 	}],
 ];
@@ -346,6 +379,24 @@ var jobMenu = [
 			//alert(prev.html());
 			prev.before(parent);
 			//parent.remove();
+			var seq = {};
+			var i = 1;
+			// id key seq value;
+			var seqId;
+			$(".job").each(function(){
+				//alert($(this).attr("id"))
+				seqId = $(this).attr("id").substring(4);
+
+				seq[seqId] = i;
+				i++;
+			});
+			$.ajax({
+				type:'POST',
+				data:JSON.stringify(seq),
+				contentType: "application/json; charset=utf-8",
+				dataType:'json',
+				url :'/workSequence/',
+			});
 		}
 	},
 	{
@@ -355,6 +406,24 @@ var jobMenu = [
 			var next = parent.next();
 			//alert(next.html());
 			next.after(parent);
+			var seq = {};
+			var i = 1;
+			// id key seq value;
+			var seqId;
+			$(".job").each(function(){
+				//alert($(this).attr("id"))
+				seqId = $(this).attr("id").substring(4);
+
+				seq[seqId] = i;
+				i++;
+			});
+			$.ajax({
+				type:'POST',
+				data:JSON.stringify(seq),
+				contentType: "application/json; charset=utf-8",
+				dataType:'json',
+				url :'/workSequence/',
+			});
 		}
 	}],
 ];
@@ -468,47 +537,47 @@ $(".confirmFixIndex").click(function(){
 
 
 $(".fixSequence").click(function(){
-	var seq = {};
-	var i = 1;
-	// id key seq value;
-	var seqId;
-	$(".job").each(function(){
-		//alert($(this).attr("id"))
-		seqId = $(this).attr("id").substring(4);
-
-		seq[seqId] = i;
-		i++;
-	});
-	$.ajax({
-		type:'POST',
-		data:JSON.stringify(seq),
-		contentType: "application/json; charset=utf-8",
-		dataType:'json',
-		url :'/workSequence/',
-	});
-	location.reload();
+	// var seq = {};
+	// var i = 1;
+	// // id key seq value;
+	// var seqId;
+	// $(".job").each(function(){
+	// 	//alert($(this).attr("id"))
+	// 	seqId = $(this).attr("id").substring(4);
+    //
+	// 	seq[seqId] = i;
+	// 	i++;
+	// });
+	// $.ajax({
+	// 	type:'POST',
+	// 	data:JSON.stringify(seq),
+	// 	contentType: "application/json; charset=utf-8",
+	// 	dataType:'json',
+	// 	url :'/workSequence/',
+	// });
+	// location.reload();
 });
 //系列顺序
 $(".fixSeriesSequence").click(function(){
-	var seq = {};
-	var i = 1;
-	// id key seq value;
-	var seqId;
-	$(".series").each(function(){
-		//alert($(this).attr("id"))
-		seqId = $(this).attr("id").substring(6);
-
-		seq[seqId] = i;
-		i++;
-	});
-	$.ajax({
-		type:'POST',
-		data:JSON.stringify(seq),
-		contentType: "application/json; charset=utf-8",
-		dataType:'json',
-		url :'/seriesSequence/',
-	});
-	location.reload();
+	// var seq = {};
+	// var i = 1;
+	// // id key seq value;
+	// var seqId;
+	// $(".series").each(function(){
+	// 	//alert($(this).attr("id"))
+	// 	seqId = $(this).attr("id").substring(6);
+    //
+	// 	seq[seqId] = i;
+	// 	i++;
+	// });
+	// $.ajax({
+	// 	type:'POST',
+	// 	data:JSON.stringify(seq),
+	// 	contentType: "application/json; charset=utf-8",
+	// 	dataType:'json',
+	// 	url :'/seriesSequence/',
+	// });
+	// location.reload();
 });
 function getFileUrl(sourceId) {
     var url;
