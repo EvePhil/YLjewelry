@@ -503,7 +503,7 @@ def introduction(request):
         return render(request, "introduction.html", {'intro': '', 'exper': '',
                                                      'image': ''})
     else:
-        return render(request,"introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+        return render(request,"introduction.html", {'image': introduction.picture_name})
 
 
 def test(request):
@@ -669,7 +669,7 @@ def introduction_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"eng/introduction_eng.html", {'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
     ss = models.series.objects.all().order_by('series_sequence')
@@ -772,3 +772,21 @@ def sendEmail2Admin(request):
     send_status = send_mail(send_title, send_message, settings.EMAIL_FROM, send_obj_list)
     print(send_status)  # 发送状态,可用可不用
     return HttpResponse('1')
+
+def getIntroduction(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_cn
+    j['exper'] = introduction.exper_cn
+    #j['image'] = introduction.picture_name
+    return HttpResponse(json.dumps(j), content_type="application/json")
+
+def getIntroduction_eng(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_eng
+    j['exper'] = introduction.exper_eng
+    #j['image'] = introduction.picture_name
+    return HttpResponse(json.dumps(j), content_type="application/json")

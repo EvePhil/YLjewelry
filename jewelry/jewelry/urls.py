@@ -83,4 +83,6 @@ urlpatterns = [
 
     url(r'^sendEmail/', views.sendEmail2Admin),
 
+    url(r'^getIntroduction/', views.getIntroduction),
+    url(r'^getIntroduction_eng/', views.getIntroduction_eng),
 ]

@@ -127,3 +127,10 @@ pre {
 	background: #333333 !important;
 	/*border-color: #333333 !important;*/
 }
+
+.modal-header {
+    border: none !important;
+}
+li {
+    list-style-type: none;
+}

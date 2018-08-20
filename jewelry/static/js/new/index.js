@@ -44,7 +44,36 @@ $(function () {
         console.log(len)
         //alert($(".first").next())
         var pic = $(".first");
-        setInterval(function(){
+        var pp;
+        $(".pic").mouseout(function() {
+            pp = setInterval(function(){
+                if(i == 1) {
+                    console.log(i);
+                    $(".first").fadeOut(1000);
+                    pic = pic.parent().next().children().first();
+                    pic.fadeIn(1000);
+                    i++;
+                }
+                else if (i == len) {
+                    console.log(i);
+                    $(".last").fadeOut(1000);
+                    pic = $(".first");
+                    $(".first").fadeIn(1000);
+                    i = 1;
+                }
+                else {
+                    console.log(i);
+                    pic.fadeOut(1000);
+                    pic = pic.parent().next().children().first();
+                    pic.fadeIn(1000);
+                    i++;
+                }
+            }, 3000);
+        })
+        $(".pic").mouseover(function() {
+            clearInterval(pp);
+        })
+        pp = setInterval(function(){
             if(i == 1) {
                 console.log(i);
                 $(".first").fadeOut(1000);

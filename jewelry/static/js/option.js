@@ -5,6 +5,79 @@ var optWork;
 var now;
 var flag;
 
+function resetWorkList(sid) {
+    var seriesPost = {id:sid};
+    $('#jobs').html('');
+    //$('#intro').html('');
+    $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
+        var intro = seriesjson;
+        $('#intro').html('');
+        $('#intro').append(intro.seriesintro);
+    })
+    $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
+        //series =  JSON.parse(json)
+        var jobs = jobsjson;
+        //$('#intro').append(jobs.intro);
+        for (var i in jobs) {
+            //alert(jobs[i].paths[0]);
+            $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
+                jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
+                jobs[i].paths[0]+ '"/><div class=\"mask\">' +
+                jobs[i].workname + '</div></a></div>');
+        }
+        $(".job").mouseover(function(){
+            $(this).children('div').show();
+        })
+        $(".job").mouseout(function(){
+            $(this).children('div').hide();
+        })
+
+        $(function () {
+        //导航切换
+            $("#series a").click(function () {
+                $("#series a.active").removeClass("active")
+                $(this).addClass("active");
+            })
+        })
+
+        $(function () {
+            //导航切换
+            $("#jobs a").click(function () {
+                $("#jobs a.active").removeClass("active")
+                $(this).addClass("active");
+            })
+        })
+        $("#jobs a").smartMenu(jobMenu, {
+            name: "jobMenu"
+        });
+        $(".job").click(function(){
+            var imgId = $(this).attr("name");
+            var img = imgId.substring(4);
+            $('#imgList').html("");
+            $('.jqueryzoom').html("");
+            for(var i=0; i<jobs[img].paths.length; i++) {
+                if(i == 0) {
+                    $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
+                    jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
+                    jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
+                    $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
+                    jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+                    jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                    jobs[img].paths[i] + '\'"/></li>');
+                }
+                else {
+                    $('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
+                    jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+                    jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                    jobs[img].paths[i] + '\'"/></li>');
+                }
+            }
+            CloudZoom.quickStart();
+            //$('#image').append('<img src="'+ src + '" width="100%" />');
+        });
+    });
+}
+
 $(function () {
 
     $.get('/getOptionSeries/', function (seriesjson) {//获取系列
@@ -49,77 +122,78 @@ $(function () {
 			var seriesId = seriesName.substring(6);
 			//jobsAjax(seriesId);
             flag = seriesId;
-			var seriesPost = {id:seriesId};
-			$('#jobs').html('');
-			//$('#intro').html('');
-            $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
-            	var intro = seriesjson;
-            	$('#intro').html('');
-                $('#intro').append(intro.seriesintro);
-            })
-			//get
-			$.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
-				//series =  JSON.parse(json)
-				var jobs = jobsjson;
-				//$('#intro').append(jobs.intro);
-				for (var i in jobs) {
-					//alert(jobs[i].paths[0]);
-					$('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
-						jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
-						jobs[i].paths[0]+ '"/><div class=\"mask\">' +
-						jobs[i].workname + '</div></a></div>');
-				}
-				$(".job").mouseover(function(){
-					$(this).children('div').show();
-				})
-				$(".job").mouseout(function(){
-					$(this).children('div').hide();
-				})
-
-				$(function () {
-		        //导航切换
-			        $("#series a").click(function () {
-			            $("#series a.active").removeClass("active")
-			            $(this).addClass("active");
-			        })
-			    })
-	
-				$(function () {
-			        //导航切换
-			        $("#jobs a").click(function () {
-			            $("#jobs a.active").removeClass("active")
-			            $(this).addClass("active");
-			        })
-			    })
-				$("#jobs a").smartMenu(jobMenu, {
-					name: "jobMenu"
-				});
-				$(".job").click(function(){
-					var imgId = $(this).attr("name");
-					var img = imgId.substring(4);
-					$('#imgList').html("");
-					$('.jqueryzoom').html("");
-					for(var i=0; i<jobs[img].paths.length; i++) {
-						if(i == 0) {
-							$('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
-							jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
-							jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
-							$('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
-							jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-							jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
-							jobs[img].paths[i] + '\'"/></li>');
-						}
-						else {
-							$('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
-							jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-							jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
-							jobs[img].paths[i] + '\'"/></li>');
-						}
-					}
-					CloudZoom.quickStart();
-					//$('#image').append('<img src="'+ src + '" width="100%" />');
-				});
-			});
+            resetWorkList(flag);
+			// var seriesPost = {id:seriesId};
+			// $('#jobs').html('');
+			// //$('#intro').html('');
+            // $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
+            	// var intro = seriesjson;
+            	// $('#intro').html('');
+             //    $('#intro').append(intro.seriesintro);
+            // })
+			// //get
+			// $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
+			// 	//series =  JSON.parse(json)
+			// 	var jobs = jobsjson;
+			// 	//$('#intro').append(jobs.intro);
+			// 	for (var i in jobs) {
+			// 		//alert(jobs[i].paths[0]);
+			// 		$('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
+			// 			jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
+			// 			jobs[i].paths[0]+ '"/><div class=\"mask\">' +
+			// 			jobs[i].workname + '</div></a></div>');
+			// 	}
+			// 	$(".job").mouseover(function(){
+			// 		$(this).children('div').show();
+			// 	})
+			// 	$(".job").mouseout(function(){
+			// 		$(this).children('div').hide();
+			// 	})
+            //
+			// 	$(function () {
+		     //    //导航切换
+			//         $("#series a").click(function () {
+			//             $("#series a.active").removeClass("active")
+			//             $(this).addClass("active");
+			//         })
+			//     })
+            //
+			// 	$(function () {
+			//         //导航切换
+			//         $("#jobs a").click(function () {
+			//             $("#jobs a.active").removeClass("active")
+			//             $(this).addClass("active");
+			//         })
+			//     })
+			// 	$("#jobs a").smartMenu(jobMenu, {
+			// 		name: "jobMenu"
+			// 	});
+			// 	$(".job").click(function(){
+			// 		var imgId = $(this).attr("name");
+			// 		var img = imgId.substring(4);
+			// 		$('#imgList').html("");
+			// 		$('.jqueryzoom').html("");
+			// 		for(var i=0; i<jobs[img].paths.length; i++) {
+			// 			if(i == 0) {
+			// 				$('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
+			// 				jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
+			// 				jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
+			// 				$('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
+			// 				jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+			// 				jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+			// 				jobs[img].paths[i] + '\'"/></li>');
+			// 			}
+			// 			else {
+			// 				$('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
+			// 				jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+			// 				jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+			// 				jobs[img].paths[i] + '\'"/></li>');
+			// 			}
+			// 		}
+			// 		CloudZoom.quickStart();
+			// 		//$('#image').append('<img src="'+ src + '" width="100%" />');
+			// 	});
+			// });
 		});
     });
 })
@@ -456,76 +530,10 @@ $(".confirmJob").click(function(){
 	addWorkAjax();
 	//location.reload();
     if(flag) {
-        var seriesPost = {id:flag};
-        $('#jobs').html('');
-        //$('#intro').html('');
-        $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
-            var intro = seriesjson;
-            $('#intro').html('');
-            $('#intro').append(intro.seriesintro);
-        })
-        $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
-            //series =  JSON.parse(json)
-            var jobs = jobsjson;
-            //$('#intro').append(jobs.intro);
-            for (var i in jobs) {
-                //alert(jobs[i].paths[0]);
-                $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
-                    jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
-                    jobs[i].paths[0]+ '"/><div class=\"mask\">' +
-                    jobs[i].workname + '</div></a></div>');
-            }
-            $(".job").mouseover(function(){
-                $(this).children('div').show();
-            })
-            $(".job").mouseout(function(){
-                $(this).children('div').hide();
-            })
-
-            $(function () {
-            //导航切换
-                $("#series a").click(function () {
-                    $("#series a.active").removeClass("active")
-                    $(this).addClass("active");
-                })
-            })
-
-            $(function () {
-                //导航切换
-                $("#jobs a").click(function () {
-                    $("#jobs a.active").removeClass("active")
-                    $(this).addClass("active");
-                })
-            })
-            $("#jobs a").smartMenu(jobMenu, {
-                name: "jobMenu"
-            });
-            $(".job").click(function(){
-                var imgId = $(this).attr("name");
-                var img = imgId.substring(4);
-                $('#imgList').html("");
-                $('.jqueryzoom').html("");
-                for(var i=0; i<jobs[img].paths.length; i++) {
-                    if(i == 0) {
-                        $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
-                        jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
-                        jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
-                        $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
-                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
-                        jobs[img].paths[i] + '\'"/></li>');
-                    }
-                    else {
-                        $('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
-                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
-                        jobs[img].paths[i] + '\'"/></li>');
-                    }
-                }
-                CloudZoom.quickStart();
-                //$('#image').append('<img src="'+ src + '" width="100%" />');
-            });
-        });
+        resetWorkList(flag);
+        $("#addWorkPhoto").html('<p id="addPhotoTag" style="margin-top: 2%; font-weight: bold;">图 片</p>\n' +
+            '\t\t\t\t\t\t\t\t\t<input id="photo1" name="photo" class="photo" type="file" accept="image/*"\n' +
+            '\t\t\t\t\t\t\t\t\t\tstyle="width: 50%; margin: 0; height: auto; display: inline;"/>');
     }
 });
 $(".addSeries").click(function(){
@@ -545,76 +553,10 @@ $(".confirmDelJob").click(function(){
 	// now.remove();
 	// location.reload();
     if(flag) {
-        var seriesPost = {id:flag};
-        $('#jobs').html('');
-        //$('#intro').html('');
-        $.get('/getOneSeries/', seriesPost, function (seriesjson) {//获取介绍
-            var intro = seriesjson;
-            $('#intro').html('');
-            $('#intro').append(intro.seriesintro);
-        })
-        $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
-            //series =  JSON.parse(json)
-            var jobs = jobsjson;
-            //$('#intro').append(jobs.intro);
-            for (var i in jobs) {
-                //alert(jobs[i].paths[0]);
-                $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
-                    jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
-                    jobs[i].paths[0]+ '"/><div class=\"mask\">' +
-                    jobs[i].workname + '</div></a></div>');
-            }
-            $(".job").mouseover(function(){
-                $(this).children('div').show();
-            })
-            $(".job").mouseout(function(){
-                $(this).children('div').hide();
-            })
-
-            $(function () {
-            //导航切换
-                $("#series a").click(function () {
-                    $("#series a.active").removeClass("active")
-                    $(this).addClass("active");
-                })
-            })
-
-            $(function () {
-                //导航切换
-                $("#jobs a").click(function () {
-                    $("#jobs a.active").removeClass("active")
-                    $(this).addClass("active");
-                })
-            })
-            $("#jobs a").smartMenu(jobMenu, {
-                name: "jobMenu"
-            });
-            $(".job").click(function(){
-                var imgId = $(this).attr("name");
-                var img = imgId.substring(4);
-                $('#imgList').html("");
-                $('.jqueryzoom').html("");
-                for(var i=0; i<jobs[img].paths.length; i++) {
-                    if(i == 0) {
-                        $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
-                        jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
-                        jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
-                        $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
-                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
-                        jobs[img].paths[i] + '\'"/></li>');
-                    }
-                    else {
-                        $('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
-                        jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-                        jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
-                        jobs[img].paths[i] + '\'"/></li>');
-                    }
-                }
-                CloudZoom.quickStart();
-                //$('#image').append('<img src="'+ src + '" width="100%" />');
-            });
-        });
+        resetWorkList(flag);
+        $("#addWorkPhoto").html('<p id="addPhotoTag" style="margin-top: 2%; font-weight: bold;">图 片</p>\n' +
+            '\t\t\t\t\t\t\t\t\t<input id="photo1" name="photo" class="photo" type="file" accept="image/*"\n' +
+            '\t\t\t\t\t\t\t\t\t\tstyle="width: 50%; margin: 0; height: auto; display: inline;"/>');
     }
 });
 $(".confirmFixSeries").click(function(){
@@ -653,50 +595,6 @@ $(".confirmFixIndex").click(function(){
 	location.reload();
 });
 
-
-$(".fixSequence").click(function(){
-	// var seq = {};
-	// var i = 1;
-	// // id key seq value;
-	// var seqId;
-	// $(".job").each(function(){
-	// 	//alert($(this).attr("id"))
-	// 	seqId = $(this).attr("id").substring(4);
-    //
-	// 	seq[seqId] = i;
-	// 	i++;
-	// });
-	// $.ajax({
-	// 	type:'POST',
-	// 	data:JSON.stringify(seq),
-	// 	contentType: "application/json; charset=utf-8",
-	// 	dataType:'json',
-	// 	url :'/workSequence/',
-	// });
-	// location.reload();
-});
-//系列顺序
-$(".fixSeriesSequence").click(function(){
-	// var seq = {};
-	// var i = 1;
-	// // id key seq value;
-	// var seqId;
-	// $(".series").each(function(){
-	// 	//alert($(this).attr("id"))
-	// 	seqId = $(this).attr("id").substring(6);
-    //
-	// 	seq[seqId] = i;
-	// 	i++;
-	// });
-	// $.ajax({
-	// 	type:'POST',
-	// 	data:JSON.stringify(seq),
-	// 	contentType: "application/json; charset=utf-8",
-	// 	dataType:'json',
-	// 	url :'/seriesSequence/',
-	// });
-	// location.reload();
-});
 function getFileUrl(sourceId) {
     var url;
     if (navigator.userAgent.indexOf("MSIE")>=1) { // IE

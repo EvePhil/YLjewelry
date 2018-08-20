@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
+    font-family: Heiti SC, Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
     /*font-family: Helvetica;*/
 	/*font-weight: lighter;*/
 }
 a {
-    font-family: Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
+    font-family: Heiti SC, Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
     /*font-family: Helvetica;*/
 }
 body {
@@ -96,7 +96,7 @@ pre {
 	background: #ffffff;
 	font-size: 13px;
 	line-height: 20px;
-    font-family: Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
+    font-family: Heiti SC, Helvetica Neue,Helvetica,Roboto,Segoe UI,Arial,sans-serif;
     word-break:normal;
     overflow: hidden;
     white-space: pre-wrap;
@@ -117,4 +117,12 @@ pre {
 	background: #333333 !important;
 	/*border-color: #333333 !important;*/
 }
+
+.modal-header {
+    border: none !important;
+}
+li {
+    list-style-type: none;
+}
+
 

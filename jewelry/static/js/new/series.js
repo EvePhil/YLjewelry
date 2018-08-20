@@ -6,7 +6,7 @@ $(function () {
             $('#list').append('<div class="series"><a href="/jewel/?' + allSeries[i].id + '">' +
                 '<div class="seriesPic" style="background:url(/static/images/series_images/' + allSeries[i].seriespic +
                 ') center center no-repeat; background-size: cover;"' +
-                '></div><div class="seriesName"><h3>' + allSeries[i].seriesname + '</h3></div></a>');
+                '></div><div class="seriesName"><h3 style="letter-spacing: 25px;text-indent: 25px;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
 		
         $('#main').append('<div id="footer">\n' +
