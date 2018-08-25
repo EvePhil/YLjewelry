@@ -17,4 +17,30 @@ $(function () {
 	        }
 	     }
 	});
+	var sea = 0;
+	$(".search").click(function(){
+	    if(sea == 1) {
+            $('.searchText').css('display', 'none');
+            sea = 0;
+        }
+        else {
+	        $('.searchText').css('display', 'inline-block');;
+            sea = 1;
+        }
+    });
+
+	function CheckChinese(obj,val){
+　　var reg = new RegExp("[\\u4E00-\\u9FFF]+","g");
+　　if(reg.test(val)){
+       alert("不能输入汉字！");
+       var strObj = document.getElementById(obj);
+       strObj.value = "";
+       strObj.focus();
+　　}
+  }
+
+	$(".searchText").keydown(function(){
+        //alert(123);
+    });
 })
+

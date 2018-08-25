@@ -14,6 +14,13 @@
 	position: relative;
 	overflow: hidden;
 }
+.series img {
+    display:block;
+    vertical-align:top;
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+}
 .seriesPic {
     width: 100%;
     height: 100%;
@@ -34,7 +41,7 @@
     background-color: transparent;
 }
 .seriesName h3 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     line-height: 22rem;
     letter-spacing: 0.6rem;
     text-indent: 0.6rem;

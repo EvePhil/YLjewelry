@@ -155,24 +155,49 @@ def getSeries(request):
     #     ja.append(j)
 
     return HttpResponse(json.dumps(j), content_type="application/json")
+def resizeSeries(path):
+    img = Image.open(path)
+    w, h = img.size
+    rate = 1.0
+    if h > 1200:
+        rate = 1200.0 / h
+
+    w = int(w * rate)
+    h = int(h * rate)
+    img.resize((w, h)).save(path, format='JPEG')
+
 
 #添加系列
 def uploadSeries(request):
-    data = request.POST
-    intro = data.get('seriesIntro')
-    name = data.get('seriesName')
-    intro_eng = data.get('seriesIntro_eng')
-    name_eng = data.get('seriesName_eng')
-    files = request.FILES
-    p = files['file']
-    fobj = open(django_settings.IMAGES_ROOT+'series_images/' + p.name, 'wb')
-    for chunk in p.chunks():
-        fobj.write(chunk)
-    fobj.close()
+    try:
 
-    numSeries = models.series.objects.all().count()
-    series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic=p.name, series_sequence = numSeries+1)
-    series.save()
+        data = request.POST
+        intro = data.get('seriesIntro')
+        name = data.get('seriesName')
+        intro_eng = data.get('seriesIntro_eng')
+        name_eng = data.get('seriesName_eng')
+        files = request.FILES
+        p = files['file']
+
+        filename = p.name
+        timestamp = int(round(time.time() * 1000))
+
+        # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
+        splitfilename = filename.encode('utf-8').split('.')
+        newfilename = str(timestamp) + 'series.' + splitfilename[-1]
+
+
+        fobj = open(django_settings.IMAGES_ROOT+'series_images/' + newfilename, 'wb')
+        for chunk in p.chunks():
+            fobj.write(chunk)
+        fobj.close()
+        resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename)
+
+        numSeries = models.series.objects.all().count()
+        series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic= newfilename, series_sequence = numSeries+1)
+        series.save()
+    except:
+        return HttpResponse(0)
     return HttpResponse(1)
 
 def getAllSeries(request):
@@ -207,17 +232,21 @@ def fixSeries(request):
     files = request.FILES
     p = files.get('file', None)
     if p is not None:
-        os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
-        fobj = open(django_settings.IMAGES_ROOT + 'series_images/' + p.name, 'wb')
+        try:
+            os.remove(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
+        except:
+            print('删除失败')
+        fobj = open(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic, 'wb')
         for chunk in p.chunks():
             fobj.write(chunk)
         fobj.close()
+        resizeSeries(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
 
         series.seriesname = data.get('seriesname')
         series.intro = data.get('seriesintro')
         series.seriesname_eng = data.get('seriesname_eng')
         series.intro_eng = data.get('seriesintro_eng')
-        series.series_pic = p.name
+        #series.series_pic = p.name
         series.save()
     else:
         series.seriesname = data.get('seriesname')
@@ -315,11 +344,7 @@ def getOptionWorks(request):
         print(type(seriesids))
         print(seriesids)
         # ws = models.works.objects.filter(series_id=seriesid).order_by('sequence')
-
-
     # seriesname = models.series.objects.get(id = seriesid).seriesname
-
-
     ja = []
     for s in seriesids:
         ws = models.works.objects.filter(series_id=s['id']).order_by('sequence')
@@ -331,14 +356,13 @@ def getOptionWorks(request):
             js1['workname'] = workname
             js1['workintro'] = w.workintro
             picpaths = models.picture_path.objects.filter(work_id=w.id).order_by('-isFirst')
-            print(picpaths.first().isFirst)
+            # print(picpaths.first().isFirst)
             paths = []
             for path in picpaths:
                 # print(path.isFirst)
                 paths.append(str(w.id)+'/'+path.picturepath)
             js1['paths'] = paths
             ja.append(js1)
-        
 
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
@@ -360,16 +384,16 @@ def resize(path, thumbnailPath):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
-    trate = 1.0
-    if h > 1080:
-        rate = 1080.0 / h
-    print w, h, w * h
+    if w>h and h > 1800:
+        rate = 1800.0 / h
+    if h>w and w > 1800:
+        rate = 1800.0 / w
     trate = 150.0/h
     tw = int(w*trate)
     th = int(h*trate)
     w = int(w * rate)
     h = int(h * rate)
-    print w, h, w * h
+
     img.resize((w, h)).save(path, format='JPEG')
     img.resize((tw, th)).save(thumbnailPath, format = 'JPEG')
 
@@ -380,7 +404,6 @@ def uploadWork(request):
     # 修改信息
     # 保存的文件名改成 时间戳+photo+本作品中该图片的序号
     seriesid = request.POST.get('seriesSelect')
-    #workIntro = request.POST.get('jobIntro')
     # 该系列多少个作品
     worksInSeriesid = models.works.objects.filter(series_id=seriesid).count()
     # seriesname = models.series.objects.get(id = seriesid).seriesname
@@ -422,6 +445,7 @@ def uploadWork(request):
     except:
         models.picture_path.objects.filter(work_id=workid).delete()
         work.delete()
+        return HttpResponse(0)
         return HttpResponse(u"上传失败")
 
     return HttpResponse(1)
@@ -503,13 +527,17 @@ def introduction(request):
         return render(request, "introduction.html", {'intro': '', 'exper': '',
                                                      'image': ''})
     else:
-        return render(request,"introduction.html", {'image': introduction.picture_name})
+        return render(request,"introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
 
 
 def test(request):
     return render(request,"introduction.html", {'intro':1, 'exper': 2, 'image': 'self.jpg'})
 
 
+def resizeIntro(path):
+    img = Image.open(path)
+    w, h = img.size
+    img.resize((w, h)).save(path, format='JPEG')
 
 def setIntro(request):
     data = request.POST
@@ -529,6 +557,7 @@ def setIntro(request):
             for chunk in p.chunks():
                 fobj.write(chunk)
             fobj.close()
+            resizeIntro(django_settings.IMAGES_ROOT+p.name)
             if introduction.count() == 0:
                 introduction = models.introduction(exper_cn=exper, intro_cn=intro, picture_name=p.name, exper_eng=exper_eng, intro_eng=intro_eng)
                 introduction.save()
@@ -669,7 +698,7 @@ def introduction_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"eng/introduction_eng.html", {'image': introduction.picture_name})
+    return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
     ss = models.series.objects.all().order_by('series_sequence')
@@ -790,3 +819,15 @@ def getIntroduction_eng(request):
     j['exper'] = introduction.exper_eng
     #j['image'] = introduction.picture_name
     return HttpResponse(json.dumps(j), content_type="application/json")
+
+def getSearchSeries(request):
+    ss = models.series.objects.all().order_by('series_sequence')
+    ja = []
+    for s in ss:
+        js1 = {}
+        js1['id'] = s.id
+        js1['seriesname_cn'] = s.seriesname
+        js1['seriesname_eng'] = s.seriesname_eng
+        ja.append(js1)
+    print(ja)
+    return HttpResponse(json.dumps(ja), content_type="application/json")

@@ -7,7 +7,8 @@
 /*#main > div {*/
     /*vertical-align: top;*/
 /*}*/
-img {
+#main img {
+    display:block;
     width: 100%;
     object-fit: contain;
 }

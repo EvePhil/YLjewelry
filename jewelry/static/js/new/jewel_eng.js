@@ -36,7 +36,7 @@ $(function () {
         '                <a class="weibo con" href="https://weibo.com/u/5627347173" target="_blank"><i class="fa fa-weibo fa-lg"></i></a>\n' +
         '                <a class="email con" href="javascript:void(0);"><i class="fa fa-envelope-o fa-lg"></i></a>\n' +
         '            </div>\n' +
-        '            <p>TEL：13020031705 Copyright © all reserved</p>\n' +
+        '            <p>YILAN JEWELRY</p>\n' +
         '        </div>');
 		$(".wechat").click(function(){
 			$('#wechatModal').modal('show');

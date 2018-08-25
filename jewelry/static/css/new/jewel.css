@@ -16,7 +16,7 @@
 	width: 50%;
 }
 /*图片列表*/
-ul {
+#imgList {
     min-width: 100%;
     margin-top: 5px;
     height: 75px;

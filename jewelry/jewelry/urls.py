@@ -85,4 +85,6 @@ urlpatterns = [
 
     url(r'^getIntroduction/', views.getIntroduction),
     url(r'^getIntroduction_eng/', views.getIntroduction_eng),
+
+    url(r'^getSearchSeries/', views.getSearchSeries),
 ]
