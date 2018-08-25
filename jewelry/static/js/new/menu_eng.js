@@ -64,7 +64,7 @@ $(function () {
                 //console.log(searchList[i].seriesname_cn.indexOf(inputVal));
                 if((searchList[i].seriesname_cn.indexOf(inputVal)>=0) || (searchList[i].seriesname_eng.indexOf(inputVal)>=0)) {
                     //console.log(searchList[i].seriesname_cn + ' ' + searchList[i].seriesname_eng);
-                   $(".results").append('<a href="/jewel/?' + searchList[i].id + '">' +
+                   $(".results").append('<a href="/index_eng/jewel_eng/?' + searchList[i].id + '">' +
                    searchList[i].seriesname_cn + '-' + searchList[i].seriesname_eng + '</a>');
                 }
             }
