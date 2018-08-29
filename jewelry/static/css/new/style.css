@@ -110,10 +110,16 @@ body {
 }
 .results a {
     display: block;
+    height: 17px;
+    line-height: 17px;
     text-align: left;
+    font-size: 12px;
     color: #333333;
     text-decoration: none;
     padding-left: 5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .searchText {
     float:left;
@@ -123,9 +129,11 @@ body {
     border: 1px solid #999999;
     outline: none;
     color: #333333;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 17px;
     padding-left: 5px;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 .search {
     display: inline-block;

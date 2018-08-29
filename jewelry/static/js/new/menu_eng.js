@@ -21,11 +21,13 @@ $(function () {
 	var sea = 0;
 	$(".search").click(function(){
 	    if(sea == 1) {
-            $('.searchBox').css('display', 'none');
+            //$('.searchBox').css('display', 'none');
+            $('.searchBox').fadeToggle(800);
             sea = 0;
         }
         else {
-	        $('.searchBox').css('display', 'inline-block');
+	        // $('.searchBox').css('display', 'inline-block');
+	        $('.searchBox').fadeToggle(800);
             sea = 1;
         }
     });
@@ -65,7 +67,7 @@ $(function () {
                 if((searchList[i].seriesname_cn.indexOf(inputVal)>=0) || (searchList[i].seriesname_eng.indexOf(inputVal)>=0)) {
                     //console.log(searchList[i].seriesname_cn + ' ' + searchList[i].seriesname_eng);
                    $(".results").append('<a href="/index_eng/jewel_eng/?' + searchList[i].id + '">' +
-                   searchList[i].seriesname_cn + '-' + searchList[i].seriesname_eng + '</a>');
+                     searchList[i].seriesname_eng + '</a>');
                 }
             }
         }
