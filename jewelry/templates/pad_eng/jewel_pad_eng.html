@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>YILAN JEWELRY</title>
     <link Rel="SHORTCUT ICON" href="/static/images/logo.png">
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-    <link href="/static/css/new/style.css" rel="stylesheet" type="text/css">
-    <link href="/static/css/new/series.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/pad/style.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/pad/jewel.css" rel="stylesheet" type="text/css">
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/tether/1.4.0/js/tether.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/jquery.rotate.min.js" ></script>
-	<script type="text/javascript" src="/static/js/new/series_eng.js" ></script>
-    <script type="text/javascript" src="/static/js/new/menu_eng.js" ></script>
+	<script type="text/javascript" src="/static/js/pad/jewel_eng.js" ></script>
+    <script type="text/javascript" src="/static/js/pad/menu_eng.js" ></script>
     <script type="text/javascript" src="/static/js/new/email_eng.js" ></script>
-    <script type="text/javascript" src="/static/js/jquery.lazyload.min.js" ></script>
-    <script type="text/javascript" src="/static/js/uaredirect.js"></script>
-    <script type="text/javascript">uaredirect("/index_mob_eng/series_mob_eng");</script>
-    <script>
-        if (/(iPad)/i.test(navigator.userAgent)) {
-            window.location.href='/index_pad_eng/series_pad_eng"';
-        }
-    </script>
+{#    <script src="/static/js/uaredirect.js" type="text/javascript"></script>#}
+{#    <script type="text/javascript">uaredirect("http://47.94.101.205/index_mob_eng/series_mob_eng","http://47.94.101.205/index_eng/series_eng");</script>#}
 </head>
 <body>
-    <div id="content" style="min-height: 100%;">
+    <div id="content">
         <div id="upMenu">
-            <div class="title"><a href="/eng/">YILAN JEWELRY</a></div>
+            <div class="title"><a href="/pad_eng/">YILAN JEWELRY</a></div>
             <div class="openMenu"></div>
             <div class="menu" style="display: none;">
-                <a class="engMenu" href="/index_eng/series_eng/">Collection</a>
-                <a class="engMenu" href="/index_eng/introduction_eng/">Designer</a>
-                <a href="/series/">中文</a>
+                <a class="engMenu" href="/index_pad_eng/series_pad_eng/">Collection</a>
+                <a class="engMenu" href="/index_pad_eng/introduction_pad_eng/">Designer</a>
+                <a class="changeLanguage" href="#">中文</a>
             </div>
-             <div class="rightIcon">
-                 <div class="searchBox" style="display: none;">
+            <div class="rightIcon">
+                <div class="searchBox" style="display: none;">
+{#                     style="display: none;"#}
                     <input class="searchText" type="text"  placeholder="COLLECTION NAME"/>
                     <div class="results">
 {#                        <a href="#">asd</a>#}
@@ -48,10 +43,8 @@
             </div>
         </div>
         <div id="main">
-            <div id="list"></div>
         </div>
     </div>
-
     <div>
         <div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -62,7 +55,7 @@
                         <h4 class="modal-title" id="myModalLabel">WeChat</h4>
                         <div class="selector">
                             <div class="append">
-                                <img style="margin-left: 12.5%" src="/static/images/wechat.png">
+                                <img style="margin-left: 10%; width: 80%;" src="/static/images/wechat.png">
                             </div>
                         </div>
                     </div>
@@ -82,17 +75,17 @@
                             <div class="append email">
 								<ul style="margin-left: 10%;">
 									<li>
-										<p style="margin-top: 2%; font-weight: bold;">Email</p>
-										<input class="yourEmail" type="email" placeholder="Your Email" style="width: 80%; margin: 0; height: 25px;"/>
+										<p style="margin-top: 1rem; margin-bottom:0; font-weight: bold;">Email</p>
+										<input class="yourEmail" type="email" placeholder="Your Email" style="width: 80%; margin-top: 1rem; height: 25px;"/>
 									</li>
                                     <li>
-										<p style="margin-top: 2%; font-weight: bold;">Title</p>
-										<input class="title" type="text" placeholder="Email Title" style="width: 80%; margin: 0; height: 25px;"/>
+										<p style="margin-top: 1rem; margin-bottom:0; font-weight: bold;">Title</p>
+										<input class="title" type="text" placeholder="Email Title" style="width: 80%; margin-top: 1rem; height: 25px;"/>
 									</li>
 									<li>
-										<p style="margin-top: 2%; font-weight: bold;">Content</p>
+										<p style="margin-top: 1rem; margin-bottom:0; font-weight: bold;">Content</p>
 										<textarea name="content" class="content" type="text"
-										clos=",50" rows="5" warp="hard" placeholder="Email Content" style="width: 90%;"></textarea>
+										clos=",50" rows="5" warp="hard" placeholder="Email Content" style="width: 90%; margin-top: 1rem;"></textarea>
 									</li>
 								</ul>
 							</div>

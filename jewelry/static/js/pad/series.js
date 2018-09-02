@@ -9,12 +9,12 @@ $(function () {
         //         '></div><div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         // }
         for(var i in allSeries) {
-            $('#list').append('<div class="series"><a href="/index_mob/jewel_mob/?' + allSeries[i].id + '">' +
+            $('#list').append('<div class="series"><a href="/index_pad/jewel_pad/?' + allSeries[i].id + '">' +
                 '<img class="lazy" data-original="/static/images/series_images/' + allSeries[i].seriespic  +'"/>' +
                 '<div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
         // $("img.lazy").lazyload({effect: "fadeIn", threshold :150});
-        $("img.lazy").lazyload({placeholder :'/static/images/loading.jpg', threshold :30});
+        $("img.lazy").lazyload({placeholder :'/static/images/loading.jpg', threshold :50});
 
 		$('#main').append('<div id="footer">\n' +
         '             <div class="contact">\n' +

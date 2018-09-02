@@ -21,7 +21,11 @@
     <!--启动CloudZoom就可以了，quickStart()立即启动-->
     <script type="text/javascript" src="/static/js/uaredirect.js"></script>
     <script type="text/javascript">uaredirect("/index_mob/series_mob");</script>
-
+    <script>
+        if (/(iPad)/i.test(navigator.userAgent)) {
+            window.location.href='/index_pad/series_pad';
+        }
+    </script>
     <style>
         /*外层盒子和里边图片的  一点点样式*/
         .jqueryzoom { position: relative; padding: 0; width: 100%; height: 85%; display: inline-block; }

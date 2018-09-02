@@ -81,6 +81,16 @@ urlpatterns = [
     url(r'^index_mob_eng/series_mob_eng', views.series_mob_eng),
     url(r'^index_mob_eng/jewel_mob_eng', views.jewel_mob_eng),
 
+    url(r'^pad/', views.index_pad),
+    url(r'^index_pad/introduction_pad', views.introduction_pad),
+    url(r'^index_pad/series_pad', views.series_pad),
+    url(r'^index_pad/jewel_pad', views.jewel_pad),
+
+    url(r'^pad_eng/', views.index_pad_eng),
+    url(r'^index_pad_eng/introduction_pad_eng', views.introduction_pad_eng),
+    url(r'^index_pad_eng/series_pad_eng', views.series_pad_eng),
+    url(r'^index_pad_eng/jewel_pad_eng', views.jewel_pad_eng),
+
     url(r'^sendEmail/', views.sendEmail2Admin),
 
     url(r'^getIntroduction/', views.getIntroduction),

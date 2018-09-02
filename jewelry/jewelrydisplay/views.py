@@ -759,9 +759,9 @@ def hasLogin(request):
 def index_mob(request):
     return render(request, "mob/index_mob.html")
 def series_mob(request):
-    return render(request,"mob/series_mob.html")
+    return render(request, "mob/series_mob.html")
 def jewel_mob(request):
-    return render(request,"mob/jewel_mob.html")
+    return render(request, "mob/jewel_mob.html")
 
 def introduction_mob(request):
     introduction = models.introduction.objects.get(id = 1)
@@ -772,7 +772,7 @@ def introduction_mob(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request, "mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
 
 def index_mob_eng(request):
     return render(request, "mob_eng/index_mob_eng.html")
@@ -831,3 +831,41 @@ def getSearchSeries(request):
         ja.append(js1)
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
+
+
+# pad
+def index_pad(request):
+    return render(request, "pad/index_pad.html")
+def series_pad(request):
+    return render(request, "pad/series_pad.html")
+def jewel_pad(request):
+    return render(request, "pad/jewel_pad.html")
+
+def introduction_pad(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_cn
+    j['exper'] = introduction.exper_cn
+    j['image'] = introduction.picture_name
+    print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request, "pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+
+def index_pad_eng(request):
+    return render(request, "pad_eng/index_pad_eng.html")
+def series_pad_eng(request):
+    return render(request,"pad_eng/series_pad_eng.html")
+def jewel_pad_eng(request):
+    return render(request,"pad_eng/jewel_pad_eng.html")
+
+def introduction_pad_eng(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_eng
+    j['exper'] = introduction.exper_eng
+    j['image'] = introduction.picture_name
+    print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request,"pad_eng/introduction_pad_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})

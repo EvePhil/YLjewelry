@@ -18,6 +18,11 @@
     <script type="text/javascript" src="/static/js/jquery.lazyload.min.js" ></script>
     <script type="text/javascript" src="/static/js/uaredirect.js"></script>
     <script type="text/javascript">uaredirect("/index_mob/series_mob");</script>
+    <script>
+        if (/(iPad)/i.test(navigator.userAgent)) {
+            window.location.href='/index_pad/series_pad';
+        }
+    </script>
 </head>
 <body>
     <div id="content" style="min-height: 100%;">

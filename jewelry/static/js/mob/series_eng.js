@@ -14,7 +14,7 @@ $(function () {
                 '<div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
         // $("img.lazy").lazyload({effect: "fadeIn", threshold :150});
-        $("img.lazy").lazyload({placeholder :'/static/images/loading.jpg', threshold :23});
+        $("img.lazy").lazyload({placeholder :'/static/images/loading.jpg', threshold :30});
 
 		$('#main').append('<div id="footer">\n' +
         '             <div class="contact">\n' +

@@ -56,3 +56,31 @@
 .con:hover, .con:active{
 	color: #333333 !important;
 }
+@media all and (orientation : landscape) {
+    #upMenu {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 15%;
+    }
+    #main {
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        height: auto;
+    }
+}
+@media all and (orientation : portrait){
+    #upMenu {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 10%;
+    }
+    #main {
+       position: absolute;
+        top: 10%;
+        width: 100%;
+        height: auto;
+    }
+}

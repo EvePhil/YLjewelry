@@ -134,6 +134,8 @@ body {
     padding-left: 5px;
     -webkit-appearance: none;
     border-radius: 0;
+    padding-top: 3px;
+    padding-bottom: 2px;
 }
 .search {
     display: inline-block;
@@ -177,15 +179,18 @@ span {
     font-size: 12px;
 	margin: 0 !important;
 }
+.modal-footer {
+    border: none;
+}
 .send{
 	background: #666666;
-    border: none;
-	/*border-color: #666666;*/
+    /*border: none;*/
+	border-color: #666666;
     outline: none !important;
 }
 .send:hover, .send:active, .send:focus {
 	background: #333333 !important;
-	/*border-color: #333333 !important;*/
+	border-color: #333333 !important;
 }
 
 .modal-header {
@@ -207,3 +212,14 @@ li {
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #999999;
 }
+input, textarea{
+    border: 0.1px solid #999999;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.append img {
+    margin-left: 12.5%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
