@@ -106,12 +106,12 @@ body {
 .searchText {
     float:left;
     width: 15rem;
-    height: 1.6rem;
+    height: 1.7rem;
     border: 1px solid #999999;
     outline: none;
     color: #333333;
     font-size: 12px;
-    line-height: 1.6rem;
+    line-height: 1.7rem;
     vertical-align: middle;
     padding-left: 5px;
     -webkit-appearance: none;
