@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mob/series.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mob/series.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mob/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mob/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/pad/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/pad/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/option.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/option.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,7 +99,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/pad/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="2470">
               <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
             </state>
           </provider>
@@ -109,26 +108,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="83" selection-start-line="83" selection-end-line="86" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/mob/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="123" column="5" selection-start-line="97" selection-start-column="4" selection-end-line="123" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu_eng.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/mob/menu_eng.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
+            <state relative-caret-position="1248">
+              <caret line="83" selection-start-line="83" selection-end-line="86" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -136,7 +117,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/new/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="2413">
               <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
             </state>
           </provider>
@@ -145,7 +126,7 @@
       <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/pad/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
+            <state relative-caret-position="2337">
               <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
             </state>
           </provider>
@@ -154,7 +135,7 @@
       <file leaf-file-name="menu_eng.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/pad/menu_eng.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
+            <state relative-caret-position="2318">
               <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
             </state>
           </provider>
@@ -163,17 +144,17 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/mob/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="132" column="24" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
+            <state relative-caret-position="2508">
+              <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="series.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/css/mob/series.css">
+      <file leaf-file-name="series.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/mob/series.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="779">
+              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -181,8 +162,34 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4407">
-              <caret line="870" column="165" selection-start-line="870" selection-start-column="165" selection-end-line="870" selection-end-column="165" />
+            <state relative-caret-position="622">
+              <caret line="242" column="88" selection-start-line="242" selection-start-column="88" selection-end-line="242" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="option.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/option.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="481" lean-forward="true" selection-start-line="481" selection-end-line="481" />
+              <folding>
+                <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="series.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/mob/series.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -229,7 +236,6 @@
         <option value="$PROJECT_DIR$/static/css/mob/jewel.css" />
         <option value="$PROJECT_DIR$/static/css/new/style.css" />
         <option value="$PROJECT_DIR$/jewelry/urls.py" />
-        <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
         <option value="$PROJECT_DIR$/jewelrydisplay/views_old.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/introduction.html" />
@@ -263,15 +269,16 @@
         <option value="$PROJECT_DIR$/static/css/mob/introduction.css" />
         <option value="$PROJECT_DIR$/static/css/pad/series.css" />
         <option value="$PROJECT_DIR$/templates/manage/item.html" />
-        <option value="$PROJECT_DIR$/static/js/option.js" />
         <option value="$PROJECT_DIR$/static/js/mob/menu.js" />
         <option value="$PROJECT_DIR$/static/js/mob/menu_eng.js" />
         <option value="$PROJECT_DIR$/static/js/pad/menu.js" />
         <option value="$PROJECT_DIR$/static/js/pad/menu_eng.js" />
-        <option value="$PROJECT_DIR$/jewelry/settings.py" />
         <option value="$PROJECT_DIR$/static/css/pad/style.css" />
         <option value="$PROJECT_DIR$/static/css/mob/style.css" />
         <option value="$PROJECT_DIR$/static/css/mob/series.css" />
+        <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
+        <option value="$PROJECT_DIR$/jewelry/settings.py" />
+        <option value="$PROJECT_DIR$/static/js/option.js" />
       </list>
     </option>
   </component>
@@ -293,7 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,6 +384,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,181 +412,6 @@
       <recent name="E:\gitTest\YLjewelry\jewelry\templates\mob" />
       <recent name="E:\gitTest\YLjewelry\jewelry\static\js\mob" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.DS_Store</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.DS_Store</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/jewelry.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelry/__init__.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelry/settings.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelry/urls.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelry/wsgi.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/__init__.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/admin.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0001_initial.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0002_introduction.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0003_series_intro.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0004_auto_20180602_2300.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0005_works_sequence.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0006_auto_20180605_1819.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0007_auto_20180605_1833.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0008_remove_works_workname.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0009_picture_path_isbroadcast.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0010_auto_20180704_1037.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0011_auto_20180728_1221.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0012_series_series_pic.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0013_series_series_sequence.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/__init__.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/models.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/tests.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/token_confirm.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/views.pyc</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0014_auto_20180801_0905.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/jewelrydisplay/migrations/0014_auto_20180801_0905.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/.DS_Store</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/.DS_Store</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/.DS_Store</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/1.pic_hd 3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/1533114040558photo1.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/534917.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/WechatIMG168.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/test1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/test2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/test3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/test4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/test5 副本.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/10/test5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/16/1533362403168photo1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/17/1533362806165photo1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/4/1533111284150photo1.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/6/1533113511957photo1.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/7/1533113593940photo1.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/8/1533113628917photo1.jpeg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/.DS_Store</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/17/1533362806165photo1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t4-1500.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t4-1600.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t4-1800.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t4-2400.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t4-2500.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t5-2500.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/t5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/tt2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/tt22.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/thumbnail/tt3.jpg</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -923,21 +755,27 @@
       <option name="project" value="LOCAL" />
       <updated>1536138153886</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="手机端系列字号">
+      <created>1536138883784</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1536138883784</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.40260416" side_tool="true" visible="true" weight="0.2473573" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.403125" side_tool="true" visible="true" weight="0.2473573" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4987437" weight="0.32959184" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4930192" weight="0.32831737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.59739584" visible="true" weight="0.2473573" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.596875" visible="true" weight="0.2473573" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6529948" weight="0.205074" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2265625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2265625" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -960,8 +798,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改系列对接ok+判断返回1" />
-    <MESSAGE value="改样式 发邮件" />
     <MESSAGE value="修改手机端样式" />
     <MESSAGE value="修改手机端样式1" />
     <MESSAGE value="修改手机端样式2" />
@@ -985,7 +821,9 @@
     <MESSAGE value="pad+横屏" />
     <MESSAGE value="调整部分样式" />
     <MESSAGE value="输入框高度" />
-    <option name="LAST_COMMIT_MESSAGE" value="输入框高度" />
+    <MESSAGE value="手机端系列字号" />
+    <MESSAGE value="后台优化上传图片交互" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台优化上传图片交互" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -993,17 +831,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mob/series.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
           <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1238,9 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mob/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/pad/series.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
@@ -1252,11 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,97 +1101,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="183" column="78" selection-start-line="183" selection-start-column="66" selection-end-line="183" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/option.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="297" column="14" selection-start-line="297" selection-start-column="14" selection-end-line="297" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4407">
-          <caret line="870" column="165" selection-start-line="870" selection-start-column="165" selection-end-line="870" selection-end-column="165" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mob/menu_eng.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="1881">
           <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mob/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
+        <state relative-caret-position="2337">
           <caret line="123" column="5" selection-start-line="97" selection-start-column="4" selection-end-line="123" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/pad/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
+        <state relative-caret-position="2337">
           <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/pad/menu_eng.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
+        <state relative-caret-position="2318">
           <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/new/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
+        <state relative-caret-position="2413">
           <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="83" selection-start-line="83" selection-end-line="86" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/pad/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="2470">
           <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mob/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="132" column="24" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/mob/series.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
+        <state relative-caret-position="817">
           <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/mob/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mob/series.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="242" column="88" selection-start-line="242" selection-start-column="88" selection-end-line="242" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="83" selection-start-line="83" selection-end-line="86" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/option.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="481" lean-forward="true" selection-start-line="481" selection-end-line="481" />
+          <folding>
+            <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
