@@ -206,7 +206,8 @@ function addSeriesAjax()
     Data.append("seriesName_eng", $(".seriesName_eng").val());
     Data.append("seriesIntro_eng", $(".seriesIntro_eng").val());
     Data.append("file", $('.seriesPhoto')[0].files[0]);
-	
+	Data.append("rate", $('.seriesRate').val());
+
     $.ajax({  
          url: '/addSeries/' ,
          type: 'post',  
@@ -336,6 +337,7 @@ var seriesMenu = [
                 $('.fixSeriesIntro').val(series.seriesintro);
                 $('.fixSeriesName_eng').val(series.seriesname_eng);
                 $('.fixSeriesIntro_eng').val(series.seriesintro_eng);
+                // $('.fixSeriesRate').val(series.rate);
             })
 			$('#fixSeries').modal('show');
 		}
@@ -565,6 +567,7 @@ $(".confirmFixSeries").click(function(){
 	var intro = $('.fixSeriesIntro').val();
 	var name_eng = $('.fixSeriesName_eng').val();
 	var intro_eng = $('.fixSeriesIntro_eng').val();
+	var rate = $('.fixSerieRate').val();
 	// var fixseries = {'id':seriesid, 'seriesname':name, 'seriesintro':intro}
 	var Data = new FormData();
 	Data.append("id", seriesid);
@@ -573,6 +576,7 @@ $(".confirmFixSeries").click(function(){
     Data.append("seriesname_eng", name_eng);
     Data.append("seriesintro_eng", intro_eng);
     Data.append("file", $('.fixSeriesPhoto')[0].files[0]);
+    Data.append("rate", rate);
 	fixSeriesAjax(Data);
 	location.reload();
 });

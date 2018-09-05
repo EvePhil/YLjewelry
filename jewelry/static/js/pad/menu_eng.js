@@ -96,9 +96,29 @@ $(function () {
 	});
 	function judge() {
 	    if (window.orientation == 90 || window.orientation == -90) {
+	        //alert(1)
 	        window.location.reload();
+            // console.log('heng')
+            // var bigHeight = $("#upMenu").height();
+            // var titleHeight = $(".title").outerHeight(true);
+            // var space = bigHeight - titleHeight;
+            // space = (space - 20.6) / 2;
+            // $(".openMenu").css("display", "inline-block");
+            // $(".openMenu").css("margin-top", space);
+            // $(".rightIcon").css("display", "block");
+            // $(".rightIcon").css("top", titleHeight + space);
         } else if (window.orientation == 0) {
+	        //alert(2)
 	        window.location.reload();
+            // console.log('shu')
+            // var bigHeight = $("#upMenu").height();
+            // var titleHeight = $(".title").outerHeight(true);
+            // var space = bigHeight - titleHeight;
+            // space = (space - 20.6) / 2;
+            // $(".openMenu").css("display", "inline-block");
+            // $(".openMenu").css("margin-top", space);
+            // $(".rightIcon").css("display", "block");
+            // $(".rightIcon").css("top", titleHeight + space);
         }
     }
     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", judge, false);
