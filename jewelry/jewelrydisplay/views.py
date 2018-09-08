@@ -155,12 +155,12 @@ def getSeries(request):
     #     ja.append(j)
 
     return HttpResponse(json.dumps(j), content_type="application/json")
-def resizeSeries(path):
+def resizeSeries(path, height):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
-    if h > 1200:
-        rate = 1200.0 / h
+    if h > height:
+        rate = height / h
 
     w = int(w * rate)
     h = int(h * rate)
@@ -176,6 +176,9 @@ def uploadSeries(request):
         name = data.get('seriesName')
         intro_eng = data.get('seriesIntro_eng')
         name_eng = data.get('seriesName_eng')
+        height = data.get('rate')
+        print(height)
+
         files = request.FILES
         p = files['file']
 
@@ -191,7 +194,7 @@ def uploadSeries(request):
         for chunk in p.chunks():
             fobj.write(chunk)
         fobj.close()
-        resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename)
+        resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename, height)
 
         numSeries = models.series.objects.all().count()
         series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic= newfilename, series_sequence = numSeries+1)
@@ -228,6 +231,8 @@ def getOneSeries(request):
 
 def fixSeries(request):
     data = request.POST
+    height = data.get('rate')
+    print(height)
     series = models.series.objects.get(id=data.get('id'))
     files = request.FILES
     p = files.get('file', None)
@@ -240,7 +245,7 @@ def fixSeries(request):
         for chunk in p.chunks():
             fobj.write(chunk)
         fobj.close()
-        resizeSeries(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic)
+        resizeSeries(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic, height)
 
         series.seriesname = data.get('seriesname')
         series.intro = data.get('seriesintro')

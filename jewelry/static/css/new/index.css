@@ -49,3 +49,21 @@
 .con:hover, .con:active{
 	color: #333333 !important;
 }
+
+#dots {
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 8.5%;
+    text-align: center;
+}
+.dot {
+    display: inline-block;
+    z-index: 999;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 0 5px;
+}
