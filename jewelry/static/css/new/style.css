@@ -109,9 +109,10 @@ body {
     border-top: none;
 }
 .results a {
+    font-family: STHeiti;
     display: block;
-    height: 17px;
-    line-height: 17px;
+    height: 18px;
+    line-height: 18px;
     text-align: left;
     font-size: 12px;
     color: #333333;
@@ -122,20 +123,19 @@ body {
     text-overflow:ellipsis;
 }
 .searchText {
+    font-family: STHeiti;
     float:left;
     width: 250px;
-    height: 17px;
+    height: 18px;
     vertical-align: top;
     border: 1px solid #999999;
     outline: none;
     color: #333333;
     font-size: 12px;
-    line-height: 17px;
+    line-height: 18px;
     padding-left: 5px;
     -webkit-appearance: none;
     border-radius: 0;
-    padding-top: 3px;
-    padding-bottom: 2px;
 }
 .search {
     display: inline-block;
