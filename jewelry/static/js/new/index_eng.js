@@ -9,21 +9,21 @@ $(function () {
 		for(var i in pics){//遍历json对象的每个key/value对,p为key
 		    if(count == 1) {
                 $("#main").append('<a href="/index_eng/jewel_eng/?' + pics[i].id + '">' +
-                '<div class="first pic" style="background-image: url(\'/static/images/' +
+                '<div class="first pic pic' + count + '" style="background-image: url(\'/static/images/' +
                 pics[i].picture + '\')"' + '></div></a>');
-                $("#dots").append('<div class="firstDot dot" style="background-color: #333333;"></div>');
+                $("#dots").append('<div id="dot' + count + '" class="firstDot dot" style="background-color: #333333;"></div>');
             }
             else if(count == len) {
                 $("#main").append('<a href="/index_eng/jewel_eng/?' + pics[i].id + '">' +
-                '<div class="last pic" style="display: none; background-image: url(\'/static/images/' +
+                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
                 pics[i].picture + '\')"' + '></div></a>');
-                $("#dots").append('<div class="lastDot dot"></div>');
+                $("#dots").append('<div id="dot' + count + '" class="lastDot dot"></div>');
             }
             else {
                 $("#main").append('<a href="/index_eng/jewel_eng/?' + pics[i].id + '">' +
-                '<div class="pic" style="display: none; background-image: url(\'/static/images/' +
+                '<div class="pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
                 pics[i].picture + '\')"' + '></div></a>');
-                $("#dots").append('<div class="dot"></div>');
+                $("#dots").append('<div id="dot' + count + '" class="dot"></div>');
             }
             count++;
 		}
@@ -118,5 +118,27 @@ $(function () {
                 i++;
             }
         }, 3000);
+        $(".dot").click(function() {
+            console.log(i);
+            var id = $(this).attr('id').substring(3);
+            $("#dot" + i).animate({ backgroundColor:'#ffffff'}, 1000);
+            $(this).animate({ backgroundColor:'#333333'}, 1000);
+            $(".pic" + i).fadeOut(1000);
+            $(".pic" + id).fadeIn(1000);
+            i = id;
+            console.log(i);
+            if (i == 1) {
+                pic = $(".pic1");
+                dot = $("#dot1");
+            }
+            else if (i == len) {
+                pic = $(".last");
+                dot = $(".lastDot");
+            }
+            else {
+                pic = $(".pic" + i);
+                dot = $("#dot" + i);
+            }
+        })
 	});
 })
