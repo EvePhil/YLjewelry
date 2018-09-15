@@ -8,7 +8,7 @@ $(function () {
         $('#upMenu').height(h2);
         $('#main').height(h3);
         $('#main').css('top', h2);
-    });
+    }); //防止安卓手机弹输入法缩放
     $(".searchText").val('');
 	var flag = 1;
 	$(".openMenu").rotate({
@@ -95,34 +95,61 @@ $(function () {
         }
 	});
 
-	function judge() {
-	    if (window.orientation == 90 || window.orientation == -90) {
-	        //alert(1)
-	        window.location.reload();
-            // console.log('heng')
-            // var bigHeight = $("#upMenu").height();
-            // var titleHeight = $(".title").outerHeight(true);
-            // var space = bigHeight - titleHeight;
-            // space = (space - 20.6) / 2;
-            // $(".openMenu").css("display", "inline-block");
-            // $(".openMenu").css("margin-top", space);
-            // $(".rightIcon").css("display", "block");
-            // $(".rightIcon").css("top", titleHeight + space);
-        } else if (window.orientation == 0) {
-	        //alert(2)
-	        window.location.reload();
-            // console.log('shu')
-            // var bigHeight = $("#upMenu").height();
-            // var titleHeight = $(".title").outerHeight(true);
-            // var space = bigHeight - titleHeight;
-            // space = (space - 20.6) / 2;
-            // $(".openMenu").css("display", "inline-block");
-            // $(".openMenu").css("margin-top", space);
-            // $(".rightIcon").css("display", "block");
-            // $(".rightIcon").css("top", titleHeight + space);
+    // function judge() {
+	 //    if (window.orientation == 90 || window.orientation == -90) {
+	 //        //alert(1)
+	 //        window.location.reload();
+    //         // console.log('heng')
+    //         // var bigHeight = $("#upMenu").height();
+    //         // var titleHeight = $(".title").outerHeight(true);
+    //         // var space = bigHeight - titleHeight;
+    //         // space = (space - 20.6) / 2;
+    //         // $(".openMenu").css("display", "inline-block");
+    //         // $(".openMenu").css("margin-top", space);
+    //         // $(".rightIcon").css("display", "block");
+    //         // $(".rightIcon").css("top", titleHeight + space);
+    //     } else if (window.orientation == 0) {
+	 //        //alert(2)
+	 //        window.location.reload();
+    //         // console.log('shu')
+    //         // var bigHeight = $("#upMenu").height();
+    //         // var titleHeight = $(".title").outerHeight(true);
+    //         // var space = bigHeight - titleHeight;
+    //         // space = (space - 20.6) / 2;
+    //         // $(".openMenu").css("display", "inline-block");
+    //         // $(".openMenu").css("margin-top", space);
+    //         // $(".rightIcon").css("display", "block");
+    //         // $(".rightIcon").css("top", titleHeight + space);
+    //     }
+    // }
+    // window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", judge, false);
+    function orient() {
+        if (window.orientation == 90 || window.orientation == -90) {
+            //ipad、iphone竖屏；Andriod横屏
+            $("body").attr("class", "landscape");
+            orientation = 'landscape';
+        } else if (window.orientation == 0 || window.orientation == 180) {
+            //ipad、iphone横屏；Andriod竖屏
+            $("body").attr("class", "portrait");
+            orientation = 'portrait';
         }
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "static/css/index.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+
+        // alert('为了您的浏览体验，建议使用竖屏访问~');
     }
-    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", judge, false);
+    //页面加载时调用
+    $(function() {
+        orient();
+    });
+    //用户变化屏幕方向时调用
+    $(window).bind('orientationchange', function(e) {
+        orient();
+        // window.location.reload();
+    });
 
 })
 

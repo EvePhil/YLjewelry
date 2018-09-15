@@ -1,5 +1,12 @@
 $(function () {
 	var len = 0;
+	var h1 = $('#upMenu').height();
+	var h0 = window.screen.height;
+	// alert(h1);
+	// alert(h0);
+	// alert($('#main').css('height'));
+	// $('#main').css('height', h0 - h1 - h1);
+	// alert($('#main').css('height'));
 	$.get('/getIndexPic/', function (picsjson) {
 		var pics = picsjson;
 		len = picsjson.length;

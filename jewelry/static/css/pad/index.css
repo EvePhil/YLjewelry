@@ -1,9 +1,19 @@
 /*轮播图片*/
+/*轮播图片*/
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#content {
+    height: 100%; padding: 90px 0 0; box-sizing: border-box ; position: relative;
+}
 #main {
 	position: absolute;
-	top: 15%;
+	top: 90px;
 	width: 100%;
-	height: 85%;
+	left: 0;
+    bottom: 0;
 }
 .pic {
 	width: 100%;
@@ -44,41 +54,12 @@
 .con:hover, .con:active{
 	color: #333333 !important;
 }
-
-@media all and (orientation : landscape) {
-    #upMenu {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 15%;
-    }
-    #main {
-        position: absolute;
-        top: 15%;
-        width: 100%;
-        height: 80%;
-    }
-}
-@media all and (orientation : portrait){
-    #upMenu {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 10%;
-    }
-    #main {
-       position: absolute;
-        top: 10%;
-        width: 100%;
-        height: 85%;
-    }
-}
 #dots {
     position: absolute;
     z-index: 999;
     left: 50%;
     transform: translate(-50%, -50%);
-    bottom: 8.5%;
+    bottom: 10%;
     text-align: center;
 }
 .dot {
