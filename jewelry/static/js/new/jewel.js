@@ -21,14 +21,31 @@ $(function () {
 				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
 				jewel.image[i] + '\',zoomImage:\'/static/images/' +
 				jewel.image[i] + '\'"/></li>');
-			}
-			else {
+			} else if(i == jewel.image.length - 1) {
+				$('#imgList').append('<li style="margin-right: 0;"><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="/static/images/thumbnail/' +
+				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
+				jewel.image[i] + '\',zoomImage:\'/static/images/' +
+				jewel.image[i] + '\'"/></li>');
+			} else {
 				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="/static/images/thumbnail/' +
 				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
 				jewel.image[i] + '\',zoomImage:\'/static/images/' +
 				jewel.image[i] + '\'"/></li>');
 			}
 		}
+
+		var photoWidth = $("#photo").width();
+		var imgLen = jewel.image.length;
+		if(69 * imgLen >= photoWidth) {
+			$('#imgList').before('<div class="thumbelina-but horiz left"></div>');
+			$('#imgList').after('<div class="thumbelina-but horiz right"></div>');
+			$('#sliderImg').Thumbelina({
+				$bwdBut:$('#sliderImg .left'),    // Selector to left button.
+				$fwdBut:$('#sliderImg .right')    // Selector to right button.
+			});
+			// $('#sliderImg').addClass("overSlider");
+		}
+
 		$('#main').append('<div id="footer">\n' +
         '             <div class="contact">\n' +
         '                <a class="ins con" href="https://www.instagram.com/yilanliu_lyl/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>\n' +

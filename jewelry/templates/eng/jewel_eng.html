@@ -21,6 +21,8 @@
     <!--启动CloudZoom就可以了，quickStart()立即启动-->
     <script type="text/javascript" src="/static/js/uaredirect.js"></script>
     <script type="text/javascript">uaredirect("/index_mob_eng/series_mob_eng");</script>
+    <script type="text/javascript" src="/static/js/thumbelina.js"></script>
+    <link href="/static/css/thumbelina.css" rel="stylesheet" type="text/css">
     <script>
         if (/(iPad)/i.test(navigator.userAgent)) {
             window.location.href='/index_pad_eng/series_pad_eng"';
@@ -76,15 +78,19 @@
     {#				 data-cloudzoom="zoomSizeMode:'lens', startMagnification:1.2, lensWidth:250, lensHeight:250,#}
     {#				  zoomImage: 'images/2.jpg', autoInside: 30"/>#}
                 </div>
-      <!--想切换多张图片，只需要改下面img中src中的路径，以及data-cloudzoom中两个img的路径，注意data-cloudzoom要和img中的路径一摸一样-->
-                <ul id="imgList">
-    {#				<li>#}
-    {#					<img class="cloudzoom-gallery cloudzoom-gallery-active" src="images/2.jpg" data-cloudzoom="useZoom:'.cloudzoom',image:'images/2-m.jpg',zoomImage:'images/2.jpg'"/>#}
-    {#				</li>#}
-    {#				<li>#}
-    {#					<img class="cloudzoom-gallery" src="images/3.jpg" data-cloudzoom="useZoom:'.cloudzoom',image:'images/3-m.jpg',zoomImage:'images/3.jpg'"/>#}
-    {#				</li>#}
-                </ul>
+                <div id="sliderImg">
+{#                    <div class="thumbelina-but horiz left"><</div>#}
+          <!--想切换多张图片，只需要改下面img中src中的路径，以及data-cloudzoom中两个img的路径，注意data-cloudzoom要和img中的路径一摸一样-->
+                    <ul id="imgList">
+        {#				<li>#}
+        {#					<img class="cloudzoom-gallery cloudzoom-gallery-active" src="images/2.jpg" data-cloudzoom="useZoom:'.cloudzoom',image:'images/2-m.jpg',zoomImage:'images/2.jpg'"/>#}
+        {#				</li>#}
+        {#				<li>#}
+        {#					<img class="cloudzoom-gallery" src="images/3.jpg" data-cloudzoom="useZoom:'.cloudzoom',image:'images/3-m.jpg',zoomImage:'images/3.jpg'"/>#}
+        {#				</li>#}
+                    </ul>
+{#                    <div class="thumbelina-but horiz right">></div>#}
+                </div>
             </div>
             <div id="text">
     {#	    	<h3>系列名字</h3>#}

@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: STXihei;
+    font-family: PingFang-SC-Light;
 	/*font-weight: lighter;*/
 }
 a {
-    font-family: STXihei;
+    font-family: PingFang-SC-Light;
 }
 body {
     /*max-width: 100%;*/
@@ -56,8 +56,8 @@ body {
     vertical-align: bottom;
 }
 .engMenu {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
+    /*font-size: 16px !important;*/
+    /*line-height: 1.5 !important;*/
 }
 /*.search {*/
 	/*display: inline-block;*/
@@ -109,7 +109,7 @@ body {
     border-top: none;
 }
 .results a {
-    font-family: STHeiti;
+    font-family: PingFang-SC-Light;
     display: block;
     height: 18px;
     line-height: 18px;
@@ -123,7 +123,7 @@ body {
     text-overflow:ellipsis;
 }
 .searchText {
-    font-family: STHeiti;
+    font-family: PingFang-SC-Light;
     float:left;
     width: 250px;
     height: 18px;
@@ -161,14 +161,14 @@ pre {
 	background: #ffffff;
 	font-size: 12px;
 	line-height: 20px;
-    font-family: STXihei;
+    font-family: PingFang-SC-Light;
     word-break:normal;
     overflow: hidden;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 em, span {
-    font-family: STXihei;
+    font-family: PingFang-SC-Light;
 }
 span {
     font-style: italic;

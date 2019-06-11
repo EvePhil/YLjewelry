@@ -9,6 +9,7 @@ $(function () {
         $('#main').height(h3);
         $('#main').css('top', h2);
     }); //防止安卓手机弹输入法缩放
+
     $(".searchText").val('');
 	var flag = 1;
 	$(".openMenu").rotate({
