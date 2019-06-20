@@ -1,9 +1,10 @@
 #main {
 	min-width: 1000px;
 	position: absolute;
-	top: 13%;
+	top: 120px;
 	width: 100%;
-	height: 87%;
+	/*height: 87%;*/
+	height: calc(100% - 120px);
 }
 #main > div {
     vertical-align: top;
@@ -13,7 +14,8 @@
     position: relative;
 	display: inline-block;
 	padding-left: 4%;
-	height: 90%;
+	/*height: 90%;*/
+	height: calc(100% - 60px);
 	width: 64%;
     vertical-align: middle;
 }
@@ -31,7 +33,8 @@
 #text {
 	display: inline-block;
 	margin-left: 1.5%;
-	height: 90%;
+	/*height: 90%;*/
+	height: calc(100% - 60px);
 	width: 30%;
     color: #333333;
 }
@@ -57,17 +60,18 @@
 #footer {
     min-width: 1000px;
 	position: absolute;
-	top: 90%;
+	bottom: 0;
 	width: 100%;
-	height: 10%;
+	/*height: 10%;*/
+	height: 60px;
 	text-align: center;
 }
 #footer p {
-	padding-top: 0.5%;
+	padding-top: 5px;
     color: #666666;
 }
 .contact {
-    padding-top: 1%;
+    padding-top: 10px;
 	width: 50%;
     margin-left: 25%;
 	text-align: center;
