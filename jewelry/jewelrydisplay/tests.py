@@ -48,21 +48,18 @@ if __name__ == '__main__':
 
 
 
-    img = Image.open(IMAGES_ROOT+'10/'+'test4.jpg')
+    img = Image.open(IMAGES_ROOT+'10/'+'test6.jpg')
+    print img.mode
     # print get_FileSize(IMAGES_ROOT+'10/'+'test3.jpg')
+    img = img.convert('P')
     w, h = img.size
     # rate = 1.0
-    # if h>1080:
-    #     rate = 1080.0/h
-
-    # tinifyResize(IMAGES_ROOT+'10/'+'test2.jpg', IMAGES_ROOT+'thumbnail/'+'tt22.jpg', h)
-
 
     rate = 1.0
 
-    rate = 1500.0/h
+    rate = 1800.0/h
     print w, h, w*h
     w = int(w*rate)
     h = int(h*rate)
     print w, h, w*h
-    img.resize((w, h)).save(IMAGES_ROOT+'thumbnail/'+'t4-1500.jpg', format = 'JPEG')
+    img.resize((w, h)).save(IMAGES_ROOT+'thumbnail/'+'t6-P.jpg', format = 'JPEG')

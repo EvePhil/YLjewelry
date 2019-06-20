@@ -349,7 +349,11 @@ def getOptionWorks(request):
         print(type(seriesids))
         print(seriesids)
         # ws = models.works.objects.filter(series_id=seriesid).order_by('sequence')
+
+
     # seriesname = models.series.objects.get(id = seriesid).seriesname
+
+
     ja = []
     for s in seriesids:
         ws = models.works.objects.filter(series_id=s['id']).order_by('sequence')
@@ -361,13 +365,14 @@ def getOptionWorks(request):
             js1['workname'] = workname
             js1['workintro'] = w.workintro
             picpaths = models.picture_path.objects.filter(work_id=w.id).order_by('-isFirst')
-            # print(picpaths.first().isFirst)
+            print(picpaths.first().isFirst)
             paths = []
             for path in picpaths:
                 # print(path.isFirst)
                 paths.append(str(w.id)+'/'+path.picturepath)
             js1['paths'] = paths
             ja.append(js1)
+        
 
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
@@ -389,10 +394,8 @@ def resize(path, thumbnailPath):
     img = Image.open(path)
     w, h = img.size
     rate = 1.0
-    if w>h and h > 1800:
+    if h > 1800:
         rate = 1800.0 / h
-    if h>w and w > 1800:
-        rate = 1800.0 / w
     trate = 150.0/h
     tw = int(w*trate)
     th = int(h*trate)
@@ -764,9 +767,9 @@ def hasLogin(request):
 def index_mob(request):
     return render(request, "mob/index_mob.html")
 def series_mob(request):
-    return render(request, "mob/series_mob.html")
+    return render(request,"mob/series_mob.html")
 def jewel_mob(request):
-    return render(request, "mob/jewel_mob.html")
+    return render(request,"mob/jewel_mob.html")
 
 def introduction_mob(request):
     introduction = models.introduction.objects.get(id = 1)
@@ -777,7 +780,7 @@ def introduction_mob(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request, "mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request,"mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
 
 def index_mob_eng(request):
     return render(request, "mob_eng/index_mob_eng.html")
