@@ -143,5 +143,88 @@ $(function () {
                 }
             }, 3000);
         })
+
+        
+        // 监听移动端滑动
+        var startX = 0;
+        var switched = false;
+        function changeCur(id) {
+            $("#dot" + i).animate({ backgroundColor:'#ffffff'}, 1000);
+            $("#dot" + id).animate({ backgroundColor:'#333333'}, 1000);
+            $(".pic" + i).fadeOut(1000);
+            $(".pic" + id).fadeIn(1000);
+            i = id;
+            console.log(i);
+            if (i == 1) {
+                pic = $(".pic1");
+                dot = $("#dot1");
+            }
+            else if (i == len) {
+                pic = $(".last");
+                dot = $(".lastDot");
+            }
+            else {
+                pic = $(".pic" + i);
+                dot = $("#dot" + i);
+            }
+        }
+        $(".pic").on("touchstart", function (e) {
+            e.preventDefault();
+            clearInterval(pp);
+            switched = false;
+            startX = e.originalEvent.changedTouches[0].pageX
+        })
+        $(".pic").on("touchmove", function (e) {
+            if (switched) {
+                return;
+            }
+            e.preventDefault();
+            var endX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
+            if (endX - startX > 150) {
+                changeCur((i - 2 + len) % len + 1);
+                switched = true;
+            } else if (endX - startX < -150) {
+                changeCur(i % len + 1);
+                switched = true;
+            }
+        })
+        function initInterval() {
+            pp = setInterval(function(){
+                if(i == 1) {
+                    //console.log(i);
+                    $(".first").fadeOut(1000);
+                    $('.firstDot').animate({ backgroundColor:'#ffffff'}, 1000);
+                    pic = pic.parent().next().children().first();
+                    dot = dot.next();
+                    pic.fadeIn(1000);
+                    dot.animate({ backgroundColor:'#333333'}, 1000);
+                    i++;
+                }
+                else if (i == len) {
+                    //console.log(i);
+                    $(".last").fadeOut(1000);
+                    $('.lastDot').animate({ backgroundColor:'#ffffff'}, 1000);
+                    pic = $(".first");
+                    dot = $(".firstDot");
+                    $(".first").fadeIn(1000);
+                    $(".firstDot").animate({ backgroundColor:'#333333'}, 1000);
+                    i = 1;
+                }
+                else {
+                    //console.log(i)
+                    pic.fadeOut(1000);
+                    dot.animate({ backgroundColor:'#ffffff'}, 1000);
+                    pic = pic.parent().next().children().first();
+                    dot = dot.next();
+                    pic.fadeIn(1000);
+                    dot.animate({ backgroundColor:'#333333'}, 1000);
+                    i++;
+                }
+            }, 3000);
+        }
+        $(".pic").on("touchend", function (e) {
+            initInterval();
+        })
+
 	});
 })

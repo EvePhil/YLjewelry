@@ -140,5 +140,40 @@ $(function () {
                 dot = $("#dot" + i);
             }
         })
+
+                
+        $("#main").append(`
+            <div class="swiper-button--next"></div>
+            <div class="swiper-button--prev"></div>
+        `);
+        // 切换图片
+        function changeCur(id) {
+            $("#dot" + i).animate({ backgroundColor:'#ffffff'}, 1000);
+            $("#dot" + id).animate({ backgroundColor:'#333333'}, 1000);
+            $(".pic" + i).fadeOut(1000);
+            $(".pic" + id).fadeIn(1000);
+            i = id;
+            console.log(i);
+            if (i == 1) {
+                pic = $(".pic1");
+                dot = $("#dot1");
+            }
+            else if (i == len) {
+                pic = $(".last");
+                dot = $(".lastDot");
+            }
+            else {
+                pic = $(".pic" + i);
+                dot = $("#dot" + i);
+            }
+        }
+        $(".swiper-button--next").click(function () {
+            clearInterval(pp);
+            changeCur(i % len +1);
+        })
+        $(".swiper-button--prev").click(function () {
+            clearInterval(pp);
+            changeCur((i - 2 + len) % len + 1);
+        })
 	});
 })
