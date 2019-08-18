@@ -180,10 +180,10 @@ $(function () {
             }
             e.preventDefault();
             var endX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
-            if (endX - startX > 150) {
+            if (endX - startX > 75) {
                 changeCur((i - 2 + len) % len + 1);
                 switched = true;
-            } else if (endX - startX < -150) {
+            } else if (endX - startX < -75) {
                 changeCur(i % len + 1);
                 switched = true;
             }
