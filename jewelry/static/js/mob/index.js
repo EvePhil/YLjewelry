@@ -168,7 +168,6 @@ $(function () {
             }
         }
         $(".pic").on("touchstart", function (e) {
-            e.preventDefault();
             clearInterval(pp);
             switched = false;
             startX = e.originalEvent.changedTouches[0].pageX
@@ -177,7 +176,6 @@ $(function () {
             if (switched) {
                 return;
             }
-            e.preventDefault();
             var endX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
             if (endX - startX > 75) {
                 changeCur((i - 2 + len) % len + 1);
