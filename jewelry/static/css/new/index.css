@@ -90,22 +90,22 @@
 }
 
 .swiper-button--next {
-	background-image: url(/static/images/arrows/right_arrow1.png);
+	background-image: url(/static/images/arrows/right_arrow1v2.png);
 	right: 10px;
 	opacity: 0;
 }
 .swiper-button--next:hover{
-	background-image: url(/static/images/arrows/right_arrow2.png);
+	background-image: url(/static/images/arrows/right_arrow2v2.png);
 }
 
 .swiper-button--prev {
-	background-image: url(/static/images/arrows/left_arrow1.png);
+	background-image: url(/static/images/arrows/left_arrow1v2.png);
 	left: 10px;
 	opacity: 0;
 }
 
 .swiper-button--prev:hover{
-	background-image: url(/static/images/arrows/left_arrow2.png);
+	background-image: url(/static/images/arrows/left_arrow2v2.png);
 }
 
 #main:hover .swiper-button--next,
