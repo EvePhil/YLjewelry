@@ -28,7 +28,7 @@ $(function () {
 
         for(var i in allSeries) {
             $('#list').append('<div class="series"><a href="/jewel/?' + allSeries[i].id + '">' +
-                '<img class="lazy" data-original="http://px75gfdiz.bkt.clouddn.com/' + allSeries[i].seriespic  +'"/>' +
+                '<img class="lazy" data-original="http://img.yilanjewelry.com/' + allSeries[i].seriespic  +'"/>' +
                 '<div class="seriesName"><h3 style="letter-spacing: 25px;text-indent: 25px;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
         // $("img.lazy").lazyload({effect: "fadeIn", threshold :150});

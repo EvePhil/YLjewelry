@@ -14,14 +14,14 @@ $(function () {
 		for(var i=0; i<jewel.image.length; i++) {
 			//alert(job.image)
 			if(i == 0) {
-				$('#main').append('<img src="http://px75gfdiz.bkt.clouddn.com/' + jewel.image[i] + '" />');
+				$('#main').append('<img src="http://img.yilanjewelry.com/' + jewel.image[i] + '" />');
 				$('#main').append('<div id="text"></div>');
 				$('#text').html('<h3>' + jewel.seriesname + '</h3>' +
                     // '<h4>' +  jewel.seriesname + '-' + cls[1] + '</h4>' +
                     '<pre>' + jewel.seriesintro + '</pre>');
 			}
 			else {
-			    $('#main').append('<img src="http://px75gfdiz.bkt.clouddn.com/' + jewel.image[i] + '" />');
+			    $('#main').append('<img src="http://img.yilanjewelry.com/' + jewel.image[i] + '" />');
 			}
 		}
 
