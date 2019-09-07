@@ -4,26 +4,27 @@ $(function () {
 	var id = window.location.search;
 	var seriesId = id.substring(1);
 
-	$('.changeLanguage').attr('href', '/index_pad/jewel_pad/?' + seriesId);
+	$('.changeLanguage').attr('href', '/index_pad_eng/jewel_pad_eng/?' + seriesId);
 
 	var seriesPost = {id:seriesId};
 
-		$.get('/getJewels_eng/', seriesPost, function (jeweljson) {//获取作品
+	$.get('/getJewels/', seriesPost, function (jeweljson) {//获取作品
 				//series =  JSON.parse(json)
 		var jewel = jeweljson;
 		for(var i=0; i<jewel.image.length; i++) {
+			//alert(job.image)
 			if(i == 0) {
-				$('#main').append('<img src="/static/images/' + jewel.image[i] + '" />');
+				$('#main').append('<img src="http://px75gfdiz.bkt.clouddn.com/' + jewel.image[i] + '" />');
 				$('#main').append('<div id="text"></div>');
 				$('#text').html('<h3>' + jewel.seriesname + '</h3>' +
                     // '<h4>' +  jewel.seriesname + '-' + cls[1] + '</h4>' +
                     '<pre>' + jewel.seriesintro + '</pre>');
-                //name = jewel.seriesname;
 			}
 			else {
-			    $('#main').append('<img src="/static/images/' + jewel.image[i] + '" />');
+			    $('#main').append('<img src="http://px75gfdiz.bkt.clouddn.com/' + jewel.image[i] + '" />');
 			}
 		}
+
 		$('#main').append('<div id="footer">\n' +
         '             <div class="contact">\n' +
         '                <a class="ins con" href="https://www.instagram.com/yilanjewellery/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>\n' +
@@ -42,4 +43,10 @@ $(function () {
         });
 
    })
+
+	// $("#imgList").click(function(){
+	// 	var classes = $(".cloudzoom-gallery-active").attr("class");
+	// 	var cls = classes.split(' ');
+	// 	$('#text h4').html(name + '-' + cls[1]);
+	// });
 })

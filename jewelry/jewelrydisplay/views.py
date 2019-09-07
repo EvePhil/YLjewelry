@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.db.models import Q
 
 from django.shortcuts import render,HttpResponseRedirect,HttpResponse,redirect,render_to_response
 import json
@@ -12,6 +13,8 @@ from django.conf import settings as django_settings
 from django.contrib.auth.decorators import login_required, permission_required
 import models
 import time
+from qiniu import Auth, put_file, etag
+import qiniu.config
 import os
 import shutil
 from django.conf import settings
@@ -26,6 +29,24 @@ sys.setdefaultencoding('utf-8')
 token_confirm = Token(django_settings.SECRET_KEY)    # 定义为全局变量
 
 
+#需要填写你的 Access Key 和 Secret Key
+def qiniu_load(file,path):
+    access_key = 'y8BaldA683hgVEhHix4_xWR3NESm9uch28e1nG30'
+    secret_key = '7Rqb5UoDbg7B3BVEdG38ZtHUzkQzTh6fU_TFOn61'
+    # 构建鉴权对象
+    q = Auth(access_key, secret_key)
+    # 要上传的空间
+    bucket_name = 'px75gfdiz.bkt.clouddn.com'
+    # 上传后保存的文件名
+    key = file
+    # 生成上传 Token，可以指定过期时间等
+    token = q.upload_token(bucket_name, key)
+    # 要上传文件的本地路径
+    localfile = path
+    ret, info = put_file(token, key, localfile)
+    print(info)
+    assert ret['key'] == key
+    assert ret['hash'] == etag(localfile)
 
 def index(request):
     return render(request, "index.html")
@@ -195,6 +216,7 @@ def uploadSeries(request):
             fobj.write(chunk)
         fobj.close()
         resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename, height)
+        qiniu_load(newfilename,django_settings.IMAGES_ROOT+'series_images/' + newfilename)
 
         numSeries = models.series.objects.all().count()
         series = models.series(seriesname=name, intro=intro, intro_eng=intro_eng, seriesname_eng=name_eng, series_pic= newfilename, series_sequence = numSeries+1)
@@ -203,7 +225,28 @@ def uploadSeries(request):
         return HttpResponse(0)
     return HttpResponse(1)
 
+def purgePreview(request):
+    try:
+        models.series.objects.all().update(isPreview=1)
+        models.picture_path.objects.all().update(isPreview=1)
+    except:
+        return HttpResponse(0)
+    return HttpResponse(1)
+
 def getAllSeries(request):
+    ss = models.series.objects.filter(isPreview=False).order_by('series_sequence')
+    ja = []
+    for s in ss:
+        js1 = {}
+        js1['id'] = s.id
+        js1['seriesname'] = s.seriesname
+        js1['seriespic'] = s.series_pic
+        #if(s.isPreview == 0):
+        ja.append(js1)
+    print(ja)
+    return HttpResponse(json.dumps(ja), content_type="application/json")
+
+def getAllSeriesWithPreview(request):
     ss = models.series.objects.all().order_by('series_sequence')
     ja = []
     for s in ss:
@@ -246,6 +289,7 @@ def fixSeries(request):
             fobj.write(chunk)
         fobj.close()
         resizeSeries(django_settings.IMAGES_ROOT + 'series_images/' + series.series_pic, height)
+        qiniu_load(series.series_pic,django_settings.IMAGES_ROOT+'series_images/' + series.series_pic)
 
         series.seriesname = data.get('seriesname')
         series.intro = data.get('seriesintro')
@@ -323,8 +367,8 @@ def getWork(request):
     paths = []
 
     for path in picpaths:
-        paths.append(str(workid)+'/'+path.picturepath)
-
+        #paths.append(str(workid)+'/'+path.picturepath)
+        paths.append(path.picturepath)
     seriesname = models.series.objects.get(id = work.series_id).seriesname
     workname = seriesname + '-' + str(work.sequence)
     j = {'workname':workname, 'workintro':work.workintro, 'image': paths}
@@ -369,7 +413,7 @@ def getOptionWorks(request):
             paths = []
             for path in picpaths:
                 # print(path.isFirst)
-                paths.append(str(w.id)+'/'+path.picturepath)
+                paths.append(path.picturepath)
             js1['paths'] = paths
             ja.append(js1)
         
@@ -448,6 +492,7 @@ def uploadWork(request):
             fobj.close()
             # 压缩图片
             resize(os.path.join(dirPath,newfilename), os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
+            qiniu_load("thumb_"+newfilename,os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
             picture = models.picture_path(work_id=workid, isFirst=(filekey == 'photo1'),picturepath=newfilename)
             picture.save()
     except:
@@ -566,6 +611,7 @@ def setIntro(request):
                 fobj.write(chunk)
             fobj.close()
             resizeIntro(django_settings.IMAGES_ROOT+p.name)
+            qiniu_load(p.name,django_settings.IMAGES_ROOT+p.name)
             if introduction.count() == 0:
                 introduction = models.introduction(exper_cn=exper, intro_cn=intro, picture_name=p.name, exper_eng=exper_eng, intro_eng=intro_eng)
                 introduction.save()
@@ -591,6 +637,21 @@ def setIntro(request):
     return HttpResponse(1)
 
 def getIndexPic(request):
+    picpaths = models.picture_path.objects.filter(Q(isBroadcast=True) and Q(isPreview=False))
+    ja = []
+    for picpath in picpaths:
+        js = {}
+        workid = picpath.work_id
+        ww = models.works.objects.filter(id=workid)
+        for w in ww:
+            js['id'] = w.series_id
+        js['picture'] = picpath.picturepath
+        #if(picpath.isPreview == 0):
+        ja.append(js)
+
+    return HttpResponse(json.dumps(ja), content_type="application/json")
+
+def getIndexPicWithPreview(request):
     picpaths = models.picture_path.objects.filter(isBroadcast=True)
     ja = []
     for picpath in picpaths:
@@ -599,7 +660,7 @@ def getIndexPic(request):
         ww = models.works.objects.filter(id=workid)
         for w in ww:
             js['id'] = w.series_id
-        js['picture'] = str(picpath.work_id) +'/'+ picpath.picturepath
+        js['picture'] = picpath.picturepath
         ja.append(js)
 
     return HttpResponse(json.dumps(ja), content_type="application/json")
@@ -632,7 +693,7 @@ def getJewels(request):
     for w in works:
         picpaths = models.picture_path.objects.filter(work_id=w.id)
         for p in picpaths:
-            paths.append(str(w.id) + '/' + p.picturepath)
+            paths.append(p.picturepath)
             seqs.append(w.sequence)
     j = {'seriesname':seriesname,
          'seriesintro':seriesintro,
@@ -656,12 +717,13 @@ def getAllPics(request):
             workId = w.id
             pics = models.picture_path.objects.filter(work_id=workId)
             for p in pics:
-                picpath = str(w.id) + '/' + p.picturepath
+                picpath = p.picturepath
                 picids.append(p.id)
                 paths.append(picpath)
                 broadcast.append(p.isBroadcast)
         js['seriesId'] = s.id
         js['seriesName'] = s.seriesname
+        js['isPreview'] = s.isPreview
         js['picIds'] = picids
         js['picpaths'] = paths
         js['broadcast'] = broadcast
@@ -709,6 +771,19 @@ def introduction_eng(request):
     return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
+    ss = models.series.objects.filter(isPreview=False).order_by('series_sequence')
+    ja = []
+    for s in ss:
+        js1 = {}
+        js1['id'] = s.id
+        js1['seriesname'] = s.seriesname_eng
+        js1['seriespic'] = s.series_pic
+        #if(s.isPreview == 0):
+        ja.append(js1)
+    print(ja)
+    return HttpResponse(json.dumps(ja), content_type="application/json")
+
+def getAllSeriesWithPreview_eng(request):
     ss = models.series.objects.all().order_by('series_sequence')
     ja = []
     for s in ss:
@@ -735,7 +810,7 @@ def getJewels_eng(request):
     for w in works:
         picpaths = models.picture_path.objects.filter(work_id=w.id)
         for p in picpaths:
-            paths.append(str(w.id) + '/' + p.picturepath)
+            paths.append(p.picturepath)
             seqs.append(w.sequence)
     j = {'seriesname':seriesname, 'seriesintro':seriesintro, 'image': paths, 'seq': seqs}
 

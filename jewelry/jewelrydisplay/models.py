@@ -18,6 +18,7 @@ class series(models.Model):
     intro_eng = models.TextField(default="")
     series_pic = models.CharField(max_length=64, default='')
     series_sequence = models.IntegerField(default=0)
+    isPreview = models.BooleanField(default=True)
 
 
 class works(models.Model):
@@ -32,6 +33,7 @@ class picture_path(models.Model):
     picturepath = models.CharField(max_length=32)
     isFirst = models.BooleanField(default=False)
     isBroadcast = models.BooleanField(default=False)
+    isPreview = models.BooleanField(default=True)
 
 class introduction(models.Model):
     exper_cn = models.TextField()

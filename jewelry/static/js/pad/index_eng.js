@@ -1,5 +1,12 @@
 $(function () {
 	var len = 0;
+	// var h1 = $('#upMenu').height();
+	// var h0 = document.body.clientHeight ;
+	// alert(h1);
+	// alert(h0);
+	// alert($('#main').css('height'));
+	// $('#main').css('height', h0 - h1);
+	// alert($('#main').css('height'));
 	$.get('/getIndexPic/', function (picsjson) {
 		var pics = picsjson;
 		len = picsjson.length;
@@ -8,20 +15,20 @@ $(function () {
 
 		for(var i in pics){//遍历json对象的每个key/value对,p为key
 		    if(count == 1) {
-                $("#main").append('<a href="/index_pad_eng/jewel_pad_eng/?' + pics[i].id + '">' +
-                '<div class="first pic pic' + count + '" style="background-image: url(\'/static/images/' +
+                $("#main").append('<a href="/index_pad/jewel_pad/?' + pics[i].id + '">' +
+                '<div class="first pic pic' + count + '" style="background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="firstDot dot" style="background-color: #333333;"></div>');
             }
             else if(count == len) {
-                $("#main").append('<a href="/index_pad_eng/jewel_pad_eng/?' + pics[i].id + '">' +
-                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
+                $("#main").append('<a href="/index_pad/jewel_pad/?' + pics[i].id + '">' +
+                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="lastDot dot"></div>');
             }
             else {
-                $("#main").append('<a href="/index_pad_eng/jewel_pad_eng/?' + pics[i].id + '">' +
-                '<div class="pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
+                $("#main").append('<a href="/index_pad/jewel_pad/?' + pics[i].id + '">' +
+                '<div class="pic pic' + count + '" style="display: none; background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="dot"></div>');
             }
@@ -137,7 +144,7 @@ $(function () {
             }, 3000);
         })
 
-        
+
         // 监听移动端滑动
         var startX = 0;
         var switched = false;
@@ -162,6 +169,7 @@ $(function () {
             }
         }
         $(".pic").on("touchstart", function (e) {
+            // e.preventDefault();
             clearInterval(pp);
             switched = false;
             startX = e.originalEvent.changedTouches[0].pageX
@@ -170,6 +178,7 @@ $(function () {
             if (switched) {
                 return;
             }
+            // e.preventDefault();
             var endX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
             if (endX - startX > 75) {
                 changeCur((i - 2 + len) % len + 1);

@@ -1,16 +1,16 @@
 $(function () {
 
-	$.get('/getAllSeries_eng/',function (allSeriesJson) {
+	$.get('/getAllSeries/',function (allSeriesJson) {
 		var allSeries = allSeriesJson;
         // for(var i in allSeries) {
-        //     $('#list').append('<div class="series"><a href="/index_mob_eng/jewel_mob_eng/?' + allSeries[i].id + '">' +
+        //     $('#list').append('<div class="series"><a href="/index_mob/jewel_mob/?' + allSeries[i].id + '">' +
         //         '<div class="seriesPic" style="background:url(/static/images/series_images/' + allSeries[i].seriespic +
         //         ') center center no-repeat; background-size: cover;"' +
-        //         '></div><div class="seriesName"><h3>' + allSeries[i].seriesname + '</h3></div></a>');
+        //         '></div><div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         // }
         for(var i in allSeries) {
-            $('#list').append('<div class="series"><a href="/index_mob_eng/jewel_mob_eng/?' + allSeries[i].id + '">' +
-                '<img class="lazy" data-original="/static/images/series_images/' + allSeries[i].seriespic  +'"/>' +
+            $('#list').append('<div class="series"><a href="/index_mob/jewel_mob/?' + allSeries[i].id + '">' +
+                '<img class="lazy" data-original="http://px75gfdiz.bkt.clouddn.com/' + allSeries[i].seriespic  +'"/>' +
                 '<div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
         // $("img.lazy").lazyload({effect: "fadeIn", threshold :150});
@@ -25,6 +25,7 @@ $(function () {
         '            </div>\n' +
         '            <p>© YILAN JEWELRY</p>\n' +
         '        </div>');
+
         $(".wechat").click(function(){
             $('#wechatModal').modal('show');
         });

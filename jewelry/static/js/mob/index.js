@@ -16,13 +16,13 @@ $(function () {
 		for(var i in pics){//遍历json对象的每个key/value对,p为key
 		    if(count == 1) {
                 $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
-                '<div class="first pic pic' + count + '" style="background-image: url(\'/static/images/' +
+                '<div class="first pic pic' + count + '" style="background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="firstDot dot" style="background-color: #333333;"></div>');
             }
             else if(count == len) {
                 $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
-                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
+                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="lastDot dot"></div>');
             }

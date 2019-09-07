@@ -81,16 +81,15 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'new_jewelry_works',
-        'HOST' : '127.0.0.1',
-        'USER' : 'root',
-        'PASSWORD' : '',
-        # 'NAME': 'jewelry_works',
-        # 'HOST' : '39.106.143.27',
-        # 'USER' : 'jewel',
-        # 'PASSWORD' : 'nbjewel',
-        # 'PORT' : '3306',
-
+        # 'NAME': 'new_jewelry_works',
+        # 'HOST' : '127.0.0.1',
+        # 'USER' : 'root',
+        # 'PASSWORD' : '',
+        'NAME': 'jewelry_works',
+        'HOST' : '39.106.143.27',
+        'USER' : 'jewel',
+        'PASSWORD' : 'nbjewel',
+        'PORT' : '3306',
     }
 }
 
@@ -156,3 +155,4 @@ EMAIL_HOST_USER = 'yilanjewelry@163.com'
 EMAIL_HOST_PASSWORD = '927037lyl'
 #收件人看到的发件人
 EMAIL_FROM = 'yilanjewelry@163.com'
+
