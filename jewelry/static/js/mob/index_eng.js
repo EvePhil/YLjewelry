@@ -1,5 +1,12 @@
 $(function () {
 	var len = 0;
+	var h1 = $('#upMenu').height();
+	var h0 = window.screen.height;
+	// alert(h1);
+	// alert(h0);
+	// alert($('#main').css('height'));
+	// $('#main').css('height', h0 - h1 - h1);
+	// alert($('#main').css('height'));
 	$.get('/getIndexPic/', function (picsjson) {
 		var pics = picsjson;
 		len = picsjson.length;
@@ -8,19 +15,19 @@ $(function () {
 
 		for(var i in pics){//遍历json对象的每个key/value对,p为key
 		    if(count == 1) {
-                $("#main").append('<a href="/index_mob_eng/jewel_mob_eng/?' + pics[i].id + '">' +
-                '<div class="first pic pic' + count + '" style="background-image: url(\'/static/images/' +
+                $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
+                '<div class="first pic pic' + count + '" style="background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="firstDot dot" style="background-color: #333333;"></div>');
             }
             else if(count == len) {
-                $("#main").append('<a href="/index_mob_eng/jewel_mob_eng/?' + pics[i].id + '">' +
-                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
+                $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
+                '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'http://px75gfdiz.bkt.clouddn.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="lastDot dot"></div>');
             }
             else {
-                $("#main").append('<a href="/index_mob_eng/jewel_mob_eng/?' + pics[i].id + '">' +
+                $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
                 '<div class="pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="dot"></div>');
@@ -46,9 +53,9 @@ $(function () {
 		var i = 1;
         console.log(len)
         //alert($(".first").next())
-        var pp;
         var pic = $(".first");
         var dot = $(".firstDot");
+        var pp;
         pp = setInterval(function(){
             if(i == 1) {
                 //console.log(i);
@@ -136,7 +143,6 @@ $(function () {
                 }
             }, 3000);
         })
-
         
         // 监听移动端滑动
         var startX = 0;

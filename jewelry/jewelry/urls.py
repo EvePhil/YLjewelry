@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from jewelrydisplay import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from django.contrib import staticfiles
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^index/', admin.site.urls),
@@ -31,6 +33,7 @@ urlpatterns = [
     url(r'^getOptionSeries/', views.getAllSeries),
     url(r'^getSeries/', views.getSeries),
     url(r'^fixSeries/', views.fixSeries),
+    url(r'^getAllSeriesWithPreview/', views.getAllSeriesWithPreview),
 
     url(r'^item/', views.itemPage),
     url(r'^series/', views.series),
@@ -42,6 +45,7 @@ urlpatterns = [
     url(r'^addWork/', views.uploadWork),
     url(r'^addSeries/', views.uploadSeries),
     url(r'^getIndexPic/', views.getIndexPic),
+    url(r'^getIndexPicWithPreview/', views.getIndexPicWithPreview),
     url(r'^getAllWorksId/', views.getAllWorksId),
 
     # url(r'^userOperate/', views.userOperate),
@@ -69,6 +73,7 @@ urlpatterns = [
     url(r'^index_eng/series_eng/', views.series_eng),
     url(r'^index_eng/jewel_eng/', views.jewel_eng),
     url(r'^getAllSeries_eng/', views.getAllSeries_eng),
+    url(r'^getAllSeriesWithPreview_eng/', views.getAllSeriesWithPreview_eng),
     url(r'^getJewels_eng/', views.getJewels_eng),
 
     url(r'^mob/', views.index_mob),
@@ -98,3 +103,5 @@ urlpatterns = [
 	
 	url(r'^getSearchSeries/', views.getSearchSeries),
 ]
+urlpatterns += staticfiles_urlpatterns()
+
