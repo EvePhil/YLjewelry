@@ -141,10 +141,7 @@ $(function () {
             }
         });
         
-        $("#main").append(`
-            <div class="swiper-button--next"></div>
-            <div class="swiper-button--prev"></div>
-        `);
+        $("#main").append('<div class="swiper-button--next"></div><div class="swiper-button--prev"></div>');
         // 切换图片
         function changeCur(id) {
             $("#dot" + i).animate({ backgroundColor:'#ffffff'}, 1000);

@@ -4,11 +4,11 @@ $(function () {
 	var id = window.location.search;
 	var seriesId = id.substring(1);
 
-	$('.changeLanguage').attr('href', '/index_pad_eng/jewel_pad_eng/?' + seriesId);
+	$('.changeLanguage').attr('href', '/index_pad/jewel_pad/?' + seriesId);
 
 	var seriesPost = {id:seriesId};
 
-	$.get('/getJewels/', seriesPost, function (jeweljson) {//获取作品
+	$.get('/getJewels_eng/', seriesPost, function (jeweljson) {//获取作品
 				//series =  JSON.parse(json)
 		var jewel = jeweljson;
 		for(var i=0; i<jewel.image.length; i++) {

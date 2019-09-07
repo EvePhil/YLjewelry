@@ -30,10 +30,12 @@ urlpatterns = [
     url(r'^setIntro/', views.setIntro),
     url(r'^register/', views.register),
     url(r'^signup/', views.signup),
-    url(r'^getOptionSeries/', views.getAllSeries),
+    url(r'^getOptionSeries/', views.getAllSeriesWithPreview),
     url(r'^getSeries/', views.getSeries),
     url(r'^fixSeries/', views.fixSeries),
     url(r'^getAllSeriesWithPreview/', views.getAllSeriesWithPreview),
+
+    url(r'^purgePreview/', views.purgePreview),
 
     url(r'^item/', views.itemPage),
     url(r'^series/', views.series),
@@ -102,6 +104,36 @@ urlpatterns = [
     url(r'^getIntroduction_eng/', views.getIntroduction_eng),
 	
 	url(r'^getSearchSeries/', views.getSearchSeries),
+
+# preview
+    url(r'^preview/', views.preview_index),
+    url(r'^preview_index/introduction/', views.preview_introduction),
+    url(r'^preview_index/series/', views.preview_series),
+    url(r'^preview_index/jewel/', views.preview_jewel),
+    url(r'^preview_eng/', views.preview_index_eng),
+    url(r'^preview_index_eng/introduction_eng/', views.preview_introduction_eng),
+    url(r'^preview_index_eng/series_eng/', views.preview_series_eng),
+    url(r'^preview_index_eng/jewel_eng/', views.preview_jewel_eng),
+
+    url(r'^preview_mob/', views.preview_index_mob),
+    url(r'^preview_index_mob/introduction_mob', views.preview_introduction_mob),
+    url(r'^preview_index_mob/series_mob', views.preview_series_mob),
+    url(r'^preview_index_mob/jewel_mob', views.preview_jewel_mob),
+
+    url(r'^preview_mob_eng/', views.preview_index_mob_eng),
+    url(r'^preview_index_mob_eng/introduction_mob_eng', views.preview_introduction_mob_eng),
+    url(r'^preview_index_mob_eng/series_mob_eng', views.preview_series_mob_eng),
+    url(r'^preview_index_mob_eng/jewel_mob_eng', views.preview_jewel_mob_eng),
+
+    url(r'^preview_pad/', views.preview_index_pad),
+    url(r'^preview_index_pad/introduction_pad', views.preview_introduction_pad),
+    url(r'^preview_index_pad/series_pad', views.preview_series_pad),
+    url(r'^preview_index_pad/jewel_pad', views.preview_jewel_pad),
+
+    url(r'^preview_pad_eng/', views.preview_index_pad_eng),
+    url(r'^preview_index_pad_eng/introduction_pad_eng', views.preview_introduction_pad_eng),
+    url(r'^preview_index_pad_eng/series_pad_eng', views.preview_series_pad_eng),
+    url(r'^preview_index_pad_eng/jewel_pad_eng', views.preview_jewel_pad_eng),
 ]
 urlpatterns += staticfiles_urlpatterns()
 

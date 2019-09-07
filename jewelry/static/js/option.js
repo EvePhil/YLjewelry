@@ -22,7 +22,7 @@ function resetWorkList(sid) {
         for (var i in jobs) {
             //alert(jobs[i].paths[0]);
             $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
-                jobs[i].id +'" name="work' + i +'"><img src="/static/images/' +
+                jobs[i].id +'" name="work' + i +'"><img src="http://img.yilanjewelry.com/thumb_' +
                 jobs[i].paths[0]+ '"/><div class=\"mask\">' +
                 jobs[i].workname + '</div></a></div>');
         }
@@ -58,18 +58,18 @@ function resetWorkList(sid) {
             $('.jqueryzoom').html("");
             for(var i=0; i<jobs[img].paths.length; i++) {
                 if(i == 0) {
-                    $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="/static/images/' +
-                    jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'/static/images/'+
+                    $('.jqueryzoom').append('<img id="img" class="cloudzoom" src="http://img.yilanjewelry.com/' +
+                    jobs[img].paths[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', startMagnification:1.2, lensWidth:180, lensHeight:180, zoomImage: \'http://img.yilanjewelry.com/'+
                     jobs[img].paths[i] + '\', autoInside: 30, zoomPosition:12"/>');
-                    $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="/static/images/' +
-                    jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-                    jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                    $('#imgList').append('<li><img class="cloudzoom-gallery cloudzoom-gallery-active" src="http://img.yilanjewelry.com/thumb_' +
+                    jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://img.yilanjewelry.com/' +
+                    jobs[img].paths[i] + '\',zoomImage:\'http://img.yilanjewelry.com/' +
                     jobs[img].paths[i] + '\'"/></li>');
                 }
                 else {
-                    $('#imgList').append('<li><img class="cloudzoom-gallery" src="/static/images/' +
-                    jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'/static/images/' +
-                    jobs[img].paths[i] + '\',zoomImage:\'/static/images/' +
+                    $('#imgList').append('<li><img class="cloudzoom-gallery" src="http://img.yilanjewelry.com/thumb_' +
+                    jobs[img].paths[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://img.yilanjewelry.com/' +
+                    jobs[img].paths[i] + '\',zoomImage:\'http://img.yilanjewelry.com/' +
                     jobs[img].paths[i] + '\'"/></li>');
                 }
             }
@@ -94,7 +94,7 @@ $(function () {
 			//$('#series').append('<a href="#" id="series'+ series[s].id + '" class="list-group-item kind">' + series[s].seriesname +'</a>');
 
             $('#series').append('<div class="ll"><a href="#" class="thumbnail series" id="series' +
-                series[s].id +'" name="series' + s +'"><img src="/static/images/series_images/' +
+                series[s].id +'" name="series' + s +'"><img src="http://img.yilanjewelry.com/' +
                 series[s].seriespic+ '"/><div class=\"mask\">' +
                 series[s].seriesname + '</div></a></div>');
 			$('.seriesSelect').append('<option value="' + series[s].id + '">' + series[s].seriesname + '</option>')
@@ -217,7 +217,7 @@ function delWorkAjax(workId) {
          async: false
     }).done(function(res) {
     	alert("删除作品成功");
-
+		resetWorkList(flag);
     }).fail(function(res) {
 
     });
@@ -420,7 +420,7 @@ $(".fixIndex").click(function(){
         }
     });
 
-    $.get('/getAllPics/', function (picsjson) {//获取介绍
+    $.get('/getAllPics/', function (picsjson) {//修改轮播
 				//series =  JSON.parse(json)
 		var pic = picsjson;
 		var len =pic.length;
@@ -435,12 +435,12 @@ $(".fixIndex").click(function(){
 		    for(var j=0; j<picLen; j++) {
 		        if(nowPic.broadcast[j]) {
                     $('.indexSeries' + i).after('<a href="#" class="se"><img id="indexPic' + nowPic.picIds[j] +
-                    '" class="indexPics selectPics" src="/static/images/' + nowPic.picpaths[j] +
+                    '" class="indexPics selectPics" src="http://img.yilanjewelry.com/thumb_' + nowPic.picpaths[j] +
                     '"></a>');
                 }
                 else {
 		            $('.indexSeries' + i).after('<a href="#" class="se"><img id="indexPic' + nowPic.picIds[j] +
-                    '" class="indexPics" src="/static/images/' + nowPic.picpaths[j] +
+                    '" class="indexPics" src="http://img.yilanjewelry.com/thumb_' + nowPic.picpaths[j] +
                     '"></a>');
                 }
             }
@@ -576,6 +576,16 @@ function upWorkPhoto(upPhoto) {
 
 $(".photo").change(function(){
 	upWorkPhoto($(this));
+});
+
+$(".confirmSubmit").click(function () {
+	$.get('/purgePreview/', function (code) {//获取介绍
+		if (code == 0) {
+		    alert('上线成功');
+        } else {
+		    alert('上线失败');
+        }
+	})
 });
 
 

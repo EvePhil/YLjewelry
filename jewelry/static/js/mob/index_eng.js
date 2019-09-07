@@ -15,19 +15,19 @@ $(function () {
 
 		for(var i in pics){//遍历json对象的每个key/value对,p为key
 		    if(count == 1) {
-                $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
+                $("#main").append('<a href="/index_mob_eng/jewel_mob_eng/?' + pics[i].id + '">' +
                 '<div class="first pic pic' + count + '" style="background-image: url(\'http://img.yilanjewelry.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="firstDot dot" style="background-color: #333333;"></div>');
             }
             else if(count == len) {
-                $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
+                $("#main").append('<a href="/index_mob_eng/jewel_mob_eng/?' + pics[i].id + '">' +
                 '<div class="last pic pic' + count + '" style="display: none; background-image: url(\'http://img.yilanjewelry.com/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="lastDot dot"></div>');
             }
             else {
-                $("#main").append('<a href="/index_mob/jewel_mob/?' + pics[i].id + '">' +
+                $("#main").append('<a href="/index_mob_eng/jewel_mob_eng/?' + pics[i].id + '">' +
                 '<div class="pic pic' + count + '" style="display: none; background-image: url(\'/static/images/' +
                 pics[i].picture + '\')"' + '></div></a>');
                 $("#dots").append('<div id="dot' + count + '" class="dot"></div>');

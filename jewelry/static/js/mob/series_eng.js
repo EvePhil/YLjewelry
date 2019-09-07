@@ -1,6 +1,6 @@
 $(function () {
 
-	$.get('/getAllSeries/',function (allSeriesJson) {
+	$.get('/getAllSeries_eng/',function (allSeriesJson) {
 		var allSeries = allSeriesJson;
         // for(var i in allSeries) {
         //     $('#list').append('<div class="series"><a href="/index_mob/jewel_mob/?' + allSeries[i].id + '">' +
@@ -9,7 +9,7 @@ $(function () {
         //         '></div><div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         // }
         for(var i in allSeries) {
-            $('#list').append('<div class="series"><a href="/index_mob/jewel_mob/?' + allSeries[i].id + '">' +
+            $('#list').append('<div class="series"><a href="/index_mob_eng/jewel_mob_eng/?' + allSeries[i].id + '">' +
                 '<img class="lazy" data-original="http://img.yilanjewelry.com/' + allSeries[i].seriespic  +'"/>' +
                 '<div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         }

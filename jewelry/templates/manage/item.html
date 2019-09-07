@@ -41,7 +41,8 @@
                 <ul id="demo-list">
                 	<li class="item active"><a href="/item/"><i class="fa fa-home "></i>查看当前情况</a></li>
                     <li class="intro"><a href="/intro/"><i class="fa fa-id-card"></i>设置个人信息</a></li>
-                    <li class="intro"><a href="/preview/"><i class="fa fa-television"></i>预览</a></li>
+                    <li class="preview"><a href="/preview/"><i class="fa fa-television"></i>预览</a></li>
+                    <li class="confirmSubmit"><a href="#"><i class="fa fa-check"></i>上线</a></li>
                     <li class="logout"><a href="/logout/"><i class="fa fa-reply"></i>注销</a></li>
                 </ul>
             </div>
@@ -360,6 +361,18 @@
             $("#series a.active").removeClass("active")
             $(this).addClass("active");
         })  
+    })
+
+    $(function () {
+        //顶部导航切换
+        $(".confirmSubmit").click(function () {
+            alert('hahaha');
+            $.get('/purgePreview/', function (code) {//获取介绍
+                alert(code);
+            }).catch(err){
+                console.log(err);
+            }
+        })
     })
 </script>
 <script src="/static/js/jquery-smartMenu.js"></script>

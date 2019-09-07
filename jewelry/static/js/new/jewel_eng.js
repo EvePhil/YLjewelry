@@ -3,12 +3,12 @@ $(function () {
 	var id = window.location.search;
 	var seriesId = id.substring(1);
 
-	$('.changeLanguage').attr('href', '/index_eng/jewel_eng/?' + seriesId);
+	$('.changeLanguage').attr('href', '/jewel/?' + seriesId);
 
 	var seriesPost = {id:seriesId};
 	var name;
 
-		$.get('/getJewels/', seriesPost, function (jeweljson) {//获取作品
+		$.get('/getJewels_eng/', seriesPost, function (jeweljson) {//获取作品
 				//series =  JSON.parse(json)
 		var jewel = jeweljson;
 		for(var i=0; i<jewel.image.length; i++) {
