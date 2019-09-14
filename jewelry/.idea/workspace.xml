@@ -2,50 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cf72246-9829-49c5-b6c2-81b607873953" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/index_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/jewel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/jewel_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/menu_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/mob/series_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/email.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/email_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/index_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/intro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/intro_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/jewel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/jewel_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/menu_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/new/series_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/index_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/jewel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/jewel_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/menu_eng.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/preview/pad/series_eng.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/materialize.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/60F54DAE-51C9-4424-99E8-79A3FB4461C9.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-2.0.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/materialize.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jewelry/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jewelry/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelry/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jewelrydisplay/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jewelrydisplay/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/intro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/intro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/mob/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/mob/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/mob/index_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/mob/index_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/mob/jewel_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/mob/jewel_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/mob/series_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/mob/series_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/index_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/index_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/jewel_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/jewel_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/new/series_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/new/series_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/option.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/option.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/pad/index_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/pad/index_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/pad/jewel_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/pad/jewel_eng.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/pad/series_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/pad/series_eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/preview/mob/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/preview/mob/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/preview/mob/index_eng.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/preview/mob/index_eng.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Oldindex(dont del!!!!).html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Oldindex(dont del!!!!).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/index_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/index_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/introduction_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/introduction_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/jewel_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/jewel_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eng/series_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eng/series_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/jewel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jewel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/manage/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage/intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/manage/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manage/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/index_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/index_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/introduction_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/introduction_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/jewel_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/jewel_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob/series_mob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob/series_mob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/introduction_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/jewel_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mob_eng/series_mob_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad/index_pad.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad/index_pad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad/introduction_pad.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad/introduction_pad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad/jewel_pad.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad/jewel_pad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad/series_pad.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad/series_pad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad_eng/index_pad_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad_eng/index_pad_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad_eng/introduction_pad_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad_eng/introduction_pad_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad_eng/jewel_pad_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad_eng/jewel_pad_eng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pad_eng/series_pad_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pad_eng/series_pad_eng.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/preview/eng/index_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview/eng/index_eng.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/preview/eng/introduction_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview/eng/introduction_eng.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/preview/eng/jewel_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview/eng/jewel_eng.html" afterDir="false" />
@@ -70,6 +68,8 @@
       <change beforePath="$PROJECT_DIR$/templates/preview/pad_eng/jewel_pad_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview/pad_eng/jewel_pad_eng.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/preview/pad_eng/series_pad_eng.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview/pad_eng/series_pad_eng.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/preview/series.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview/series.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/series.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/series.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -161,32 +161,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jewelry/urls.py">
+      <file leaf-file-name="intro.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/manage/intro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="76">
+              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="27" />
               <folding>
-                <element signature="e#641#673#0" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="232" column="30" lean-forward="true" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
+            <state relative-caret-position="646">
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intro.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/manage/intro.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="27" column="89" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="27" selection-end-column="89" />
+            <state relative-caret-position="266">
+              <caret line="14" column="75" lean-forward="true" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manageIndex.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/manageIndex.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="930">
+              <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -194,25 +203,8 @@
       <file leaf-file-name="item.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manage/item.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="367" column="8" lean-forward="true" selection-start-line="367" selection-start-column="8" selection-end-line="374" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="option.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/option.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="585" column="26" selection-start-line="585" selection-start-column="26" selection-end-line="585" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -231,13 +223,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
-      <find />
-      <find>alert</find>
-      <find>getAllSeries</find>
-      <find>getAll</find>
-      <find>purgePreview</find>
-      <find />
       <find>get</find>
       <find>staticfiles_urlpatterns</find>
       <find>getIndexPic</find>
@@ -249,7 +234,6 @@
       <find>confirmJob</find>
       <find>addWorkPhoto</find>
       <find>addJob</find>
-      <find>upWorkPhoto</find>
       <find>uploadWork</find>
       <find>addWorkAjax</find>
       <find>addWork</find>
@@ -259,15 +243,26 @@
       <find>confirmDelJob</find>
       <find>intro</find>
       <find>delWorkAjax</find>
-      <find>resetWorkList</find>
       <find>purge</find>
+      <find>resetWorkList</find>
+      <find>http://libs.baidu.com/jquery/2.0.0/jquery.min.js</find>
+      <find>#000</find>
+      <find>introduction</find>
+      <find>getFileUrl</find>
+      <find>preImg</find>
+      <find>boots</find>
+      <find>upWorkPhoto</find>
+      <find>photo</find>
     </findStrings>
     <replaceStrings>
       <replace />
-      <replace />
+      <replace>YILAN JEWELRY</replace>
+      <replace>/static/js/jquery-2.0.0.min.js</replace>
+      <replace>#4a4a4a</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\gitTest\YLjewelry\jewelry\static\images</dir>
+      <dir>C:\Users\Limbo\Desktop\JWJWJW\wuju\YLjewelry\jewelry\templates</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -277,15 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/preview/eng/introduction_eng.html" />
-        <option value="$PROJECT_DIR$/templates/preview/eng/jewel_eng.html" />
-        <option value="$PROJECT_DIR$/templates/preview/eng/series_eng.html" />
-        <option value="$PROJECT_DIR$/templates/preview/mob/index_mob.html" />
-        <option value="$PROJECT_DIR$/templates/preview/mob/introduction_mob.html" />
-        <option value="$PROJECT_DIR$/templates/preview/mob/jewel_mob.html" />
-        <option value="$PROJECT_DIR$/templates/preview/mob/series_mob.html" />
-        <option value="$PROJECT_DIR$/templates/preview/mob_eng/index_mob_eng.html" />
-        <option value="$PROJECT_DIR$/templates/preview/mob_eng/introduction_mob_eng.html" />
         <option value="$PROJECT_DIR$/templates/preview/mob_eng/series_mob_eng.html" />
         <option value="$PROJECT_DIR$/templates/preview/mob_eng/jewel_mob_eng.html" />
         <option value="$PROJECT_DIR$/templates/preview/pad/index_pad.html" />
@@ -319,15 +305,24 @@
         <option value="$PROJECT_DIR$/static/js/preview/pad/index_eng.js" />
         <option value="$PROJECT_DIR$/static/js/preview/new/index_eng.js" />
         <option value="$PROJECT_DIR$/static/js/preview/new/index.js" />
-        <option value="$PROJECT_DIR$/static/js/preview/mob/index_eng.js" />
-        <option value="$PROJECT_DIR$/static/js/preview/mob/index.js" />
         <option value="$PROJECT_DIR$/static/js/new/index_eng.js" />
-        <option value="$PROJECT_DIR$/static/js/mob/index_eng.js" />
         <option value="$PROJECT_DIR$/static/js/pad/index_eng.js" />
-        <option value="$PROJECT_DIR$/templates/manage/intro.html" />
-        <option value="$PROJECT_DIR$/templates/manage/item.html" />
-        <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
         <option value="$PROJECT_DIR$/static/js/option.js" />
+        <option value="$PROJECT_DIR$/jewelry/settings.py" />
+        <option value="$PROJECT_DIR$/static/js/mob/index.js" />
+        <option value="$PROJECT_DIR$/static/js/mob/index_eng.js" />
+        <option value="$PROJECT_DIR$/static/js/preview/mob/index.js" />
+        <option value="$PROJECT_DIR$/static/js/preview/mob/index_eng.js" />
+        <option value="$PROJECT_DIR$/static/css/index.css" />
+        <option value="$PROJECT_DIR$/static/js/login.js" />
+        <option value="$PROJECT_DIR$/static/css/login.css" />
+        <option value="$PROJECT_DIR$/jewelrydisplay/views.py" />
+        <option value="$PROJECT_DIR$/static/css/manageIndex.css" />
+        <option value="$PROJECT_DIR$/templates/manage/intro.html" />
+        <option value="$PROJECT_DIR$/static/js/intro.js" />
+        <option value="$PROJECT_DIR$/static/css/intro.css" />
+        <option value="$PROJECT_DIR$/templates/manage/item.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
       </list>
     </option>
   </component>
@@ -337,9 +332,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="652" />
-    <option name="width" value="933" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="650" />
+    <option name="width" value="935" />
     <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -363,25 +358,13 @@
             <path>
               <item name="jewelry" type="b2602c69:ProjectViewProjectNode" />
               <item name="jewelry" type="462c0819:PsiDirectoryNode" />
-              <item name="jewelrydisplay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jewelry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jewelry" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jewelry" type="b2602c69:ProjectViewProjectNode" />
               <item name="jewelry" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jewelry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jewelry" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="new" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jewelry" type="b2602c69:ProjectViewProjectNode" />
@@ -412,19 +395,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Limbo\Desktop\JWJWJW\wuju\YLjewelry\jewelry\static\images" />
+      <recent name="C:\Users\Limbo\Desktop\JWJWJW\wuju\YLjewelry\jewelry\static\css" />
+      <recent name="C:\Users\Limbo\Desktop\JWJWJW\wuju\YLjewelry\jewelry\static\js" />
+      <recent name="C:\Users\Limbo\Desktop\JWJWJW\wuju\YLjewelry\jewelry\static\js\preview" />
+      <recent name="E:\gitTest\YLjewelry\jewelry\static\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\gitTest\YLjewelry\jewelry\static\css\pad" />
       <recent name="E:\gitTest\YLjewelry\jewelry\templates\pad" />
       <recent name="E:\gitTest\YLjewelry\jewelry\jewelrydisplay" />
       <recent name="C:\Users\Limbo\Desktop\jewelry\templates\eng" />
       <recent name="C:\Users\Limbo\Desktop\jewelry\static\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Limbo\Desktop\JWJWJW\wuju\YLjewelry\jewelry\static\js\preview" />
-      <recent name="E:\gitTest\YLjewelry\jewelry\static\js" />
-      <recent name="E:\gitTest\YLjewelry\jewelry\static\css\mob" />
-      <recent name="E:\gitTest\YLjewelry\jewelry\static\js\pad" />
-      <recent name="E:\gitTest\YLjewelry\jewelry\templates\pad_eng" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -809,18 +792,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.40820312" side_tool="true" visible="true" weight="0.1739726" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.40950522" side_tool="true" visible="true" weight="0.1739726" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4987437" weight="0.32959184" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.4930192" weight="0.32831737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5917969" visible="true" weight="0.1739726" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5904948" weight="0.1739726" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6529948" weight="0.205074" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1998698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19921875" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49396783" weight="0.19661734" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -831,7 +814,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49396783" visible="true" weight="0.19661734" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -874,123 +856,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/eng/jewel_eng.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preview/new/intro.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/preview/mob/index_mob.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="55" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/pad/jewel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob/index_mob.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mob_eng/index_mob_eng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/preview/mob_eng/index_mob_eng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mob/series.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="61" lean-forward="true" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mob/series_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/pad/jewel_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/pad/series.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/pad/series_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preview/mob/jewel_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preview/new/series.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preview/pad/jewel_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="67" lean-forward="true" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/preview/pad/series.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,18 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/series.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,9 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,9 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1058,9 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="96" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,9 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1090,12 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1103,12 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2470">
           <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1123,12 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,45 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preview/mob/index_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preview/mob/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1185,46 +973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="124" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mob/jewel_eng.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-419">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mob/jewel.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/pad/index_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mob/index_eng.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,19 +987,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/intro_eng.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/new/intro.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/new/jewel_eng.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1255,6 +998,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelry/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="29" column="105" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mob/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="125" selection-start-line="30" selection-start-column="125" selection-end-line="30" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mob/index_eng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="125" selection-start-line="30" selection-start-column="125" selection-end-line="30" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mob/jewel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/pad/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/pad/index_eng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preview/mob/index_eng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -1264,41 +1048,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-2.0.0.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preview/mob/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/materialize.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/indexFront.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="124" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/new/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="28" selection-start-line="28" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/new/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="121" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="553" column="84" selection-start-line="553" selection-start-column="84" selection-end-line="553" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/materialize.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/jewelry/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="175">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
             <element signature="e#641#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage/intro.html">
+    <entry file="file://$PROJECT_DIR$/templates/introduction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="89" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="27" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage/item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="367" column="8" lean-forward="true" selection-start-line="367" selection-start-column="8" selection-end-line="374" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jewelrydisplay/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="232" column="30" lean-forward="true" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/option.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="585" column="26" selection-start-line="585" selection-start-column="26" selection-end-line="585" selection-end-column="26" />
+        <state relative-caret-position="458">
+          <caret line="576" selection-start-line="576" selection-end-line="578" selection-end-column="3" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#li#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
@@ -1307,6 +1152,58 @@
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/intro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/intro.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/manageIndex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage/intro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manage/item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="75" lean-forward="true" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
         </state>
       </provider>
     </entry>

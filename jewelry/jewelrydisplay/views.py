@@ -551,7 +551,7 @@ def intro(request):
     j['exper'] = introduction.exper_cn
     # print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"manage/intro.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn,'intro_eng':introduction.intro_eng, 'exper_eng': introduction.exper_eng})
+    return render(request,"manage/intro.html", {'image': introduction.picture_name, 'intro':introduction.intro_cn, 'exper': introduction.exper_cn,'intro_eng':introduction.intro_eng, 'exper_eng': introduction.exper_eng})
     # u = auth.get_user(request)
     # print(u)
     # print(u.get_all_permissions())
@@ -560,18 +560,6 @@ def intro(request):
     #     return render(request,"manage/intro.html")
     # else:
     #     return render(request, 'message.html', {'message':'没有权限'})
-
-
-def intro(request):
-    try:
-        introduction = models.introduction.objects.get(id = 1)
-        # print(introduction)
-    except models.introduction.DoesNotExist:
-        return render(request, "manage/intro.html", {'intro': '', 'exper': '',
-                                                     'intro_eng': '',
-                                                     'exper_eng': ''})
-    else:
-        return render(request,"manage/intro.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn,'intro_eng':introduction.intro_eng, 'exper_eng': introduction.exper_eng})
 
 
 # 展示作者介绍
