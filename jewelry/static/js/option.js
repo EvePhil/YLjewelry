@@ -13,8 +13,9 @@ function resetWorkList(sid) {
         sss = seriesjson;
         var intro = seriesjson;
         $('#intro').html('');
-        $('#intro').append(intro.seriesintro);
-    })
+        $('#intro').append('<p>'+intro.seriesintro+'</p><br>');
+        $('#intro').append('<p>'+intro.seriesintro_eng+'</p>');
+    });
     $.get('/getOptionWorks/', seriesPost,  function (jobsjson) {//获取作品
         //series =  JSON.parse(json)
         var jobs = jobsjson;
@@ -22,7 +23,7 @@ function resetWorkList(sid) {
         for (var i in jobs) {
             //alert(jobs[i].paths[0]);
             $('#jobs').append('<div class="ll"><a href="#" class="thumbnail job" id="work' +
-                jobs[i].id +'" name="work' + i +'"><img src="http://img.yilanjewelry.com/thumb_' +
+                jobs[i].id +'" name="work' + i +'"><img src="http://img.yilanjewelry.com/' +
                 jobs[i].paths[0]+ '"/><div class=\"mask\">' +
                 jobs[i].workname + '</div></a></div>');
         }
@@ -97,7 +98,7 @@ $(function () {
                 series[s].id +'" name="series' + s +'"><img src="http://img.yilanjewelry.com/' +
                 series[s].seriespic+ '"/><div class=\"mask\">' +
                 series[s].seriesname + '</div></a></div>');
-			$('.seriesSelect').append('<option value="' + series[s].id + '">' + series[s].seriesname + '</option>')
+			$('.seriesSelect').append('<option class="grey-text text-darken-2" value="' + series[s].id + '">' + series[s].id + " " + series[s].seriesname + '</option>')
 			$('.fixSeriesSelect').append('<option value="' + series[s].id + '">' + series[s].seriesname + '</option>')
 
             $(".series").mouseover(function(){
@@ -108,6 +109,8 @@ $(function () {
             })
 			console.log(series[s].seriespic);
 		}
+    $('select').material_select();
+
 		$(function () {
         //导航切换
 	        $("#series a").click(function () {
@@ -157,19 +160,29 @@ function addSeriesAjax()
 } 
 function addWorkAjax()
 {
-	var allInput = $('#addPhotoTag').nextAll('input');
+	// var allInput = $('#addPhotoTag').nextAll('input');
+    var allInput = $('.jobPhoto');
+    console.log(allInput.length)
 	var i = 1;
 	var name;
     var Data = new FormData();
-    Data.append("seriesSelect", $(".seriesSelect").val());
+
+    var seriesId = $(".seriesSelect ul .active span").html().split(' ')[0]
+    var options = $('.seriesSelect option');
+
+    console.log(seriesId)
+    Data.append("seriesSelect", seriesId);
     // Data.append("jobIntro", $(".jobIntro").val());
+    console.log($(".seriesSelect ul .active span").html())
     allInput.each(function(){
 	    if($(this).val() != "") {
 	    	name = "photo" + i;
 	    	Data.append(name, $(this)[0].files[0]);
 	    	i++
 	    }
+	    // console.log($(this)[0].files[0])
 	});
+
     $.ajax({
          url: '/addWork/' ,
          type: 'post',
@@ -270,7 +283,7 @@ var seriesMenu = [
                 $('.fixSeriesIntro_eng').val(series.seriesintro_eng);
                 // $('.fixSeriesRate').val(series.rate);
             })
-			$('#fixSeries').modal('show');
+			$('#fixSeries').modal('open');
 		}
 	},
 	{
@@ -279,7 +292,7 @@ var seriesMenu = [
 			now = $(this);
 			delSeries = $(this).attr('id').substring(6);
 			//alert(delSeries)
-			$('#delSeries').modal('show');
+			$('#delSeries').modal('open');
 		}
 	},{
 		text: "上移",
@@ -350,7 +363,7 @@ var jobMenu = [
 			now = $(this);
 			var workName = $(this).attr("id");
 			delWork = workName.substring(4);
-			$('#delJob').modal('show');
+			$('#delJob').modal('open');
 		}
 	},{
 		text: "上移",
@@ -426,8 +439,8 @@ $(".fixIndex").click(function(){
 		var len =pic.length;
 		$('.indexFix').html('');
 		for(var i=0; i<len; i++) {
-			$('.indexFix').append('<li><h5 class="indexSeries' + i +
-				'" style="font-weight: bold">' + pic[i].seriesName + '</h5></li>');
+			$('.indexFix').append('<li style="list-style: none"><p class="indexSeries' + i +
+				'" style="font-weight: bold">' + pic[i].seriesName + '</p></li>');
 		}
 		for(var i=0; i<len; i++) {
 		    var picLen = pic[i].picIds.length
@@ -447,7 +460,7 @@ $(".fixIndex").click(function(){
 		}
     })
 // getAllPics
-	$('#fixIndex').modal('show');
+    $('#fixIndex').modal('open');
 });
 
 $(".confirmSeries").click(function(){
@@ -462,22 +475,31 @@ $(".confirmSeries").click(function(){
 $(".confirmJob").click(function(){
 	addWorkAjax();
 	//location.reload();
-    flag = $(".seriesSelect").val();
+    flag = $(".seriesSelect ul .active span").html().split(' ')[0];
     if(flag) {
         resetWorkList(flag);
-        $("#addWorkPhoto").html('<p id="addPhotoTag" style="margin-top: 2%; font-weight: bold;">图 片</p>\n' +
-            '\t\t\t\t\t\t\t\t\t<input id="photo1" name="photo" class="photo" type="file" accept="image/*"\n' +
-            '\t\t\t\t\t\t\t\t\t\tstyle="width: 50%; margin: 0; height: auto; display: inline;"/>');
+        // $("#addWorkPhoto").html('<p id="addPhotoTag" style="margin-top: 2%; font-weight: bold;">图 片</p>\n' +
+        //     '\t\t\t\t\t\t\t\t\t<input id="photo1" name="photo" class="photo" type="file" accept="image/*"\n' +
+        //     '\t\t\t\t\t\t\t\t\t\tstyle="width: 50%; margin: 0; height: auto; display: inline;"/>');
+        $("#addWorkPhoto").html(`<div class="uploadPhoto file-field input-field">
+                          <div class="waves-effect waves-light btn grey darken-2">
+                            <span>图 片</span>
+                            <input id="photo1" name="photo" class="photo jobPhoto" type="file" accept="image/*">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                          </div>
+                        </div>`);
         $(".photo").change(function(){
 			upWorkPhoto($(this));
 		});
     }
 });
 $(".addSeries").click(function(){
-	$('#seriesModal').modal('show');
+	$('#seriesModal').modal('open');
 });
 $(".addJob").click(function(){
-	$('#jobModal').modal('show');
+	$('#jobModal').modal('open');
 });
 
 $(".confirmDelSeries").click(function(){
@@ -554,10 +576,51 @@ function upWorkPhoto(upPhoto) {
 		var i = parseInt(upPhoto.attr("id").substr(5));
 		var j = i + 1;
 		var src = upPhoto.val();
-		upPhoto.after('<img id="img' + i + '" style="margin-left: 10%; margin-bottom: 2%;" src="" />' +
-		'<button type="button" style="margin-left: 8%;" class="btn btn-primary deleteAddWork">删除</button>' +
-		'<input id="photo' + j + '" name="photo" class="photo" type="file" accept="image/*"' +
-		'style="width: 50%; margin: 0; height: auto; display: inline;"/>');
+		// upPhoto.after('<img id="img' + i + '" style="margin-left: 10%; margin-bottom: 2%;" src="" />' +
+		// '<button type="button" style="margin-left: 8%;" class="btn btn-primary deleteAddWork">删除</button>' +
+		// '<input id="photo' + j + '" name="photo" class="photo" type="file" accept="image/*"' +
+		// 'style="width: 50%; margin: 0; height: auto; display: inline;"/>');
+		upPhoto.parent().parent().after(`
+            <img id="img${i}" style="height: 100px; width: 200px; object-fit: cover;" src="" />
+            <button type="button" style="float: right" class="waves-effect waves-light btn-flat deleteAddWork">删除</button>
+            
+             <div class="uploadPhoto file-field input-field">
+              <div class="waves-effect waves-light btn grey darken-2">
+                <span>图 片</span>
+                <input id="photo${j}" name="photo" class="photo jobPhoto" type="file" accept="image/*">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+        `);
+
+        // upPhoto.parent().parent().after(`
+        //     <div class="uploadPhoto file-field input-field">
+        //       <div class="waves-effect waves-light btn grey darken-2">
+        //         <span>图 片</span>
+        //         <input id="photo${j}" name="photo" class="photo" type="file" accept="image/*">
+        //       </div>
+        //       <div class="file-path-wrapper">
+        //         <input class="file-path validate" type="text">
+        //       </div>
+        //     </div>
+        // `);
+
+
+        // <div class="uploadPhoto file-field input-field">
+        //                   <div class="waves-effect waves-light btn grey darken-2">
+        //                     <span>图 片</span>
+        //                     <input id="photo${j}" name="photo" class="photo" type="file" accept="image/*">
+        //                   </div>
+        //                   <div class="file-path-wrapper">
+        //                     <input class="file-path validate" type="text">
+        //                   </div>
+        //                 </div>
+		// upPhoto.after('<img id="img' + i + '" style="margin-left: 10%; margin-bottom: 2%;" src="" />' +
+		// '<button type="button" style="margin-left: 8%;" class="btn btn-primary deleteAddWork">删除</button>' +
+		// '<input id="photo' + j + '" name="photo" class="photo" type="file" accept="image/*"' +
+		// 'style="width: 50%; margin: 0; height: auto; display: inline;"/>');
 		//alert(i)
 		preImg(upPhoto.attr("id"), "img" + i);
 

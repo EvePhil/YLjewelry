@@ -496,6 +496,8 @@ def uploadWork(request):
             resize(os.path.join(dirPath,newfilename), os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
             qiniu_load("thumb_"+newfilename,os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
             picture = models.picture_path(work_id=workid, isFirst=(filekey == 'photo1'),picturepath=newfilename)
+
+            print(newfilename)
             picture.save()
     except:
         models.picture_path.objects.filter(work_id=workid).delete()

@@ -33,7 +33,7 @@
             <form id="intro" role="form" method="POST" action="/intro/" enctype="multipart/form-data">
                 <div class="loadPhoto">
                     <div class="uploadPhoto file-field input-field">
-                      <div class="waves-effect waves-light btn btn  grey darken-1">
+                      <div class="waves-effect waves-light btn grey darken-2">
                         <span>设计师照片</span>
                         <input id="photo" name="photo" class="photo" type="file" accept="image/*">
                       </div>
@@ -64,7 +64,7 @@
                     <label for="exper_eng">Experience</label>
                 </div>
             </form>
-            <a class="confirmIntro waves-effect waves-light btn btn grey darken-4">确 认</a>
+            <a class="confirmIntro waves-effect waves-light btn grey darken-2">确 认</a>
 		</div>
     </div>
 </div>
@@ -76,15 +76,6 @@
         {#jQuery("#jquery-accordion-menu").jqueryAccordionMenu();#}
 
     });
-
-    $(function () {
-    	var flag1 = 0;
-        //顶部导航切换
-        $("#demo-list li").click(function () {
-            $("#demo-list li.active").removeClass("active")
-            $(this).addClass("active");
-        })  
-    })
 </script>
 <script src="/static/js/jquery-smartMenu.js"></script>
 <script type="text/javascript" src="/static/js/intro.js"></script>
