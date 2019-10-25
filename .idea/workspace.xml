@@ -79,14 +79,43 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-982130268">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="315" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="315" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jewelry/jewelrydisplay/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4294">
-              <caret line="248" column="27" selection-start-line="248" selection-start-column="16" selection-end-line="248" selection-end-column="27" />
+            <state relative-caret-position="938">
+              <caret line="832" column="21" lean-forward="true" selection-start-line="832" selection-start-column="21" selection-end-line="832" selection-end-column="21" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -97,8 +126,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jewelry/jewelrydisplay/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+            <state relative-caret-position="190">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/django/db/models/fields/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="1077" column="53" selection-start-line="1077" selection-start-column="49" selection-end-line="1077" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -106,8 +147,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jewelry/jewelry/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            <state relative-caret-position="285">
+              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -119,13 +160,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mysql</find>
-      <find>de</find>
       <find>resize</find>
       <find>picturepath</find>
       <find>save()</find>
       <find>.write</find>
-      <find>qiniu</find>
       <find>thumb_</find>
       <find>picture</find>
       <find>getAllSeries</find>
@@ -143,6 +181,15 @@
       <find>withPreview</find>
       <find>WithPreview</find>
       <find>http://px75gfdiz.bkt.clouddn.com</find>
+      <find>qiniu</find>
+      <find>fix</find>
+      <find>intro</find>
+      <find>exper</find>
+      <find>.objects.</find>
+      <find>all().</find>
+      <find>path</find>
+      <find>inte</find>
+      <find>fixintro</find>
     </findStrings>
     <replaceStrings>
       <replace>http://img.yilanjewelry.com</replace>
@@ -206,19 +253,25 @@
         <subPane>
           <expand>
             <path>
-              <item name="YLjewelry111" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YLjewelry111" type="462c0819:PsiDirectoryNode" />
+              <item name="YLjewelry_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YLjewelry_new" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="YLjewelry111" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YLjewelry111" type="462c0819:PsiDirectoryNode" />
+              <item name="YLjewelry_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YLjewelry_new" type="462c0819:PsiDirectoryNode" />
               <item name="jewelry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="YLjewelry111" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YLjewelry111" type="462c0819:PsiDirectoryNode" />
+              <item name="YLjewelry_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YLjewelry_new" type="462c0819:PsiDirectoryNode" />
               <item name="jewelry" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="jewelry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YLjewelry_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YLjewelry_new" type="462c0819:PsiDirectoryNode" />
+              <item name="jewelry" type="462c0819:PsiDirectoryNode" />
+              <item name="jewelrydisplay" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,10 +368,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17246597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17420067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -331,7 +384,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.15763547" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.15712799" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32840723" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -614,27 +667,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py" />
-    <entry file="file://$PROJECT_DIR$/jewelry/jewelrydisplay/views.py">
+    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4294">
-          <caret line="248" column="27" selection-start-line="248" selection-start-column="16" selection-end-line="248" selection-end-column="27" />
+        <state relative-caret-position="243">
+          <caret line="1077" column="53" selection-start-line="1077" selection-start-column="49" selection-end-line="1077" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jewelry/jewelrydisplay/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jewelry/jewelrydisplay/models.py">
+    <entry file="file://$PROJECT_DIR$/jewelry/jewelrydisplay/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        <state relative-caret-position="938">
+          <caret line="832" column="21" lean-forward="true" selection-start-line="832" selection-start-column="21" selection-end-line="832" selection-end-column="21" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jewelry/jewelry/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        <state relative-caret-position="285">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
             <element signature="e#641#673#0" expanded="true" />
           </folding>
