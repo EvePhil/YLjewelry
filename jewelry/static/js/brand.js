@@ -1,24 +1,37 @@
-var self={"intro":"个人简历","exper":"获奖经济"};
+var pressId = 0;
 
-// function getFileUrl(sourceId) {
-//     var url;
-//     if (navigator.userAgent.indexOf("MSIE")>=1) { // IE
-//         url = document.getElementById(sourceId).value;
-//     } else if(navigator.userAgent.indexOf("Firefox")>0) { // Firefox
-//         url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
-//     } else if(navigator.userAgent.indexOf("Chrome")>0) { // Chrome
-//         url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
-//     }
-//     return url;
-// }
-// function preImg(sourceId, targetId) {
-//     var url = getFileUrl(sourceId);
-//     var imgPre = document.getElementById(targetId);
-//     imgPre.src = url;
-// }
-// $(".photo").change(function(){
-// 	preImg('photo', 'previewImg');
-// });
+$(function () {
+    $.get('/getAllMedia/', function (presses) {
+        // var intro = introduction;
+        // //alert(len)
+        // $("#intro").append('<pre>' + intro.intro + '</pre>');
+        // $("#exper").append('<pre>' + intro.exper + '</pre>');
+
+        for (var i = 0, len = presses.length; i < len; i++) {
+            $(".pressImg").append('<img id="press' + presses[i].sid + '" src="/static/images/press/' + presses[i].simg +
+                '" style="height: 100px; width: 200px; margin-bottom: 10px; margin-right: 5px; object-fit: cover;" />');
+        }
+        console.log(presses);
+
+        $(".pressImg img").smartMenu(pressMenu, {
+            name: "pressMenu"
+        });
+    })
+});
+
+var pressMenu = [
+	[{
+		text: "删除图片",
+		func: function() {
+			now = $(this);
+			pressId = $(this).attr("id").substring(5);
+			$('#delPress').modal('open');
+		}
+	}]
+]
+
+// confirmDelPress
+
 function brandAjax()
 {   
     var Data = new FormData();
@@ -34,7 +47,7 @@ function brandAjax()
          contentType: false,
          async: false
     }).done(function(res) {
-    	if(res === 1) {
+    	if(res == 1) {
             alert("修改成功");
     	location.reload();
         } else {
@@ -63,9 +76,9 @@ function addPressAjax()
          contentType: false,
          async: false
     }).done(function(res) {
-        if(res === 1) {
+        if(res == 1) {
             alert("添加成功");
-    	location.reload();
+    	    location.reload();
         } else {
             alert("添加失败，请重试");
             return;
@@ -78,4 +91,34 @@ function addPressAjax()
 
 $(".addPress").click(function(){
 	addPressAjax();
+});
+
+function deletePressAjax()
+{
+    var Data = new FormData();
+    Data.append("id", pressId);
+    $.ajax({
+         url: '/deleteMedia/' ,
+         type: 'post',
+         data: Data,
+         cache: false,
+         processData: false,
+         contentType: false,
+         async: false
+    }).done(function(res) {
+        if(res == 1) {
+            alert("删除成功");
+    	    location.reload();
+        } else {
+            alert("删除失败，请重试");
+            return;
+        }
+    }).fail(function(res) {
+        alert("删除失败，请重试");
+        return;
+    });
+}
+
+$(".confirmDelPress").click(function(){
+	deletePressAjax();
 });

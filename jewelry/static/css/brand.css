@@ -18,6 +18,12 @@
     padding-top: 10px;
 }
 
+.pressImg {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .uploadPhoto {
     flex-grow: 1;
     padding-right: 40px;

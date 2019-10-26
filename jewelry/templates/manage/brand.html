@@ -55,8 +55,22 @@
             </div>
             <a class="addPress waves-effect waves-light btn grey darken-2">添 加</a>
         </div>
+        <div class="pressImg"></div>
+    </div>
+
+    <div id="delPress" class="modal">
+        <div class="modal-content">
+          <h5>删除图片</h5>
+          <p style="font-weight: bold;">确认删除该图片？</p>
+        </div>
+        <div class="modal-footer">
+          <a class=" modal-action modal-close waves-effect btn grey darken-2 confirmDelPress">确认</a>
+          <a class=" modal-action modal-close waves-effect waves-light btn-flat">关闭</a>
+        </div>
+      </div>
     </div>
 </div>
+
 </body>
 
 <script type="text/javascript">
@@ -65,6 +79,7 @@
         {#jQuery("#jquery-accordion-menu").jqueryAccordionMenu();#}
 
     });
+    $('.modal').modal();
 </script>
 <script src="/static/js/jquery-smartMenu.js"></script>
 <script type="text/javascript" src="/static/js/brand.js"></script>
