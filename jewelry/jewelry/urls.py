@@ -33,6 +33,11 @@ urlpatterns = [
     url(r'^getOptionSeries/', views.getAllSeriesWithPreview),
     url(r'^getSeries/', views.getSeries),
     url(r'^fixSeries/', views.fixSeries),
+    url(r'^fixIntro/', views.fixIntro),
+    url(r'^addMedia/', views.addMedia),
+    url(r'^deleteMedia/', views.deleteMedia),
+    url(r'^getAllMedia/', views.getAllMedia),
+
     url(r'^getAllSeriesWithPreview/', views.getAllSeriesWithPreview),
 
     url(r'^purgePreview/', views.purgePreview),

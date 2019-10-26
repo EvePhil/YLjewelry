@@ -19,6 +19,9 @@ import os
 import shutil
 from django.conf import settings
 # Create your views here.
+from qiniu import Auth, put_file, etag, urlsafe_base64_encode
+import qiniu.config
+from qiniu.compat import is_py2, is_py3
 
 import sys
 from PIL import Image
@@ -29,24 +32,56 @@ sys.setdefaultencoding('utf-8')
 token_confirm = Token(django_settings.SECRET_KEY)    # 定义为全局变量
 
 
-#需要填写你的 Access Key 和 Secret Key
 def qiniu_load(file,path):
     access_key = 'y8BaldA683hgVEhHix4_xWR3NESm9uch28e1nG30'
     secret_key = '7Rqb5UoDbg7B3BVEdG38ZtHUzkQzTh6fU_TFOn61'
+
     # 构建鉴权对象
     q = Auth(access_key, secret_key)
+
     # 要上传的空间
     bucket_name = 'yljewlery'
-    # 上传后保存的文件名
+
+    # 上传到七牛后保存的文件名
     key = file
+
     # 生成上传 Token，可以指定过期时间等
     token = q.upload_token(bucket_name, key)
+
     # 要上传文件的本地路径
     localfile = path
+
     ret, info = put_file(token, key, localfile)
+    print(ret)
     print(info)
-    assert ret['key'] == key
+
+    if is_py2:
+        assert ret['key'].encode('utf-8') == key
+    elif is_py3:
+        assert ret['key'] == key
+
     assert ret['hash'] == etag(localfile)
+
+# #需要填写你的 Access Key 和 Secret Key
+# def qiniu_load(file,path):
+#     access_key = 'y8BaldA683hgVEhHix4_xWR3NESm9uch28e1nG30'
+#     secret_key = '7Rqb5UoDbg7B3BVEdG38ZtHUzkQzTh6fU_TFOn61'
+#     # 构建鉴权对象
+#     q = Auth(access_key, secret_key)
+#     # 要上传的空间
+#     bucket_name = 'yljewlery'
+#     # 上传后保存的文件名
+#     key = file
+#     # 生成上传 Token，可以指定过期时间等
+#     token = q.upload_token(bucket_name, key)
+#     # 要上传文件的本地路径
+#     localfile = path
+#     ret, info = put_file(token, key, localfile)
+#     print(info)
+#     assert ret['key'] == key
+#     assert ret['hash'] == etag(localfile)
+
+
 
 def index(request):
     return render(request, "index.html")
@@ -741,7 +776,63 @@ def fixIndex(request):
         indexpic.save()
     return HttpResponse(1)
 
+def fixIntro(request):
+    try:
+        data = request.POST
+        cn = data.get('story_cn')
+        eng = data.get('story_eng')
+        series = models.introduction.objects.all().update(story_cn = cn,story_eng = eng)
+    except:
+        return HttpResponse(0)
+    return HttpResponse(1)
 
+def addMedia(request):
+    try:
+        data = request.POST
+        height = data.get('rate')
+        print(height)
+        files = request.FILES
+        p = files['file']
+        filename = p.name
+        timestamp = int(round(time.time() * 1000))
+        # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
+        splitfilename = filename.encode('utf-8').split('.')
+        newfilename = str(timestamp) + 'series.' + splitfilename[-1]
+        fobj = open(django_settings.IMAGES_ROOT+'series_images/' + newfilename, 'wb')
+        for chunk in p.chunks():
+            fobj.write(chunk)
+        fobj.close()
+        resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename, height)
+
+        series = models.media(img= newfilename)
+        series.save()
+    except:
+        return HttpResponse(0)
+    return HttpResponse(1)
+
+def deleteMedia(request):
+    try:
+        data = request.POST
+        nid = data.get('id')
+
+        models.media.objects.filter(id = nid).delete()
+        #series.save()
+    except:
+        return HttpResponse(0)
+    return HttpResponse(1)
+
+
+def getAllMedia(request):
+    series = models.media.objects.all().order_by('id')
+    ja = []
+    for s in series:
+        js = {}
+
+        js['sid'] = s.id
+        js['simg'] = s.img
+        ja.append(js)
+    print(ja)
+    return HttpResponse(json.dumps(ja), content_type="application/json")
 
 
 
