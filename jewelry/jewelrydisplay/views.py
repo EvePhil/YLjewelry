@@ -488,7 +488,6 @@ def resize(path, thumbnailPath):
 
 
 def uploadWork(request):
-    # 上传
     # 修改信息
     # 保存的文件名改成 时间戳+photo+本作品中该图片的序号
     seriesid = request.POST.get('seriesSelect')
@@ -598,6 +597,16 @@ def intro(request):
     # else:
     #     return render(request, 'message.html', {'message':'没有权限'})
 
+# 品牌设置介绍
+@login_required
+@permission_required('jewelrydisplay.author_entry', '/series/')
+def brand(request):
+    introduction = models.introduction.objects.get(id = 1)
+    # print(introduction)
+    # print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request,"manage/brand.html", {'story':introduction.story_cn, 'story_eng':introduction.story_eng})
+
 
 # 展示作者介绍
 def introduction(request):
@@ -607,7 +616,7 @@ def introduction(request):
         return render(request, "introduction.html", {'intro': '', 'exper': '',
                                                      'image': ''})
     else:
-        return render(request,"introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+        return render(request,"introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 
 def test(request):
@@ -776,7 +785,7 @@ def fixIndex(request):
         indexpic.save()
     return HttpResponse(1)
 
-def fixIntro(request):
+def setBrand(request):
     try:
         data = request.POST
         cn = data.get('story_cn')
@@ -797,15 +806,15 @@ def addMedia(request):
         timestamp = int(round(time.time() * 1000))
         # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
         splitfilename = filename.encode('utf-8').split('.')
-        newfilename = str(timestamp) + 'series.' + splitfilename[-1]
-        fobj = open(django_settings.IMAGES_ROOT+'series_images/' + newfilename, 'wb')
+        newfilename = str(timestamp) + 'press.' + splitfilename[-1]
+        fobj = open(django_settings.IMAGES_ROOT+'press/' + newfilename, 'wb')
         for chunk in p.chunks():
             fobj.write(chunk)
         fobj.close()
-        resizeSeries(django_settings.IMAGES_ROOT+'series_images/' + newfilename, height)
+        resizeSeries(django_settings.IMAGES_ROOT+'press/' + newfilename, height)
 
-        series = models.media(img= newfilename)
-        series.save()
+        media = models.media(img=newfilename)
+        media.save()
     except:
         return HttpResponse(0)
     return HttpResponse(1)
@@ -854,7 +863,7 @@ def introduction_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
     ss = models.series.objects.filter(isPreview=False).order_by('series_sequence')
@@ -941,7 +950,7 @@ def introduction_mob(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request,"mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 def index_mob_eng(request):
     return render(request, "mob_eng/index_mob_eng.html")
@@ -959,7 +968,7 @@ def introduction_mob_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 def sendEmail2Admin(request):
     send_title = request.POST['title']
@@ -977,6 +986,7 @@ def getIntroduction(request):
     j = {}
     j['intro'] = introduction.intro_cn
     j['exper'] = introduction.exper_cn
+    j['story'] = introduction.story_cn
     #j['image'] = introduction.picture_name
     return HttpResponse(json.dumps(j), content_type="application/json")
 
@@ -986,6 +996,7 @@ def getIntroduction_eng(request):
     j = {}
     j['intro'] = introduction.intro_eng
     j['exper'] = introduction.exper_eng
+    j['story'] = introduction.story_eng
     #j['image'] = introduction.picture_name
     return HttpResponse(json.dumps(j), content_type="application/json")
 
@@ -1019,7 +1030,7 @@ def introduction_pad(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request, "pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request, "pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 def index_pad_eng(request):
     return render(request, "pad_eng/index_pad_eng.html")
@@ -1036,7 +1047,7 @@ def introduction_pad_eng(request):
     j['exper'] = introduction.exper_eng
     j['image'] = introduction.picture_name
     print(j)
-    return render(request, "pad_eng/introduction_pad_eng.html",{'intro': introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request, "pad_eng/introduction_pad_eng.html",{'intro': introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 # preview
 def preview_index(request):
@@ -1052,7 +1063,7 @@ def preview_introduction(request):
         return render(request, "preview/introduction.html", {'intro': '', 'exper': '',
                                                      'image': ''})
     else:
-        return render(request,"preview/introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+        return render(request,"preview/introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 def preview_index_eng(request):
     return render(request,"preview/eng/index_eng.html")
 def preview_series_eng(request):
@@ -1069,7 +1080,7 @@ def preview_introduction_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"preview/eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"preview/eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 def preview_index_mob(request):
     return render(request, "preview/mob/index_mob.html")
@@ -1087,7 +1098,7 @@ def preview_introduction_mob(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"preview/mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request,"preview/mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 def preview_index_mob_eng(request):
     return render(request, "preview/mob_eng/index_mob_eng.html")
@@ -1105,7 +1116,7 @@ def preview_introduction_mob_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"preview/mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"preview/mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 def preview_index_pad(request):
     return render(request, "preview/pad/index_pad.html")
@@ -1123,7 +1134,7 @@ def preview_introduction_pad(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request, "preview/pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request, "preview/pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 def preview_index_pad_eng(request):
     return render(request, "preview/pad_eng/index_pad_eng.html")
@@ -1141,4 +1152,4 @@ def preview_introduction_pad_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"preview/pad_eng/introduction_pad_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"preview/pad_eng/introduction_pad_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})

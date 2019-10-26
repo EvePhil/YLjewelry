@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YILAN JEWERY CMS</title>
+    <link Rel="SHORTCUT ICON" href="/static/images/logo.png">
+    <link href="/static/css/jquery-accordion-menu.css" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+    <link href="/static/css/manageIndex.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/brand.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/smartMenu.css" rel="stylesheet" type="text/css"/>
+	<script src="/static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+	<script src="//cdn.bootcss.com/tether/1.4.0/js/tether.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-accordion-menu.js" ></script>
+</head>
+<body>
+<div id="main">
+    <div id="leftMenu">
+        <ul id="nav-mobile" class="side-nav fixed">
+            <div class="menuTitle">YILAN JEWELRY</div>
+            <li><a class="waves-effect" href="/item/"><i class="material-icons">favorite_border</i>展示作品</a></li>
+            <li><a class="waves-effect" href="/intro"><i class="material-icons">perm_identity</i>个人信息</a></li>
+            <li><a class="waves-effect navActive" href="/brand/"><i class="material-icons">tab</i>品牌信息</a></li>
+            <li><a class="waves-effect" href="/preview/"><i class="material-icons">airplay</i>预览</a></li>
+            <li><a class="waves-effect" href="/logout/"><i class="material-icons">reply</i>注销</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse" style="display: none"><i class="material-icons">menu</i></a>
+    </div>
+
+    <div id="settingContent">
+		<div class="brandinfo">
+            <div class="input-field">
+                <textarea id="story_cn" name="story" class="story materialize-textarea" type="text">{{ story }}</textarea>
+                <label for="introduction_cn">品牌故事</label>
+            </div>
+
+            <div class="input-field">
+                <textarea id="story_eng" name="story_eng" class="story_eng materialize-textarea" type="text">{{ story_eng }}</textarea>
+                <label for="exper_cn">Brand Story</label>
+            </div>
+            <a class="confirmBrand waves-effect waves-light btn grey darken-2">确 认</a>
+		</div>
+
+        <div class="press">
+            <div class="uploadPhoto file-field input-field">
+                <div class="waves-effect waves-light btn grey darken-2">
+                    <span>媒体报道</span>
+                    <input id="photo" name="photo" class="photo" type="file" accept="image/*">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <a class="addPress waves-effect waves-light btn grey darken-2">添 加</a>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+         $(".button-collapse").sideNav();
+        {#jQuery("#jquery-accordion-menu").jqueryAccordionMenu();#}
+
+    });
+</script>
+<script src="/static/js/jquery-smartMenu.js"></script>
+<script type="text/javascript" src="/static/js/brand.js"></script>
+
+</html>
