@@ -798,7 +798,7 @@ def setBrand(request):
 def addMedia(request):
     try:
         data = request.POST
-        height = data.get('rate')
+        height = 1000
         print(height)
         files = request.FILES
         p = files['file']
@@ -811,11 +811,12 @@ def addMedia(request):
         for chunk in p.chunks():
             fobj.write(chunk)
         fobj.close()
-        resizeSeries(django_settings.IMAGES_ROOT+'press/' + newfilename, height)
+        # resizeSeries(django_settings.IMAGES_ROOT+'press/' + newfilename, height)
 
         media = models.media(img=newfilename)
         media.save()
-    except:
+    except Exception as e:
+        print 'str(e):\t\t', str(e)
         return HttpResponse(0)
     return HttpResponse(1)
 
