@@ -30,7 +30,7 @@
             <div class="openMenu"></div>
             <div class="menu" style="display: none;">
                 <a href="/preview_index/series/">系列</a>
-                <a href="/preview_index/introduction/">设计师</a>
+                <a href="/preview_index/introduction/">品牌</a>
                 <a class="engMenu" href="/preview_index_eng/introduction_eng/">EN</a>
                 <a href="/item/">退出</a>
             </div>
@@ -47,17 +47,37 @@
                 <a href="https://weidian.com/?userid=1301811343&wfr=wx_profile"><div class="shop"></div></a>
             </div>
         </div>
-        <div id="main">
-            <div id="photo">
-                <img id="self" src="/static/images/{{ image }}">
+      <div id="main">
+            <div class="brand">
+                <p class="infotTitle">品牌故事</p>
+                <pre id="text">{{ intro }}{{ intro }}{{ intro }}</pre>
             </div>
-            <div id="text">
-                <h3>设计师</h3>
-                <div id="intro" class="text text1">
-{#                    <pre>{{ intro }}</pre>#}
+            <div class="founder">
+                <p class="infotTitle">品牌创始人</p>
+                <div class="founderInfo">
+                    <div id="photo">
+                        <img id="self" src="/static/images/{{ image }}">
+                    </div>
+                    <div id="text">
+                        <div id="intro" class="text text1">
+        {#                    <pre>{{ intro }}</pre>#}
+                        </div>
+                        <div id="exper" class="text text2">
+        {#                    <pre>{{ exper }}</pre>#}
+                        </div>
+                    </div>
                 </div>
-                <div id="exper" class="text text2">
-{#                    <pre>{{ exper }}</pre>#}
+            </div>
+            <div class="media">
+                <p class="infotTitle">媒体报道</p>
+                <div class="mediaBox">
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
                 </div>
             </div>
         </div>

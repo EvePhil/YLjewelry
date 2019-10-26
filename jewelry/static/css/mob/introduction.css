@@ -1,21 +1,29 @@
 #main {
 	position: absolute;
 	top: 85px;
-	width: 100%;
+	/*width: 100%;*/
 	height: auto;
 }
 #main > div {
+	margin: 1rem auto 2rem;
     vertical-align: top;
 }
 
+.infotTitle {
+	font-size: 16px;
+	color: #333333;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+
 #photo {
     position: relative;
-	/*margin-left: 1.5rem;*/
-	/*margin-right: 1.5rem;*/
 	padding-bottom: 1rem;
 }
 #photo img {
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -36,9 +44,24 @@
 .text2 {
     padding-top: 0.5rem;
 }
+
+.mediaBox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+    margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+.mediaImg {
+	width: 10rem;
+    margin-bottom: 1rem;
+}
+
 #footer {
     /*margin-top: 0.5rem;*/
-    width: 100%;
+    width: 100vw;
     height: auto;
     text-align: center;
 }

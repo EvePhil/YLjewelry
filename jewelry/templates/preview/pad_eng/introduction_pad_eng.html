@@ -25,7 +25,7 @@
             <div class="openMenu"></div>
             <div class="menu" style="display: none;">
                 <a class="engMenu" href="/preview_index_pad_eng/series_pad_eng/">Collection</a>
-                <a class="engMenu" href="/preview_index_pad_eng/introduction_pad_eng/">Designer</a>
+                <a class="engMenu" href="/preview_index_pad_eng/introduction_pad_eng/">Brand</a>
                 <a href="/preview_index_pad/introduction_pad/">中文</a>
                 <a href="/item/">退出</a>
             </div>
@@ -45,17 +45,34 @@
         </div>
 
         <div id="main">
-    {#        <button id="test" >hahah</button>#}
-            <div id="photo">
-                <img id="self" src="/static/images/{{ image }}">
+            <div class="brand">
+                <p class="infotTitle">品牌故事</p>
+                <pre id="text">{{ intro }}{{ intro }}{{ intro }}</pre>
             </div>
-            <div id="text">
-                <h3>Designer</h3>
-                <div id="intro" class="text text1">
-{#                    <pre>{{ intro }}</pre>#}
+            <div class="founder">
+                <p class="infotTitle">品牌创始人</p>
+                <div class="founderInfo">
+                    <div id="photo">
+                        <img id="self" src="/static/images/{{ image }}">
+                    </div>
+                    <div id="text">
+                        <div id="intro" class="text text1">
+                        </div>
+                        <div id="exper" class="text text2">
+                        </div>
+                    </div>
                 </div>
-                <div id="exper" class="text text2">
-{#                    <pre>{{ exper }}</pre>#}
+            </div>
+            <div class="media">
+                <p class="infotTitle">媒体报道</p>
+                <div class="mediaBox">
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
+                    <img src="/static/images/icons/title.png" class="mediaImg"/>
                 </div>
             </div>
         </div>

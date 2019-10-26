@@ -137,8 +137,8 @@ body {
 
 .search {
     display: inline-block;
-    width: 1.8rem;
-    height: 1.7rem;
+    width: 1.6rem;
+    height: 1.5rem;
     vertical-align: top;
     background: url("/static/images/icons/search.png") center center no-repeat;
     background-size: contain;
@@ -146,8 +146,8 @@ body {
 }
 .shop {
     display: inline-block;
-    width: 1.8rem;
-    height: 1.7rem;
+    width: 2rem;
+    height: 1.5rem;
     vertical-align: top;
     background: url("/static/images/icons/shop.png") center center no-repeat;
     background-size: contain;
