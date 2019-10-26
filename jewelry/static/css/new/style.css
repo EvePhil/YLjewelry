@@ -170,6 +170,7 @@ pre {
     overflow: hidden;
     white-space: pre-wrap;
     word-wrap: break-word;
+    text-align: justify;
 }
 em, span {
     font-family: PingFang-SC-Light;
