@@ -8,7 +8,7 @@
     <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link href="/static/css/mob/style.css" rel="stylesheet" type="text/css">
     <link href="/static/css/mob/introduction.css" rel="stylesheet" type="text/css">
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="/static/js/jquery-2.0.0.min.js"></script>
 	<script src="//cdn.bootcss.com/tether/1.4.0/js/tether.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/jquery.rotate.min.js" ></script>
@@ -21,11 +21,11 @@
 <body>
 <div id="content">
         <div id="upMenu">
-            <div class="title"><a href="/mob_eng/">YILAN JEWELRY</a></div>
+            <div class="title"><a href="/mob_eng/"><img class="imgLogo" src="/static/images/icons/title.png"/></a></div>
             <div class="openMenu"></div>
             <div class="menu" style="display: none;">
                 <a class="engMenu" href="/index_mob_eng/series_mob_eng/">Collection</a>
-                <a class="engMenu" href="/index_mob_eng/introduction_mob_eng/">Designer</a>
+                <a class="engMenu" href="/index_mob_eng/introduction_mob_eng/">Brand</a>
                 <a href="/index_mob/introduction_mob/">中文</a>
             </div>
             <div class="rightIcon">
@@ -44,19 +44,39 @@
         </div>
 
         <div id="main">
-    {#        <button id="test" >hahah</button>#}
-            <div id="photo">
-                <img id="self" src="/static/images/{{ image }}">
-            </div>
-            <div id="text">
-                <h3>Designer</h3>
-                <div id="intro" class="text text1">
-{#                    <pre>{{ intro }}</pre>#}
-                </div>
-                <div id="exper" class="text text2">
-{#                    <pre>{{ exper }}</pre>#}
+            <div class="brand">
+                <p class="infotTitle">Brand Story</p>
+                <div id="text">
+                    <div id="story" class="text">
+                    </div>
                 </div>
             </div>
+            <div class="founder">
+                <p class="infotTitle">Founder of the Brand</p>
+                <div class="founderInfo">
+                    <div id="photo">
+                        <img id="self" src="/static/images/{{ image }}">
+                    </div>
+                    <div id="text">
+                        <div id="intro" class="text text1">
+                        </div>
+                        <div id="exper" class="text text2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+{#            <div class="media">#}
+{#                <p class="infotTitle">Press</p>#}
+{#                <div class="mediaBox">#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                </div>#}
+{#            </div>#}
         </div>
     </div>
      <div>

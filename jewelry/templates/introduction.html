@@ -15,7 +15,7 @@
             window.location.href='/index_pad/introduction_pad';
         }
     </script>
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="/static/js/jquery-2.0.0.min.js"></script>
 	<script src="//cdn.bootcss.com/tether/1.4.0/js/tether.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/jquery.rotate.min.js" ></script>
@@ -26,11 +26,11 @@
 <body>
     <div id="content">
         <div id="upMenu">
-            <div class="title"><a href="/">YILAN JEWELRY</a></div>
+            <div class="title"><a href="/"><img class="imgLogo" src="/static/images/icons/title.png"/></a></div>
             <div class="openMenu"></div>
             <div class="menu" style="display: none;">
                 <a href="/series/">系列</a>
-                <a href="/introduction/">设计师</a>
+                <a href="/introduction/">品牌</a>
                 <a class="engMenu" href="/index_eng/introduction_eng/">EN</a>
             </div>
              <div class="rightIcon">
@@ -47,18 +47,38 @@
             </div>
         </div>
         <div id="main">
-            <div id="photo">
-                <img id="self" src="/static/images/{{ image }}">
+            <div class="brand">
+                <p class="infotTitle">品牌故事</p>
+                <div id="story" class="text"></div>
             </div>
-            <div id="text">
-                <h3>设计师</h3>
-                <div id="intro" class="text text1">
-{#                    <pre>{{ intro }}</pre>#}
-                </div>
-                <div id="exper" class="text text2">
-{#                    <pre>{{ exper }}</pre>#}
+            <div class="founder">
+                <p class="infotTitle">品牌创始人</p>
+                <div class="founderInfo">
+                    <div id="photo">
+                        <img id="self" src="/static/images/{{ image }}">
+                    </div>
+                    <div id="text">
+                        <div id="intro" class="text text1">
+        {#                    <pre>{{ intro }}</pre>#}
+                        </div>
+                        <div id="exper" class="text text2">
+        {#                    <pre>{{ exper }}</pre>#}
+                        </div>
+                    </div>
                 </div>
             </div>
+{#            <div class="media">#}
+{#                <p class="infotTitle">媒体报道</p>#}
+{#                <div class="mediaBox">#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                    <img src="/static/images/icons/title.png" class="mediaImg"/>#}
+{#                </div>#}
+{#            </div>#}
         </div>
 {#        <div id="footer">#}
 {#            <div class="contact">#}

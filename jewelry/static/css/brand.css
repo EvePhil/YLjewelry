@@ -1,0 +1,35 @@
+#settingContent {
+	display: flex;
+    flex-flow: column;
+	padding: 20px 40px;
+}
+.brandinfo {
+    /*flex-grow: 1;*/
+    padding-bottom: 10px;
+}
+.confirmBrand, .addPress {
+    float: right;
+}
+
+.press {
+    border-top: 1px #a2a7ad dashed;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.pressImg {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.uploadPhoto {
+    flex-grow: 1;
+    padding-right: 40px;
+}
+.previewImg {
+    width: 500px;
+    height: 334px;
+    object-fit: cover;
+}

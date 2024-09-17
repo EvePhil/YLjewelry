@@ -1,5 +1,5 @@
 $(function () {
-	$.get('/getAllSeries/',function (allSeriesJson) {
+	$.get('/getAllSeries_eng/',function (allSeriesJson) {
 		var allSeries = allSeriesJson;
 
         // var i=0;
@@ -27,8 +27,8 @@ $(function () {
         // }
 
         for(var i in allSeries) {
-            $('#list').append('<div class="series"><a href="/jewel/?' + allSeries[i].id + '">' +
-                '<img class="lazy" data-original="http://px75gfdiz.bkt.clouddn.com/' + allSeries[i].seriespic  +'"/>' +
+            $('#list').append('<div class="series"><a href="/index_eng/jewel_eng/?' + allSeries[i].id + '">' +
+                '<img class="lazy" data-original="http://img.yilanjewelry.com/' + allSeries[i].seriespic  +'"/>' +
                 '<div class="seriesName"><h3 style="letter-spacing: 25px;text-indent: 25px;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
         // $("img.lazy").lazyload({effect: "fadeIn", threshold :150});

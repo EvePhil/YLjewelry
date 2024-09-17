@@ -11,6 +11,11 @@ class User(models.Model):
     rule = models.IntegerField(default=0)
 #asdfasdf
 
+class media(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.CharField(max_length=256)
+
+
 class series(models.Model):
     seriesname = models.CharField(max_length=32)
     intro = models.TextField(default="")
@@ -40,4 +45,6 @@ class introduction(models.Model):
     exper_eng = models.TextField()
     intro_cn = models.TextField()
     intro_eng = models.TextField()
+    story_cn = models.TextField()
+    story_eng = models.TextField()
     picture_name = models.CharField(max_length=256)

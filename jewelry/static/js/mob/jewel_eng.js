@@ -4,24 +4,24 @@ $(function () {
 	var id = window.location.search;
 	var seriesId = id.substring(1);
 
-	$('.changeLanguage').attr('href', '/index_mob_eng/jewel_mob_eng/?' + seriesId);
+	$('.changeLanguage').attr('href', '/index_mob/jewel_mob/?' + seriesId);
 
 	var seriesPost = {id:seriesId};
 
-	$.get('/getJewels/', seriesPost, function (jeweljson) {//获取作品
+	$.get('/getJewels_eng/', seriesPost, function (jeweljson) {//获取作品
 				//series =  JSON.parse(json)
 		var jewel = jeweljson;
 		for(var i=0; i<jewel.image.length; i++) {
 			//alert(job.image)
 			if(i == 0) {
-				$('#main').append('<img src="http://px75gfdiz.bkt.clouddn.com/' + jewel.image[i] + '" />');
+				$('#main').append('<img src="http://img.yilanjewelry.com/' + jewel.image[i] + '" />');
 				$('#main').append('<div id="text"></div>');
 				$('#text').html('<h3>' + jewel.seriesname + '</h3>' +
                     // '<h4>' +  jewel.seriesname + '-' + cls[1] + '</h4>' +
                     '<pre>' + jewel.seriesintro + '</pre>');
 			}
 			else {
-			    $('#main').append('<img src="http://px75gfdiz.bkt.clouddn.com/' + jewel.image[i] + '" />');
+			    $('#main').append('<img src="http://img.yilanjewelry.com/' + jewel.image[i] + '" />');
 			}
 		}
 

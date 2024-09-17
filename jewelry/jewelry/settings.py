@@ -27,7 +27,7 @@ SECRET_KEY = '=2&*skxlz-989s)y9i-lkv_ft_mylclk8q)k55$un3qo3gn0#2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'127.0.0.1',u'47.94.101.205',u'106.39.42.41', u'39.106.143.27']
+ALLOWED_HOSTS = [u'127.0.0.1',u'47.94.101.205',u'106.39.42.41', u'39.106.143.27', u'www.yilanjewelry.com']
 
 
 # Application definition

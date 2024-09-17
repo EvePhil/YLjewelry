@@ -10,7 +10,7 @@ $(function () {
         // }
         for(var i in allSeries) {
             $('#list').append('<div class="series"><a href="/index_pad/jewel_pad/?' + allSeries[i].id + '">' +
-                '<img class="lazy" data-original="http://px75gfdiz.bkt.clouddn.com/' + allSeries[i].seriespic  +'"/>' +
+                '<img class="lazy" data-original="http://img.yilanjewelry.com/' + allSeries[i].seriespic  +'"/>' +
                 '<div class="seriesName"><h3 style="letter-spacing: 1rem;text-indent: 1rem;">' + allSeries[i].seriesname + '</h3></div></a>');
         }
         // $("img.lazy").lazyload({effect: "fadeIn", threshold :150});

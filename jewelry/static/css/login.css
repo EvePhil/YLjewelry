@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: PingFang-SC-Light;
+}
+
+body {
+    /*background: #f0f0f0;*/
+    background: #FFFFFF;
+}
+
+#main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+.leftBackground {
+    flex: 6;
+    height: 100vh;
+    background-image: url("http://img.yilanjewelry.com/1560982089847photo1.jpg");
+    /*background-image: url("http://img.yilanjewelry.com/1561187131982photo1.JPG");*/
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.bigText {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+}
+.content {
+    flex: 4;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+}
+.title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+	color: #4a4a4a;
+}
+.userInfo {
+    padding: 0 120px;
+}
+.loginBtn {
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+}

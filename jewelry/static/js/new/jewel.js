@@ -14,22 +14,22 @@ $(function () {
 		for(var i=0; i<jewel.image.length; i++) {
 			//alert(job.image)
 			if(i == 0) {
-				$('.jqueryzoom').append('<img id="img" class="cloudzoom" src="http://px75gfdiz.bkt.clouddn.com/' +
-				jewel.image[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', animationTime:0, zoomPosition: \'inside\', startMagnification:1.5, zoomImage: \'http://px75gfdiz.bkt.clouddn.com/'+
+				$('.jqueryzoom').append('<img id="img" class="cloudzoom" src="http://img.yilanjewelry.com/' +
+				jewel.image[i] + '"data-cloudzoom="zoomSizeMode:\'lens\', animationTime:0, zoomPosition: \'inside\', startMagnification:1.5, zoomImage: \'http://img.yilanjewelry.com/'+
 				jewel.image[i] + '\', autoInside: 30"/>');
-				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + ' cloudzoom-gallery-active" src="http://px75gfdiz.bkt.clouddn.com/thumb_' +
-				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://px75gfdiz.bkt.clouddn.com/' +
-				jewel.image[i] + '\',zoomImage:\'http://px75gfdiz.bkt.clouddn.com/' +
+				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + ' cloudzoom-gallery-active" src="http://img.yilanjewelry.com/thumb_' +
+				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://img.yilanjewelry.com/' +
+				jewel.image[i] + '\',zoomImage:\'http://img.yilanjewelry.com/' +
 				jewel.image[i] + '\'"/></li>');
 			} else if(i == jewel.image.length - 1) {
-				$('#imgList').append('<li style="margin-right: 0;"><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="http://px75gfdiz.bkt.clouddn.com/thumb_' +
-				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://px75gfdiz.bkt.clouddn.com/' +
-				jewel.image[i] + '\',zoomImage:\'http://px75gfdiz.bkt.clouddn.com/' +
+				$('#imgList').append('<li style="margin-right: 0;"><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="http://img.yilanjewelry.com/thumb_' +
+				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://img.yilanjewelry.com/' +
+				jewel.image[i] + '\',zoomImage:\'http://img.yilanjewelry.com/' +
 				jewel.image[i] + '\'"/></li>');
 			} else {
-				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="http://px75gfdiz.bkt.clouddn.com/thumb_' +
-				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://px75gfdiz.bkt.clouddn.com/' +
-				jewel.image[i] + '\',zoomImage:\'http://px75gfdiz.bkt.clouddn.com/' +
+				$('#imgList').append('<li><img class="cloudzoom-gallery ' + jewel.seq[i] + '" src="http://img.yilanjewelry.com/thumb_' +
+				jewel.image[i] + '" data-cloudzoom="useZoom:\'.cloudzoom\',image:\'http://img.yilanjewelry.com/' +
+				jewel.image[i] + '\',zoomImage:\'http://img.yilanjewelry.com/' +
 				jewel.image[i] + '\'"/></li>');
 			}
 		}

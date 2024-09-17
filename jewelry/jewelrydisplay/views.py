@@ -19,6 +19,9 @@ import os
 import shutil
 from django.conf import settings
 # Create your views here.
+from qiniu import Auth, put_file, etag, urlsafe_base64_encode
+import qiniu.config
+from qiniu.compat import is_py2, is_py3
 
 import sys
 from PIL import Image
@@ -29,24 +32,56 @@ sys.setdefaultencoding('utf-8')
 token_confirm = Token(django_settings.SECRET_KEY)    # 定义为全局变量
 
 
-#需要填写你的 Access Key 和 Secret Key
 def qiniu_load(file,path):
     access_key = 'y8BaldA683hgVEhHix4_xWR3NESm9uch28e1nG30'
     secret_key = '7Rqb5UoDbg7B3BVEdG38ZtHUzkQzTh6fU_TFOn61'
+
     # 构建鉴权对象
     q = Auth(access_key, secret_key)
+
     # 要上传的空间
-    bucket_name = 'px75gfdiz.bkt.clouddn.com'
-    # 上传后保存的文件名
+    bucket_name = 'yljewlery'
+
+    # 上传到七牛后保存的文件名
     key = file
+
     # 生成上传 Token，可以指定过期时间等
     token = q.upload_token(bucket_name, key)
+
     # 要上传文件的本地路径
     localfile = path
+
     ret, info = put_file(token, key, localfile)
+    print(ret)
     print(info)
-    assert ret['key'] == key
+
+    if is_py2:
+        assert ret['key'].encode('utf-8') == key
+    elif is_py3:
+        assert ret['key'] == key
+
     assert ret['hash'] == etag(localfile)
+
+# #需要填写你的 Access Key 和 Secret Key
+# def qiniu_load(file,path):
+#     access_key = 'y8BaldA683hgVEhHix4_xWR3NESm9uch28e1nG30'
+#     secret_key = '7Rqb5UoDbg7B3BVEdG38ZtHUzkQzTh6fU_TFOn61'
+#     # 构建鉴权对象
+#     q = Auth(access_key, secret_key)
+#     # 要上传的空间
+#     bucket_name = 'yljewlery'
+#     # 上传后保存的文件名
+#     key = file
+#     # 生成上传 Token，可以指定过期时间等
+#     token = q.upload_token(bucket_name, key)
+#     # 要上传文件的本地路径
+#     localfile = path
+#     ret, info = put_file(token, key, localfile)
+#     print(info)
+#     assert ret['key'] == key
+#     assert ret['hash'] == etag(localfile)
+
+
 
 def index(request):
     return render(request, "index.html")
@@ -227,8 +262,8 @@ def uploadSeries(request):
 
 def purgePreview(request):
     try:
-        models.series.objects.all().update(isPreview=1)
-        models.picture_path.objects.all().update(isPreview=1)
+        models.series.objects.all().update(isPreview=0)
+        models.picture_path.objects.all().update(isPreview=0)
     except:
         return HttpResponse(0)
     return HttpResponse(1)
@@ -254,6 +289,7 @@ def getAllSeriesWithPreview(request):
         js1['id'] = s.id
         js1['seriesname'] = s.seriesname
         js1['seriespic'] = s.series_pic
+        js1['isPreview'] = s.isPreview
         ja.append(js1)
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
@@ -452,26 +488,26 @@ def resize(path, thumbnailPath):
 
 
 def uploadWork(request):
-    # 上传
     # 修改信息
     # 保存的文件名改成 时间戳+photo+本作品中该图片的序号
     seriesid = request.POST.get('seriesSelect')
     # 该系列多少个作品
-    worksInSeriesid = models.works.objects.filter(series_id=seriesid).count()
-    # seriesname = models.series.objects.get(id = seriesid).seriesname
-
-    # 上传作品的序列
-    sequence = worksInSeriesid+1
-    work = models.works(series_id=seriesid, sequence = sequence)
-    work.save()
-
-    workid = work.id
-    # print(workid)
-    # print(request.POST)
     files = request.FILES
-    # print(files)
+
     try:
         for filekey in files:
+            worksInSeriesid = models.works.objects.filter(series_id=seriesid).count()
+            # seriesname = models.series.objects.get(id = seriesid).seriesname
+
+            # 上传作品的序列
+            sequence = worksInSeriesid + 1
+            work = models.works(series_id=seriesid, sequence=sequence)
+            work.save()
+
+            workid = work.id
+            # print(workid)
+            # print(request.POST)
+            # print(files)
             print(filekey)
             filename = files[filekey].name
             timestamp = int(round(time.time() * 1000))
@@ -485,15 +521,17 @@ def uploadWork(request):
             if not os.path.exists(dirPath):
                 os.makedirs(dirPath)
                 os.makedirs(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid))
-
             fobj = open(os.path.join(dirPath,newfilename), 'wb')
             for chunk in files[filekey].chunks():
                 fobj.write(chunk)
             fobj.close()
             # 压缩图片
+            qiniu_load(newfilename,os.path.join(dirPath,newfilename))
             resize(os.path.join(dirPath,newfilename), os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
             qiniu_load("thumb_"+newfilename,os.path.join(django_settings.IMAGES_ROOT+'thumbnail/'+str(workid),newfilename))
             picture = models.picture_path(work_id=workid, isFirst=(filekey == 'photo1'),picturepath=newfilename)
+
+            print(newfilename)
             picture.save()
     except:
         models.picture_path.objects.filter(work_id=workid).delete()
@@ -549,7 +587,7 @@ def intro(request):
     j['exper'] = introduction.exper_cn
     # print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"manage/intro.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn,'intro_eng':introduction.intro_eng, 'exper_eng': introduction.exper_eng})
+    return render(request,"manage/intro.html", {'image': introduction.picture_name, 'intro':introduction.intro_cn, 'exper': introduction.exper_cn,'intro_eng':introduction.intro_eng, 'exper_eng': introduction.exper_eng})
     # u = auth.get_user(request)
     # print(u)
     # print(u.get_all_permissions())
@@ -559,17 +597,15 @@ def intro(request):
     # else:
     #     return render(request, 'message.html', {'message':'没有权限'})
 
-
-def intro(request):
-    try:
-        introduction = models.introduction.objects.get(id = 1)
-        # print(introduction)
-    except models.introduction.DoesNotExist:
-        return render(request, "manage/intro.html", {'intro': '', 'exper': '',
-                                                     'intro_eng': '',
-                                                     'exper_eng': ''})
-    else:
-        return render(request,"manage/intro.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn,'intro_eng':introduction.intro_eng, 'exper_eng': introduction.exper_eng})
+# 品牌设置介绍
+@login_required
+@permission_required('jewelrydisplay.author_entry', '/series/')
+def brand(request):
+    introduction = models.introduction.objects.get(id = 1)
+    # print(introduction)
+    # print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request,"manage/brand.html", {'story':introduction.story_cn, 'story_eng':introduction.story_eng})
 
 
 # 展示作者介绍
@@ -580,7 +616,7 @@ def introduction(request):
         return render(request, "introduction.html", {'intro': '', 'exper': '',
                                                      'image': ''})
     else:
-        return render(request,"introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+        return render(request,"introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 
 def test(request):
@@ -637,7 +673,7 @@ def setIntro(request):
     return HttpResponse(1)
 
 def getIndexPic(request):
-    picpaths = models.picture_path.objects.filter(Q(isBroadcast=True) and Q(isPreview=False))
+    picpaths = models.picture_path.objects.filter(isBroadcast=True, isPreview=False)
     ja = []
     for picpath in picpaths:
         js = {}
@@ -705,7 +741,7 @@ def getJewels(request):
 
 
 def getAllPics(request):
-    series = models.series.objects.all()
+    series = models.series.objects.all().order_by('series_sequence')
     ja = []
     for s in series:
         works = models.works.objects.filter(series_id=s.id)
@@ -713,6 +749,7 @@ def getAllPics(request):
         picids = []
         paths = []
         broadcast = []
+        picIsPreivew = []
         for w in works:
             workId = w.id
             pics = models.picture_path.objects.filter(work_id=workId)
@@ -721,12 +758,14 @@ def getAllPics(request):
                 picids.append(p.id)
                 paths.append(picpath)
                 broadcast.append(p.isBroadcast)
+                picIsPreivew.append(p.isPreview)
         js['seriesId'] = s.id
         js['seriesName'] = s.seriesname
         js['isPreview'] = s.isPreview
         js['picIds'] = picids
         js['picpaths'] = paths
         js['broadcast'] = broadcast
+        js['picIsPreivew'] = picIsPreivew
         ja.append(js)
     print(ja)
     return HttpResponse(json.dumps(ja), content_type="application/json")
@@ -746,7 +785,64 @@ def fixIndex(request):
         indexpic.save()
     return HttpResponse(1)
 
+def setBrand(request):
+    try:
+        data = request.POST
+        cn = data.get('story_cn')
+        eng = data.get('story_eng')
+        series = models.introduction.objects.all().update(story_cn = cn,story_eng = eng)
+    except:
+        return HttpResponse(0)
+    return HttpResponse(1)
 
+def addMedia(request):
+    try:
+        data = request.POST
+        height = 1000
+        print(height)
+        files = request.FILES
+        p = files['file']
+        filename = p.name
+        timestamp = int(round(time.time() * 1000))
+        # 文件名中文乱码问题是因为这里str()过程中没有使用utf8编码，在代码最上方规定utf8后即可
+        splitfilename = filename.encode('utf-8').split('.')
+        newfilename = str(timestamp) + 'press.' + splitfilename[-1]
+        fobj = open(django_settings.IMAGES_ROOT+'press/' + newfilename, 'wb')
+        for chunk in p.chunks():
+            fobj.write(chunk)
+        fobj.close()
+        # resizeSeries(django_settings.IMAGES_ROOT+'press/' + newfilename, height)
+
+        media = models.media(img=newfilename)
+        media.save()
+    except Exception as e:
+        print 'str(e):\t\t', str(e)
+        return HttpResponse(0)
+    return HttpResponse(1)
+
+def deleteMedia(request):
+    try:
+        data = request.POST
+        nid = data.get('id')
+
+        models.media.objects.filter(id = nid).delete()
+        #series.save()
+    except:
+        return HttpResponse(0)
+    return HttpResponse(1)
+
+
+def getAllMedia(request):
+    series = models.media.objects.all().order_by('id')
+    ja = []
+    for s in series:
+        js = {}
+
+        js['sid'] = s.id
+        js['simg'] = s.img
+        ja.append(js)
+    print(ja)
+    return HttpResponse(json.dumps(ja), content_type="application/json")
 
 
 
@@ -768,7 +864,7 @@ def introduction_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 def getAllSeries_eng(request):
     ss = models.series.objects.filter(isPreview=False).order_by('series_sequence')
@@ -855,7 +951,7 @@ def introduction_mob(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request,"mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 def index_mob_eng(request):
     return render(request, "mob_eng/index_mob_eng.html")
@@ -873,7 +969,7 @@ def introduction_mob_eng(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
 
 def sendEmail2Admin(request):
     send_title = request.POST['title']
@@ -891,6 +987,7 @@ def getIntroduction(request):
     j = {}
     j['intro'] = introduction.intro_cn
     j['exper'] = introduction.exper_cn
+    j['story'] = introduction.story_cn
     #j['image'] = introduction.picture_name
     return HttpResponse(json.dumps(j), content_type="application/json")
 
@@ -900,6 +997,7 @@ def getIntroduction_eng(request):
     j = {}
     j['intro'] = introduction.intro_eng
     j['exper'] = introduction.exper_eng
+    j['story'] = introduction.story_eng
     #j['image'] = introduction.picture_name
     return HttpResponse(json.dumps(j), content_type="application/json")
 
@@ -933,7 +1031,7 @@ def introduction_pad(request):
     j['image'] = introduction.picture_name
     print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request, "pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'image': introduction.picture_name})
+    return render(request, "pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
 
 def index_pad_eng(request):
     return render(request, "pad_eng/index_pad_eng.html")
@@ -950,5 +1048,109 @@ def introduction_pad_eng(request):
     j['exper'] = introduction.exper_eng
     j['image'] = introduction.picture_name
     print(j)
+    return render(request, "pad_eng/introduction_pad_eng.html",{'intro': introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
+
+# preview
+def preview_index(request):
+    return render(request, "preview/index.html")
+def preview_series(request):
+    return render(request, "preview/series.html")
+def preview_jewel(request):
+    return render(request, 'preview/jewel.html')
+def preview_introduction(request):
+    try:
+        introduction = models.introduction.objects.get(id = 1)
+    except models.introduction.DoesNotExist:
+        return render(request, "preview/introduction.html", {'intro': '', 'exper': '',
+                                                     'image': ''})
+    else:
+        return render(request,"preview/introduction.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
+def preview_index_eng(request):
+    return render(request,"preview/eng/index_eng.html")
+def preview_series_eng(request):
+    return render(request,"preview/eng/series_eng.html")
+def preview_jewel_eng(request):
+    return render(request,"preview/eng/jewel_eng.html")
+
+def preview_introduction_eng(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_eng
+    j['exper'] = introduction.exper_eng
+    j['image'] = introduction.picture_name
+    print(j)
     # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
-    return render(request,"pad_eng/introduction_pad_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'image': introduction.picture_name})
+    return render(request,"preview/eng/introduction_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
+
+def preview_index_mob(request):
+    return render(request, "preview/mob/index_mob.html")
+def preview_series_mob(request):
+    return render(request,"preview/mob/series_mob.html")
+def preview_jewel_mob(request):
+    return render(request,"preview/mob/jewel_mob.html")
+
+def preview_introduction_mob(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_cn
+    j['exper'] = introduction.exper_cn
+    j['image'] = introduction.picture_name
+    print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request,"preview/mob/introduction_mob.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
+
+def preview_index_mob_eng(request):
+    return render(request, "preview/mob_eng/index_mob_eng.html")
+def preview_series_mob_eng(request):
+    return render(request,"preview/mob_eng/series_mob_eng.html")
+def preview_jewel_mob_eng(request):
+    return render(request,"preview/mob_eng/jewel_mob_eng.html")
+
+def preview_introduction_mob_eng(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_eng
+    j['exper'] = introduction.exper_eng
+    j['image'] = introduction.picture_name
+    print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request,"preview/mob_eng/introduction_mob_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
+
+def preview_index_pad(request):
+    return render(request, "preview/pad/index_pad.html")
+def preview_series_pad(request):
+    return render(request, "preview/pad/series_pad.html")
+def preview_jewel_pad(request):
+    return render(request, "preview/pad/jewel_pad.html")
+
+def preview_introduction_pad(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_cn
+    j['exper'] = introduction.exper_cn
+    j['image'] = introduction.picture_name
+    print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request, "preview/pad/introduction_pad.html", {'intro':introduction.intro_cn, 'exper': introduction.exper_cn, 'story':introduction.story_cn, 'image': introduction.picture_name})
+
+def preview_index_pad_eng(request):
+    return render(request, "preview/pad_eng/index_pad_eng.html")
+def preview_series_pad_eng(request):
+    return render(request,"preview/pad_eng/series_pad_eng.html")
+def preview_jewel_pad_eng(request):
+    return render(request,"preview/pad_eng/jewel_pad_eng.html")
+
+def preview_introduction_pad_eng(request):
+    introduction = models.introduction.objects.get(id = 1)
+    print(introduction)
+    j = {}
+    j['intro'] = introduction.intro_eng
+    j['exper'] = introduction.exper_eng
+    j['image'] = introduction.picture_name
+    print(j)
+    # return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json, charset=utf-8")
+    return render(request,"preview/pad_eng/introduction_pad_eng.html", {'intro':introduction.intro_eng, 'exper': introduction.exper_eng, 'story':introduction.story_eng, 'image': introduction.picture_name})
